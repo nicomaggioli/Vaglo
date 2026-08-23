@@ -3,12 +3,12 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>The details · VAGLO</title>
+<title>In detail · VAGLO</title>
 <meta name="description" content="A full, honest tour of the system: what it does, what it refuses to do, and the constraints you would be buying into.">
 <meta name="theme-color" content="#f2f0ed">
 <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
 <link rel="alternate icon" href="assets/mark.svg" type="image/svg+xml">
-<link rel="stylesheet" href="styles.css?v=1787513317">
+<link rel="stylesheet" href="styles.css?v=1787513762">
 </head>
 <body>
 <a class="skip" href="#main">Skip to content</a>
@@ -27,24 +27,27 @@
   </div>
 </nav>
 
-<main id="main">
+<main>
 
-<header class="hero" style="padding-bottom:0">
+<header class="hero">
   <div class="wrap">
-    <span class="eyebrow">Technical details</span>
-    <h1 style="max-width:15ch">The whole system, described honestly.</h1>
-    <p class="lead">
-      Most pages like this one leave out the parts that do not flatter them. Below is every substantial part of the system, including where the edges are and the things it refuses to&nbsp;do.</p>
-    <p class="hero-note"><span class="badge badge-live">Everything below is shipped and in daily use</span></p>
+    <span class="eyebrow">IN DETAIL</span>
+    <h1 style="max-width:15ch">The whole system, in plain&nbsp;words.</h1>
+    <p class="lead">Six things happen between a notice appearing on SAM.gov and a package leaving your
+      office. Here is each one, what it does for you, and where the edges&nbsp;are.</p>
+    <p class="hero-note">Everything below is built and in daily&nbsp;use</p>
   </div>
 </header>
 
 <section class="sec">
-  <div class="wrap narrow">
-    <div class="card rv">
-      <h3>What's not on this&nbsp;page</h3>
-      <p>Some of the system is built but not load-bearing yet, so I don't sell it as though it were. The proposal lifecycle analytics view still runs on sample data. Personnel commitment matrix: finished, lightly used. Diagnostics for the statistical model got shelved, though the score it produces shows on every card. And there's a second AI provider, fully implemented and switched off on&nbsp;purpose.</p>
-      <p style="margin-bottom:0">All of it can be finished as part of a build. None of it is claimed&nbsp;below.</p>
+  <div class="wrap">
+    <div class="card rv" style="max-width:44rem;margin-inline:auto">
+      <h3>What is not on this&nbsp;page</h3>
+      <p>Some of it is built but not carrying weight yet, so I will not sell it as though it were.
+        The proposal analytics view still runs on sample data. The staffing commitment table is
+        finished but lightly used. Diagnostics for the learning model got shelved, though the score
+        it produces shows on every card. A second AI provider is wired up and switched&nbsp;off.</p>
+      <p>All of it can be finished as part of a build. None of it is claimed&nbsp;below.</p>
     </div>
   </div>
 </section>
@@ -52,19 +55,26 @@
 <!-- 01 -->
 <section class="sec" style="padding-top:0">
   <div class="wrap">
-    <div class="sec-head"><span class="eyebrow">01 · Discovery</span><h2>The nightly&nbsp;watch</h2></div>
+    <div class="sec-head"><span class="eyebrow">01 &middot; Finding the work</span><h2>It watches SAM.gov all&nbsp;night</h2></div>
     <div class="split rv">
       <div class="stack">
-        <p>A twenty-step pipeline runs unattended every night in three phases: sync and health, then deliverables, then a reviewed wrap-up. Each phase gates on the one before it, so a failed database restore or a bad code sync stops the run instead of producing a brief built on stale&nbsp;data.</p>
-        <p>It searches the federal opportunity API once per set-aside code, merges and de-duplicates by notice ID, filters to your NAICS codes, and downloads the complete package into a folder per opportunity: base solicitation, attachments, amendments, drawings.</p>
-        <p><strong>The freshness re-check is the underrated part.</strong> Every night it re-verifies everything you're still tracking against the current listing: due dates that moved, notices withdrawn, notices quietly amended, new attachments posted. One wide search, diffed locally, so the API cost is fixed no matter how many opportunities you&nbsp;track.</p>
-        <p>It also spots notices where an agency has already chosen a winner, and buries them. It won't say so without two corroborating signals plus a named&nbsp;recipient.</p>
+        <p>Every federal opportunity is posted to SAM.gov, and there are thousands of them. Nobody at
+          a small firm has the hours to read that, which is why good work goes by&nbsp;unnoticed.</p>
+        <p>Every night it searches SAM.gov for your set-aside, keeps only what matches your NAICS
+          codes, and downloads the entire package for each one: the base solicitation, every
+          attachment, amendments, drawings. One folder per opportunity, ready to&nbsp;read.</p>
+        <p><strong>It also re-checks what you are already tracking.</strong> Due dates move. Notices
+          get withdrawn. Attachments appear quietly a week later. Your list reflects what SAM.gov
+          says this morning, not what it said the day you found&nbsp;it.</p>
+        <p>And it buries the ones already decided. If an agency has effectively picked its winner,
+          that notice stops taking up room on your board. It will not make that call without two
+          independent signals and a named&nbsp;recipient.</p>
       </div>
       <div class="cards c2">
-        <div class="card"><div class="card-n">20</div><h3>Steps</h3><p>Ordered and resumable, each with a stable name so re-ordering can't break&nbsp;recovery.</p></div>
-        <div class="card"><div class="card-n">94</div><h3>Nights&nbsp;run</h3><p>Consecutive and unattended at the reference installation.</p></div>
-        <div class="card"><div class="card-n">7k</div><h3>Notices&nbsp;seen</h3><p>7,442 unique federal notices pulled and&nbsp;triaged.</p></div>
-        <div class="card"><div class="card-n">4</div><h3>API calls a&nbsp;night</h3><p>Out of a free tier of ten. A new firm starts on a same-day&nbsp;key.</p></div>
+        <div class="card"><div class="card-n">94</div><h3>Nights&nbsp;run</h3><p>Consecutive and unattended at the first&nbsp;installation.</p></div>
+        <div class="card"><div class="card-n">7k</div><h3>Notices&nbsp;read</h3><p>7,442 federal notices pulled in and&nbsp;sorted.</p></div>
+        <div class="card"><div class="card-n">1</div><h3>Page each&nbsp;morning</h3><p>What survived the filter, ranked, waiting for&nbsp;you.</p></div>
+        <div class="card"><div class="card-n">0</div><h3>People watching&nbsp;it</h3><p>It works while the office is&nbsp;closed.</p></div>
       </div>
     </div>
   </div>
@@ -73,16 +83,31 @@
 <!-- 02 -->
 <section class="sec" style="padding-top:0">
   <div class="wrap">
-    <div class="sec-head"><span class="eyebrow">02 · Comprehension</span><h2>Reading the&nbsp;solicitation</h2></div>
+    <div class="sec-head"><span class="eyebrow">02 &middot; Reading it</span><h2>It reads the solicitation, then checks with&nbsp;you</h2></div>
     <div class="split rv">
       <div class="stack">
-        <p>One command turns the whole package into structured data: mixed PDF, Word, Excel and text, detected by content rather than file extension. First it sorts the solicitation into one of five types, because a design job, a construction management job, and a general construction job you shouldn't be bidding all need different handling.</p>
-        <p>Then it parses every document in parallel, merges the results with amendments taking precedence over the base document, and extracts a structured record: scope, required roles, evaluation factors and their weights, set-aside and size standards, key dates, page limits, submission mechanics, the contracting officer.</p>
+        <p>A federal package is rarely one file. It is a base solicitation plus attachments plus
+          amendments, in PDF and Word and Excel, and the amendments quietly overrule the&nbsp;base.</p>
+        <p>It reads all of it. First it works out what kind of job this is, because a design job, a
+          construction management job and a general construction job should not be bid the same way.
+          Then it pulls out what matters: the scope, the roles they require, how they intend to score
+          you, the set-aside and size standard, the dates, the page limits, how it must be submitted,
+          and who to send questions&nbsp;to.</p>
+        <p><strong>Then it stops and shows you what it understood.</strong> Every line comes with the
+          sentence from the solicitation that produced it. If it read something wrong you say so, and
+          it makes you write down why. If it missed scope, you add&nbsp;it.</p>
+        <p>There is no AI in that checkpoint, deliberately. An AI-written summary of an AI's reading
+          would hide the exact mistake the step exists to catch. Your sign-off is tied to that
+          reading, so if the solicitation gets re-read, the sign-off goes stale rather than quietly
+          standing.</p>
+        <p>If the AI fails, the run fails loudly and tells you. There is a working backup switched off
+          by default, because a silent fallback turns a broken process into an invisible&nbsp;one.</p>
       </div>
-      <div class="stack">
-        <p><strong>Then it stops and asks you.</strong> Before anything is built on that reading, it shows you its own understanding of the solicitation with the verbatim source sentence behind every line. Flag a line as wrong and it demands a written note. Add scope it&nbsp;missed.</p>
-        <p>No AI in that step, on purpose. An AI-rewritten summary would put back the exact risk the checkpoint exists to catch. Your sign-off is fingerprinted to that parse, so a re-analysis makes it go stale instead of quietly standing.</p>
-        <p>When the primary model fails, the run fails loudly. There's a working second provider, switched off by default, because a silent fallback turns a broken process into a quiet&nbsp;one.</p>
+      <div class="cards c2">
+        <div class="card"><h3>Five kinds of&nbsp;job</h3><p>Sorted first, because they are not bid the same&nbsp;way.</p></div>
+        <div class="card"><h3>Amendments&nbsp;win</h3><p>Where an amendment contradicts the base, the amendment&nbsp;stands.</p></div>
+        <div class="card"><h3>Every line&nbsp;sourced</h3><p>Shown next to the sentence it came&nbsp;from.</p></div>
+        <div class="card"><h3>You sign it&nbsp;off</h3><p>Nothing gets built on a reading you have not&nbsp;approved.</p></div>
       </div>
     </div>
   </div>
@@ -91,16 +116,13 @@
 <!-- 03 -->
 <section class="sec" style="padding-top:0">
   <div class="wrap">
-    <div class="sec-head"><span class="eyebrow">03 · Judgement</span><h2>Deciding what to&nbsp;chase</h2>
-      <p class="lead">Three layers, and you can see all&nbsp;three.</p></div>
-    <div class="cards c3 rv">
-      <div class="card"><div class="card-n">1</div><h3>The&nbsp;read</h3><p>A base score out of 100 from the gap analysis: personnel coverage against required roles, past-performance match, location, certifications, scope alignment. It comes with a written rationale.</p></div>
-      <div class="card"><div class="card-n">2</div><h3>Your&nbsp;rules</h3><p>Deterministic adjustments you author in plain English and edit from the dashboard. <em>"Anything past the Mississippi: minus 15."</em> Every adjustment shows the rule that produced&nbsp;it.</p></div>
-      <div class="card"><div class="card-n">3</div><h3>What it&nbsp;learned</h3><p>A statistical model keeping separate posteriors per state, agency, fee band, set-aside and discipline, with credible intervals. It's exposed over an API so the score stays&nbsp;auditable.</p></div>
-    </div>
-    <div class="card mt-l rv">
-      <h3>The cold-start answer</h3>
-      <p style="margin-bottom:0">The learned layer carries zero weight until enough decisions exist to justify influence, and earns its way up from there. It can't learn the wrong thing from your first ten calls, because for your first ten calls it isn't&nbsp;voting.</p>
+    <div class="sec-head"><span class="eyebrow">03 &middot; Scoring it</span><h2>A good match, or an okay&nbsp;one</h2>
+      <p class="lead">Every opportunity comes back with a percentage, and you can see all three things
+        that produced&nbsp;it.</p></div>
+    <div class="steps rv">
+      <article class="step"><div class="step-n">1</div><div><h3>What it&nbsp;read</h3><p>A score out of 100 from holding the solicitation up against your firm. Do you have the roles they want, does your past work match, where is it, do you hold the certifications, does the scope line up. It arrives with the reasoning written&nbsp;out.</p></div></article>
+      <article class="step"><div class="step-n">2</div><div><h3>Your own&nbsp;rules</h3><p>Adjustments you write yourself, in plain English, from the dashboard. &ldquo;Anything past the Mississippi, minus fifteen.&rdquo; Every adjustment shows you which of your rules caused&nbsp;it.</p></div></article>
+      <article class="step"><div class="step-n">3</div><div><h3>What it learned from&nbsp;you</h3><p>Once you have made enough real calls, it starts noticing your patterns by state, agency, fee size, set-aside and discipline. Until then it carries no weight at all. It cannot learn the wrong lesson from your first ten decisions, because for your first ten decisions it is not&nbsp;voting.</p></div></article>
     </div>
   </div>
 </section>
@@ -108,17 +130,29 @@
 <!-- 04 -->
 <section class="sec" style="padding-top:0">
   <div class="wrap">
-    <div class="sec-head"><span class="eyebrow">04 · Selection</span><h2>Choosing the projects and the&nbsp;people</h2></div>
+    <div class="sec-head"><span class="eyebrow">04 &middot; Picking the team</span><h2>You choose the projects and the&nbsp;people</h2></div>
     <div class="split rv">
       <div class="stack">
-        <p>This is the real work of a qualifications submission, and it usually gets done from memory the week of the&nbsp;deadline.</p>
-        <p>The engine flips the usual order. It ranks your whole portfolio against this solicitation first, and eligibility is annotated rather than filtered, so a project that fails a cost threshold is marked and still on screen instead of quietly dropped. Then the team comes out of the winning slate, because the strongest qualification a person can carry is that they did that discipline themselves on a project you're already submitting.</p>
-        <p>The whole ranking path is deterministic. No AI call, no variance: the same inputs give the same slate, and every pick carries a printed&nbsp;reason.</p>
+        <p>This is the real work of a qualifications submission, and at most firms it gets done from
+          memory, the week it is&nbsp;due.</p>
+        <p>It goes in the opposite order from how it is usually done. First it ranks your whole
+          portfolio against this solicitation. A project that fails a threshold is marked rather than
+          hidden, so you can see what was ruled out and why. Then the team comes out of the projects
+          that ranked, because the strongest thing you can say about a person is that they did this
+          exact work, on a job you are already putting&nbsp;forward.</p>
+        <p><strong>Nothing is decided for you.</strong> You choose the projects, the personnel and the
+          subconsultants. Every suggestion carries the reason it was&nbsp;made.</p>
+        <p>Same inputs, same list, every time. There is no AI in the ranking, so it does not change
+          its mind between&nbsp;runs.</p>
       </div>
       <div class="card">
         <h3>Measured against a&nbsp;human</h3>
-        <p>On a live solicitation I compared the recommender's slate against the team the firm's owner had built by hand. Nine of fifteen top picks matched exactly. In four of the six divergences the owner's pick was already sitting in the alternates, and all three subconsultant firms rolled up&nbsp;identically.</p>
-        <p style="margin-bottom:0">It also blocks two known-bad picks the old approach still surfaced, one of them a design that was never constructed reaching slot three of a submitted package.</p>
+        <p>On a live solicitation, the list it produced was set against the team the firm&rsquo;s owner had
+          picked by hand. Nine of the fifteen top picks matched exactly. Of the six that differed,
+          four of the owner&rsquo;s picks were already sitting in the alternates, and all three
+          subcontractor firms came out the&nbsp;same.</p>
+        <p>It also refused two picks the old way had let through, one of them a design that was never
+          built, sitting third in a submitted&nbsp;package.</p>
       </div>
     </div>
   </div>
@@ -127,80 +161,108 @@
 <!-- 05 -->
 <section class="sec" style="padding-top:0">
   <div class="wrap">
-    <div class="sec-head"><span class="eyebrow">05 · Production</span><h2>The&nbsp;package</h2>
-      <p class="lead">Twenty-nine generator modules and a set of base templates with every form field individually mapped. This is the part nothing else in the category&nbsp;does.</p></div>
+    <div class="sec-head"><span class="eyebrow">05 &middot; Building it</span><h2>The SF330&nbsp;itself</h2>
+      <p class="lead">Every section, generated from your own records and laid out on the real form.
+        This is the part nothing else in the category&nbsp;does.</p></div>
     <div class="cards c3 rv">
-      <div class="card"><h3>Résumés</h3><p>One per person, per role. Written from your records, then the facts your database owns are written back over anything generated. Any project the draft names that isn't in that person's real history gets&nbsp;flagged.</p></div>
-      <div class="card"><h3>Project&nbsp;sheets</h3><p>Each chosen project rendered to the form's layout, with a constraint on relevance: only a real match may claim direct relevance, not a project that happens to share a&nbsp;discipline.</p></div>
-      <div class="card"><h3>The&nbsp;matrix</h3><p>Twenty people by ten projects is two hundred cells, and it's the section firms most often get wrong by hand. Built from relational joins with no AI at&nbsp;all.</p></div>
-      <div class="card"><h3>The&nbsp;narrative</h3><p>Eight to fifteen pages, reordered to mirror the agency's published evaluation factors, with more page budget for higher-weighted ones. A second pass checks every scored factor was&nbsp;answered.</p></div>
-      <div class="card"><h3>Partner&nbsp;forms</h3><p>A qualifications form for every teaming firm, prime included. One live package carried ten. Chasing partners two days before a deadline is a pain nothing else&nbsp;touches.</p></div>
-      <div class="card"><h3>Assembly</h3><p>Cover, cover letter, dot-leader table of contents, PDF bookmarks, tab dividers, page footers. One real package on record: 61 pages,&nbsp;20MB.</p></div>
+      <div class="card"><h3>R&eacute;sum&eacute;s</h3><p>One per person, per role, written from your records. Anything the draft claims that is not in that person&rsquo;s real history gets&nbsp;flagged.</p></div>
+      <div class="card"><h3>Project&nbsp;sheets</h3><p>Each project laid out to the form. Only a genuine match may claim direct relevance; sharing a discipline is not&nbsp;enough.</p></div>
+      <div class="card"><h3>The&nbsp;matrix</h3><p>Twenty people across ten projects is two hundred boxes, and it is the section firms most often get wrong by hand. Built straight from your records, no AI&nbsp;involved.</p></div>
+      <div class="card"><h3>The&nbsp;narrative</h3><p>Eight to fifteen pages, ordered to mirror how the agency said it will score you, with more room where they weighted&nbsp;heaviest.</p></div>
+      <div class="card"><h3>Partner&nbsp;forms</h3><p>A qualifications form for every teaming firm, yours included. One real package carried ten. Chasing partners two days out is a job nothing else&nbsp;touches.</p></div>
+      <div class="card"><h3>Putting it&nbsp;together</h3><p>Cover, cover letter, contents with dot leaders, bookmarks, tab dividers, footers. One real package on record: 61 pages,&nbsp;20MB.</p></div>
     </div>
   </div>
 </section>
 
 <!-- 06 -->
-<section class="wrap">
-  <div class="block rv">
-    <h2>What it refuses to&nbsp;do</h2>
-    <p class="lead">On a document that binds your firm to the federal government, the guardrails are the&nbsp;product.</p>
-    <div class="block-grid">
-      <div><h3>It won't invent a fact only you&nbsp;know</h3><p>Availability percentages are never generated. Missing facts become visible placeholders, and a do-not-submit file blocks the package until a human resolves every one. On a real package that gate held back 62&nbsp;blanks.</p></div>
-      <div><h3>The AI can't write to your&nbsp;database</h3><p>Extraction agents run read-only. Every write is hand-written, parameterised code. AI-drafted corrections pass a static validator, then a dry run, then a human approval. The chat editor's total write permission is two&nbsp;fields.</p></div>
-      <div><h3>It won't reassign who did a&nbsp;project</h3><p>A partner's uploaded project sheet that fuzzy-matches a project attributed to a different firm goes to review with zero writes. A partner's fee can never land in your own design-fee column.</p></div>
-    </div>
-  </div>
-</section>
-
-<!-- 07 -->
-<section class="sec">
-  <div class="wrap">
-    <div class="sec-head center"><span class="eyebrow">Constraints</span><h2>What you would be buying&nbsp;into</h2>
-      <p class="lead">Every system has edges. Better you hear these from me on a webpage than discover them in month&nbsp;two.</p></div>
-    <div class="cards c3 rv">
-      <div class="card"><h3>A per-firm install, not cloud&nbsp;software</h3><p>It runs on your machine. No user accounts or role permissions, and no multi-tenancy, because it was built for one firm inside its own building. That's good for data control, and wrong if you want a hosted product ten people log&nbsp;into.</p></div>
-      <div class="card"><h3>Windows-first today</h3><p>Document conversion, service management and default output paths assume Windows. Every entry point has a POSIX sibling, but a Mac or Linux shop is a scoped engineering item.</p></div>
-      <div class="card"><h3>It produces the federal qualifications package</h3><p>That covers any firm pursuing federal design work, and the analysis half transfers to construction management. It does not write general commercial RFP&nbsp;responses.</p></div>
-      <div class="card"><h3>Output quality follows your&nbsp;record</h3><p>It's built to say <em>I don't know</em> rather than guess. A thin database gives you a package with visible blanks. That's correct behaviour, and it's why the archive work isn't&nbsp;optional.</p></div>
-      <div class="card"><h3>Heavy concurrent editing is&nbsp;unproven</h3><p>There's real production hardening in there: resumable uploads, concurrency guards, per-conversation locks. But it's been run by one firm with one primary user, not a ten-person proposal team all editing at&nbsp;once.</p></div>
-      <div class="card"><h3>No undo on the chat&nbsp;editor</h3><p>The safety model is verify-before-assert, a two-field write allowlist, before/after display and a separate confirmation. It is not a version history. To reverse a team swap, you run the opposite&nbsp;swap.</p></div>
-    </div>
-  </div>
-</section>
-
-<!-- 08 -->
 <section class="sec" style="padding-top:0">
   <div class="wrap">
-    <div class="sec-head"><span class="eyebrow">Provenance</span><h2>How it was&nbsp;built</h2></div>
+    <div class="sec-head"><span class="eyebrow">06 &middot; Checking it</span><h2>It reads the solicitation back to&nbsp;you</h2></div>
     <div class="split rv">
       <div class="stack">
-        <p>This matters more than it usually would, because you're buying a system you'll depend on and there's no vendor logo behind it to borrow trust from. The record is&nbsp;below.</p>
-        <p>Every change went through a written plan before any code got touched, and 136 of those plans are completed and on file. Bigger changes were reviewed in parallel by a panel of specialised reviewers covering database safety, front-end and API consistency, pipeline integration, security and architecture. Each one returned approve, concern or&nbsp;block.</p>
-        <p>The architecture document is a machine-enforced contract rather than a README. Hooks refuse to let a plan close or a commit push if the documentation has drifted from the&nbsp;code.</p>
+        <p>Packages get thrown out for reasons that have nothing to do with how good the firm is. A
+          form nobody signed. An attachment nobody remembered. A page limit missed by&nbsp;two.</p>
+        <p><strong>Before you submit, it goes back through the solicitation requirement by
+          requirement</strong> and checks your package against every one. What you have met, it
+          confirms. What you have missed, it flags, with the line from the solicitation sitting next
+          to it. Fix it yourself, or tell it&nbsp;to.</p>
+        <p>Anything it could not source stays a visible blank, and a do-not-submit file holds the
+          package shut until a person has resolved every one. On one real package that gate held back
+          62&nbsp;blanks.</p>
+        <p>A last pass then scores the finished package the way the evaluation board is going to,
+          against the factors the agency published.</p>
       </div>
       <div class="cards c2">
-        <div class="card"><div class="card-n">6k</div><h3>5,997&nbsp;tests</h3><p>Automated checks guarding behaviour.</p></div>
-        <div class="card"><div class="card-n">136</div><h3>Completed&nbsp;plans</h3><p>Every change designed and&nbsp;documented.</p></div>
-        <div class="card"><div class="card-n">29</div><h3>Generator modules</h3><p>Producing the package sections.</p></div>
-        <div class="card"><div class="card-n">0</div><h3>Third-party scripts</h3><p>No framework and no bundler, so nothing to&nbsp;patch.</p></div>
+        <div class="card"><div class="card-n">62</div><h3>Blanks held&nbsp;back</h3><p>On one real package, before it would let it&nbsp;out.</p></div>
+        <div class="card"><h3>Nothing quietly&nbsp;filled</h3><p>A gap stays a gap until a person closes&nbsp;it.</p></div>
       </div>
     </div>
   </div>
 </section>
 
-</main>
+<section class="sec bg-soft">
+  <div class="wrap">
+    <div class="sec-head center"><span class="eyebrow">The guardrails</span><h2>What it refuses to&nbsp;do</h2>
+      <p class="lead">On a document that binds your firm to the federal government, what it will not
+        do matters as much as what it&nbsp;will.</p></div>
+    <div class="cards c3 rv">
+      <div class="card"><h3>It will not invent a fact only you&nbsp;know</h3><p>Availability percentages are never generated. On a federal form that is a staffing commitment, not a guess. Missing facts become visible blanks and the package stays&nbsp;shut.</p></div>
+      <div class="card"><h3>The AI cannot change your&nbsp;records</h3><p>The parts that read your documents cannot write to them. Every change is ordinary code, and an AI-suggested correction passes a check, then a trial run, then you. The chat editor can only ever touch two&nbsp;fields.</p></div>
+      <div class="card"><h3>It will not move a project between&nbsp;firms</h3><p>If a partner uploads a project sheet resembling one already credited elsewhere, it goes to review and writes nothing. A partner&rsquo;s fee can never land in your own fee&nbsp;column.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="sec">
+  <div class="wrap">
+    <div class="sec-head center"><span class="eyebrow">Straight about the limits</span><h2>What you would be buying&nbsp;into</h2>
+      <p class="lead">Every system has edges. Better you hear these from me on a webpage than find them
+        in month&nbsp;two.</p></div>
+    <div class="cards c2 rv">
+      <div class="card"><h3>It runs on your machine, not in the&nbsp;cloud</h3><p>No logins, no user accounts, no shared database, nothing leaving your building. That is good for control of your data, and wrong if what you wanted was a hosted product with a support desk behind&nbsp;it.</p></div>
+      <div class="card"><h3>Windows&nbsp;today</h3><p>Document conversion, service management and the default file paths all assume Windows. A Mac or Linux office is real work, not a&nbsp;checkbox.</p></div>
+      <div class="card"><h3>It makes the federal qualifications&nbsp;package</h3><p>That covers any firm chasing federal design work, and the finding half carries over to construction management. It does not write general commercial RFP&nbsp;responses.</p></div>
+      <div class="card"><h3>What comes out follows what goes&nbsp;in</h3><p>It is built to say I don&rsquo;t know rather than guess, so a thin database gives you a package full of blanks. That is correct behaviour, and it is why the archive work at the start is not&nbsp;optional.</p></div>
+      <div class="card"><h3>It has not been run by a big proposal&nbsp;team</h3><p>One firm, one main user. There is real hardening in there for several people working at once, but several people editing the same proposal at once is&nbsp;untested.</p></div>
+      <div class="card"><h3>There is no undo in the chat&nbsp;editor</h3><p>It shows you before and after and asks before it acts, but it does not keep a history. To reverse a team swap, you run the opposite&nbsp;swap.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="sec bg-soft">
+  <div class="wrap">
+    <div class="sec-head center"><span class="eyebrow">How it got built</span><h2>Why you can rely on&nbsp;it</h2></div>
+    <div class="stack rv" style="max-width:44rem;margin-inline:auto">
+      <p>You would be buying a system you depend on, from a small team rather than a company whose
+        logo you already trust. So here is the&nbsp;record.</p>
+      <p>Every change was written down as a plan before any code was touched, and 136 of those plans
+        are finished and on file. The bigger ones were reviewed from several directions at once:
+        database safety, the dashboard, the nightly run, security, and the shape of the thing&nbsp;overall.</p>
+      <p>The documentation is enforced rather than hoped for. The system refuses to accept a change if
+        the documentation no longer matches the&nbsp;code.</p>
+    </div>
+    <div class="cards c3 rv" style="margin-top:2.5rem">
+      <div class="card"><div class="card-n">6k</div><h3>5,997 automatic&nbsp;checks</h3><p>Run against the system to catch what a change might have&nbsp;broken.</p></div>
+      <div class="card"><div class="card-n">136</div><h3>Written&nbsp;plans</h3><p>Every change designed on paper first, and kept on&nbsp;file.</p></div>
+      <div class="card"><div class="card-n">0</div><h3>Borrowed&nbsp;code</h3><p>Nothing pulled in from elsewhere that can rot or need&nbsp;patching.</p></div>
+    </div>
+  </div>
+</section>
 
 <section class="wrap">
   <div class="cta-band rv">
     <h2>Bring the hard&nbsp;questions.</h2>
-    <p class="lead">If something above sounded too good, ask about it directly. I'd rather lose the deal on a call than oversell it into a&nbsp;build.</p>
+    <p>If something above sounded too good, ask about it directly. I would rather lose the deal on a
+      call than oversell it into a&nbsp;build.</p>
     <div class="hero-cta">
       <a class="btn btn-primary btn-lg" href="contact.html">Request a call</a>
       <a class="btn btn-ghost btn-lg" href="index.html">Back to the overview</a>
     </div>
   </div>
 </section>
+
+</main>
 
 <footer class="foot">
   <div class="wrap">
@@ -268,6 +330,6 @@
   </form>
 </div>
 
-<script src="app.js?v=1787508588"></script>
+<script src="app.js?v=1787513691"></script>
 </body>
 </html>
