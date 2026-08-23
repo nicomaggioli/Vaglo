@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>The details · VAGLO</title>
+<meta name="description" content="A full, honest tour of the system: what it does, what it refuses to do, and the constraints you would be buying into.">
+<meta name="theme-color" content="#f2f0ed">
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+<link rel="alternate icon" href="assets/mark.svg" type="image/svg+xml">
+<link rel="stylesheet" href="styles.css?v=1787501911">
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+
+<nav class="nav" id="nav">
+  <div class="wrap nav-in">
+    <a class="brand" href="index.html">
+      <svg class="brand-logo" viewBox="0 0 953.78 195.8" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="VAGLO"><polygon fill="#1b2330" points="201.93 136.65 100.77 195.8 .04 136.74 .12 108.13 100.73 167.34 201.51 108.09 201.93 136.65"/><polygon fill="#1b2330" points="201.87 82.44 100.62 142.43 .05 82.67 .21 53.9 100.62 114.06 201.51 53.98 201.87 82.44"/><polygon fill="#1b2330" points="201.86 28.4 100.87 89.06 77.1 75 201.52 0 201.86 28.4"/><polygon fill="#295541" points="57.5 62.54 0 28.63 .05 .15 80.77 48.51 57.5 62.54"/><path fill="#1b2330" d="M651.87,99.23l-32.19-.09.1-18.48,51.39-.06.04,65-61.21-.25c-16.93-.07-31.34-9.45-41-22.79-11.8-18.76-13.89-41.38-5.11-61.82,8.09-18.83,25.42-31.26,46.28-32.56l60.82-.57.05,18.57-56.99.18c-14.94.05-27.51,9.96-32.81,23.8-4.68,12.25-4.22,25.75,1.76,37.44,5.76,11.25,16.98,19.31,29.74,19.36l39.13.14-.02-27.86Z"/><path fill="#1b2330" d="M950.45,107.59c-10.31,31.65-42.68,44.13-74.12,37.44-13.97-2.97-26.37-10.74-34.27-22.79-20.3-30.95-10.81-76.69,23.61-90.58,18.34-7.4,39.53-7.16,57.36,1.56,26.94,13.17,36.47,46.55,27.41,74.37ZM934.58,86.64c0-23.19-18.8-41.98-41.98-41.98s-41.98,18.8-41.98,41.98,18.8,41.98,41.98,41.98,41.98-18.8,41.98-41.98Z"/><polygon fill="#1b2330" points="382.27 28.22 404.38 27.97 342.89 146.67 281.6 28.26 303.48 27.74 342.92 105.35 382.27 28.22"/><polygon fill="#1b2330" points="473.05 68.45 433.45 145.55 411.45 145.5 472.94 27.06 534.43 145.2 512.78 145.62 473.05 68.45"/><polygon fill="#1b2330" points="810.64 127.04 811.06 145.59 717.58 145.71 717.59 27.85 737.52 27.93 737.53 127.04 810.64 127.04"/></svg>
+    </a>
+    <div class="nav-links">
+      <a href="index.html#how">How it works</a>
+      <a href="index.html#yours">What it produces</a>
+      <a href="system.html" aria-current="page">Details</a>
+    </div>
+    <a class="btn btn-primary" href="contact.html">Request a call</a>
+  </div>
+</nav>
+
+<main id="main">
+
+<header class="hero" style="padding-bottom:0">
+  <div class="wrap">
+    <span class="eyebrow">Technical details</span>
+    <h1 style="max-width:15ch">The whole system, described honestly.</h1>
+    <p class="lead">
+      Marketing pages round up. Below is every substantial part of the system, including where the edges are and the things it refuses to&nbsp;do.</p>
+    <p class="hero-note"><span class="badge badge-live">Everything below is shipped and in daily use</span></p>
+  </div>
+</header>
+
+<section class="sec">
+  <div class="wrap narrow">
+    <div class="card rv">
+      <h3>What's not on this&nbsp;page</h3>
+      <p>Some of the system is built but not load-bearing yet, so I don't sell it as though it were. The proposal lifecycle analytics view still runs on sample data. Personnel commitment matrix: finished, lightly used. Diagnostics for the statistical model got shelved, though the score it produces shows on every card. And there's a second AI provider, fully implemented and switched off on&nbsp;purpose.</p>
+      <p style="margin-bottom:0">All of it can be finished as part of a build. None of it is claimed&nbsp;below.</p>
+    </div>
+  </div>
+</section>
+
+<!-- 01 -->
+<section class="sec" style="padding-top:0">
+  <div class="wrap">
+    <div class="sec-head"><span class="eyebrow">01 · Discovery</span><h2>The nightly&nbsp;watch</h2></div>
+    <div class="split rv">
+      <div class="stack">
+        <p>A twenty-step pipeline runs unattended every night in three phases: sync and health, then deliverables, then a reviewed wrap-up. Each phase gates on the one before it, so a failed database restore or a bad code sync stops the run instead of producing a brief built on stale&nbsp;data.</p>
+        <p>It searches the federal opportunity API once per set-aside code, merges and de-duplicates by notice ID, filters to your NAICS codes, and downloads the complete package into a folder per opportunity: base solicitation, attachments, amendments, drawings.</p>
+        <p><strong>The freshness re-check is the underrated part.</strong> Every night it re-verifies everything you're still tracking against the current listing: due dates that moved, notices withdrawn, notices quietly amended, new attachments posted. One wide search, diffed locally, so the API cost is fixed no matter how many opportunities you&nbsp;track.</p>
+        <p>It also spots notices where an agency has already chosen a winner, and buries them. It won't say so without two corroborating signals plus a named&nbsp;recipient.</p>
+      </div>
+      <div class="cards c2">
+        <div class="card"><div class="card-n">20</div><h3>Steps</h3><p>Ordered and resumable, each with a stable name so re-ordering can't break&nbsp;recovery.</p></div>
+        <div class="card"><div class="card-n">94</div><h3>Nights&nbsp;run</h3><p>Consecutive and unattended at the reference installation.</p></div>
+        <div class="card"><div class="card-n">7k</div><h3>Notices&nbsp;seen</h3><p>7,442 unique federal notices pulled and&nbsp;triaged.</p></div>
+        <div class="card"><div class="card-n">4</div><h3>API calls a&nbsp;night</h3><p>Out of a free tier of ten. A new firm starts on a same-day&nbsp;key.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 02 -->
+<section class="sec" style="padding-top:0">
+  <div class="wrap">
+    <div class="sec-head"><span class="eyebrow">02 · Comprehension</span><h2>Reading the&nbsp;solicitation</h2></div>
+    <div class="split rv">
+      <div class="stack">
+        <p>One command turns the whole package into structured data: mixed PDF, Word, Excel and text, detected by content rather than file extension. First it sorts the solicitation into one of five types, because a design job, a construction management job, and a general construction job you shouldn't be bidding all need different handling.</p>
+        <p>Then it parses every document in parallel, merges the results with amendments taking precedence over the base document, and extracts a structured record: scope, required roles, evaluation factors and their weights, set-aside and size standards, key dates, page limits, submission mechanics, the contracting officer.</p>
+      </div>
+      <div class="stack">
+        <p><strong>Then it stops and asks you.</strong> Before anything is built on that reading, it shows you its own understanding of the solicitation with the verbatim source sentence behind every line. Flag a line as wrong and it demands a written note. Add scope it&nbsp;missed.</p>
+        <p>No AI in that step, on purpose. An AI-rewritten summary would put back the exact risk the checkpoint exists to catch. Your sign-off is fingerprinted to that parse, so a re-analysis makes it go stale instead of quietly standing.</p>
+        <p>When the primary model fails, the run fails loudly. There's a working second provider, switched off by default, because a silent fallback turns a broken process into a quiet&nbsp;one.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 03 -->
+<section class="sec" style="padding-top:0">
+  <div class="wrap">
+    <div class="sec-head"><span class="eyebrow">03 · Judgement</span><h2>Deciding what to&nbsp;chase</h2>
+      <p class="lead">Three layers, and you can see all&nbsp;three.</p></div>
+    <div class="cards c3 rv">
+      <div class="card"><div class="card-n">1</div><h3>The&nbsp;read</h3><p>A base score out of 100 from the gap analysis: personnel coverage against required roles, past-performance match, location, certifications, scope alignment. It comes with a written rationale.</p></div>
+      <div class="card"><div class="card-n">2</div><h3>Your&nbsp;rules</h3><p>Deterministic adjustments you author in plain English and edit from the dashboard. <em>"Anything past the Mississippi: minus 15."</em> Every adjustment shows the rule that produced&nbsp;it.</p></div>
+      <div class="card"><div class="card-n">3</div><h3>What it&nbsp;learned</h3><p>A statistical model keeping separate posteriors per state, agency, fee band, set-aside and discipline, with credible intervals. It's exposed over an API so the score stays&nbsp;auditable.</p></div>
+    </div>
+    <div class="card mt-l rv">
+      <h3>The cold-start answer</h3>
+      <p style="margin-bottom:0">The learned layer carries zero weight until enough decisions exist to justify influence, and earns its way up from there. It can't learn the wrong thing from your first ten calls, because for your first ten calls it isn't&nbsp;voting.</p>
+    </div>
+  </div>
+</section>
+
+<!-- 04 -->
+<section class="sec" style="padding-top:0">
+  <div class="wrap">
+    <div class="sec-head"><span class="eyebrow">04 · Selection</span><h2>Choosing the projects and the&nbsp;people</h2></div>
+    <div class="split rv">
+      <div class="stack">
+        <p>This is the real work of a qualifications submission, and it usually gets done from memory the week of the&nbsp;deadline.</p>
+        <p>The engine flips the usual order. It ranks your whole portfolio against this solicitation first, and eligibility is annotated rather than filtered, so a project that fails a cost threshold is marked and still on screen instead of quietly dropped. Then the team comes out of the winning slate, because the strongest qualification a person can carry is that they did that discipline themselves on a project you're already submitting.</p>
+        <p>The whole ranking path is deterministic. No AI call, no variance: the same inputs give the same slate, and every pick carries a printed&nbsp;reason.</p>
+      </div>
+      <div class="card">
+        <h3>Measured against a&nbsp;human</h3>
+        <p>On a live solicitation I compared the recommender's slate against the team the firm's owner had built by hand. Nine of fifteen top picks matched exactly. In four of the six divergences the owner's pick was already sitting in the alternates, and all three subconsultant firms rolled up&nbsp;identically.</p>
+        <p style="margin-bottom:0">It also blocks two known-bad picks the old approach still surfaced, one of them a design that was never constructed reaching slot three of a submitted package.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 05 -->
+<section class="sec" style="padding-top:0">
+  <div class="wrap">
+    <div class="sec-head"><span class="eyebrow">05 · Production</span><h2>The&nbsp;package</h2>
+      <p class="lead">Twenty-nine generator modules and a set of base templates with every form field individually mapped. This is the part nothing else in the category&nbsp;does.</p></div>
+    <div class="cards c3 rv">
+      <div class="card"><h3>Résumés</h3><p>One per person, per role. Written from your records, then the facts your database owns are written back over anything generated. Any project the draft names that isn't in that person's real history gets&nbsp;flagged.</p></div>
+      <div class="card"><h3>Project&nbsp;sheets</h3><p>Each chosen project rendered to the form's layout, with a constraint on relevance: only a real match may claim direct relevance, not a project that happens to share a&nbsp;discipline.</p></div>
+      <div class="card"><h3>The&nbsp;matrix</h3><p>Twenty people by ten projects is two hundred cells, and it's the section firms most often get wrong by hand. Built from relational joins with no AI at&nbsp;all.</p></div>
+      <div class="card"><h3>The&nbsp;narrative</h3><p>Eight to fifteen pages, reordered to mirror the agency's published evaluation factors, with more page budget for higher-weighted ones. A second pass checks every scored factor was&nbsp;answered.</p></div>
+      <div class="card"><h3>Partner&nbsp;forms</h3><p>A qualifications form for every teaming firm, prime included. One live package carried ten. Chasing partners two days before a deadline is a pain nothing else&nbsp;touches.</p></div>
+      <div class="card"><h3>Assembly</h3><p>Cover, cover letter, dot-leader table of contents, PDF bookmarks, tab dividers, page footers. One real package on record: 61 pages,&nbsp;20MB.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- 06 -->
+<section class="wrap">
+  <div class="block rv">
+    <h2>What it refuses to&nbsp;do</h2>
+    <p class="lead">On a document that binds your firm to the federal government, the guardrails are the&nbsp;product.</p>
+    <div class="block-grid">
+      <div><h3>It won't invent a fact only you&nbsp;know</h3><p>Availability percentages are never generated. Missing facts become visible placeholders, and a do-not-submit file blocks the package until a human resolves every one. On a real package that gate held back 62&nbsp;blanks.</p></div>
+      <div><h3>The AI can't write to your&nbsp;database</h3><p>Extraction agents run read-only. Every write is hand-written, parameterised code. AI-drafted corrections pass a static validator, then a dry run, then a human approval. The chat editor's total write permission is two&nbsp;fields.</p></div>
+      <div><h3>It won't reassign who did a&nbsp;project</h3><p>A partner's uploaded project sheet that fuzzy-matches a project attributed to a different firm goes to review with zero writes. A partner's fee can never land in your own design-fee column.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- 07 -->
+<section class="sec">
+  <div class="wrap">
+    <div class="sec-head center"><span class="eyebrow">Constraints</span><h2>What you would be buying&nbsp;into</h2>
+      <p class="lead">Every system has edges. Better you hear these from me on a webpage than discover them in month&nbsp;two.</p></div>
+    <div class="cards c3 rv">
+      <div class="card"><h3>A per-firm install, not cloud&nbsp;software</h3><p>It runs on your machine. No user accounts or role permissions, and no multi-tenancy, because it was built for one firm inside its own building. That's good for data control, and wrong if you want a hosted product ten people log&nbsp;into.</p></div>
+      <div class="card"><h3>Windows-first today</h3><p>Document conversion, service management and default output paths assume Windows. Every entry point has a POSIX sibling, but a Mac or Linux shop is a scoped engineering item.</p></div>
+      <div class="card"><h3>It produces the federal qualifications package</h3><p>That covers any firm pursuing federal design work, and the analysis half transfers to construction management. It does not write general commercial RFP&nbsp;responses.</p></div>
+      <div class="card"><h3>Output quality follows your&nbsp;record</h3><p>It's built to say <em>I don't know</em> rather than guess. A thin database gives you a package with visible blanks. That's correct behaviour, and it's why the archive work isn't&nbsp;optional.</p></div>
+      <div class="card"><h3>Heavy concurrent editing is&nbsp;unproven</h3><p>There's real production hardening in there: resumable uploads, concurrency guards, per-conversation locks. But it's been run by one firm with one primary user, not a ten-person proposal team all editing at&nbsp;once.</p></div>
+      <div class="card"><h3>No undo on the chat&nbsp;editor</h3><p>The safety model is verify-before-assert, a two-field write allowlist, before/after display and a separate confirmation. It is not a version history. To reverse a team swap, you run the opposite&nbsp;swap.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- 08 -->
+<section class="sec" style="padding-top:0">
+  <div class="wrap">
+    <div class="sec-head"><span class="eyebrow">Provenance</span><h2>How it was&nbsp;built</h2></div>
+    <div class="split rv">
+      <div class="stack">
+        <p>This matters more than it usually would, because you're buying a system you'll depend on and there's no vendor logo behind it to borrow trust from. The record is&nbsp;below.</p>
+        <p>Every change went through a written plan before any code got touched, and 136 of those plans are completed and on file. Bigger changes were reviewed in parallel by a panel of specialised reviewers covering database safety, front-end and API consistency, pipeline integration, security and architecture. Each one returned approve, concern or&nbsp;block.</p>
+        <p>The architecture document is a machine-enforced contract rather than a README. Hooks refuse to let a plan close or a commit push if the documentation has drifted from the&nbsp;code.</p>
+      </div>
+      <div class="cards c2">
+        <div class="card"><div class="card-n">6k</div><h3>5,997&nbsp;tests</h3><p>Automated checks guarding behaviour.</p></div>
+        <div class="card"><div class="card-n">136</div><h3>Completed&nbsp;plans</h3><p>Every change designed and&nbsp;documented.</p></div>
+        <div class="card"><div class="card-n">29</div><h3>Generator modules</h3><p>Producing the package sections.</p></div>
+        <div class="card"><div class="card-n">0</div><h3>Third-party scripts</h3><p>No framework and no bundler, so nothing to&nbsp;patch.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<section class="wrap">
+  <div class="cta-band rv">
+    <h2>Bring the hard&nbsp;questions.</h2>
+    <p class="lead">If something above sounded too good, ask about it directly. I'd rather lose the deal on a call than oversell it into a&nbsp;build.</p>
+    <div class="hero-cta">
+      <a class="btn btn-primary btn-lg" href="contact.html">Request a call</a>
+      <a class="btn btn-ghost btn-lg" href="index.html">Back to the overview</a>
+    </div>
+  </div>
+</section>
+
+<footer class="foot">
+  <div class="wrap">
+    <div class="foot-in">
+      <div class="foot-brand">
+        <a class="brand" href="index.html">
+          <svg class="brand-logo" viewBox="0 0 953.78 195.8" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="VAGLO"><polygon fill="#1b2330" points="201.93 136.65 100.77 195.8 .04 136.74 .12 108.13 100.73 167.34 201.51 108.09 201.93 136.65"/><polygon fill="#1b2330" points="201.87 82.44 100.62 142.43 .05 82.67 .21 53.9 100.62 114.06 201.51 53.98 201.87 82.44"/><polygon fill="#1b2330" points="201.86 28.4 100.87 89.06 77.1 75 201.52 0 201.86 28.4"/><polygon fill="#295541" points="57.5 62.54 0 28.63 .05 .15 80.77 48.51 57.5 62.54"/><path fill="#1b2330" d="M651.87,99.23l-32.19-.09.1-18.48,51.39-.06.04,65-61.21-.25c-16.93-.07-31.34-9.45-41-22.79-11.8-18.76-13.89-41.38-5.11-61.82,8.09-18.83,25.42-31.26,46.28-32.56l60.82-.57.05,18.57-56.99.18c-14.94.05-27.51,9.96-32.81,23.8-4.68,12.25-4.22,25.75,1.76,37.44,5.76,11.25,16.98,19.31,29.74,19.36l39.13.14-.02-27.86Z"/><path fill="#1b2330" d="M950.45,107.59c-10.31,31.65-42.68,44.13-74.12,37.44-13.97-2.97-26.37-10.74-34.27-22.79-20.3-30.95-10.81-76.69,23.61-90.58,18.34-7.4,39.53-7.16,57.36,1.56,26.94,13.17,36.47,46.55,27.41,74.37ZM934.58,86.64c0-23.19-18.8-41.98-41.98-41.98s-41.98,18.8-41.98,41.98,18.8,41.98,41.98,41.98,41.98-18.8,41.98-41.98Z"/><polygon fill="#1b2330" points="382.27 28.22 404.38 27.97 342.89 146.67 281.6 28.26 303.48 27.74 342.92 105.35 382.27 28.22"/><polygon fill="#1b2330" points="473.05 68.45 433.45 145.55 411.45 145.5 472.94 27.06 534.43 145.2 512.78 145.62 473.05 68.45"/><polygon fill="#1b2330" points="810.64 127.04 811.06 145.59 717.58 145.71 717.59 27.85 737.52 27.93 737.53 127.04 810.64 127.04"/></svg>
+        </a>
+        <p>Private RFP systems for firms that bid federal&nbsp;work.</p>
+      </div>
+      <div class="foot-col">
+        <span class="kicker">Site</span>
+        <a href="index.html#how">How it works</a>
+        <a href="index.html#yours">What it produces</a>
+        <a href="system.html">Details</a>
+      </div>
+      <div class="foot-col">
+        <span class="kicker">Start</span>
+        <a href="contact.html">Request a call</a>
+        <a href="mailto:hello@vaglo.example">Email</a>
+      </div>
+    </div>
+    <div class="foot-bar"><span>VAGLO</span><span>Built for federal contractors</span></div>
+  </div>
+</footer>
+
+
+<!-- ───────────────────────────── ASSISTANT ───────────────────────────── -->
+<button class="chat-fab" id="chatFab" type="button" aria-label="Ask a question" aria-expanded="false">
+  <svg class="ic-open" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+  <svg class="ic-close" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M18 6 6 18M6 6l12 12"/></svg>
+</button>
+
+<div class="chat-panel" id="chatPanel" role="dialog" aria-label="Ask about VAGLO" aria-modal="false">
+  <div class="chat-head">
+    <div class="chat-head-top">
+      <span class="chat-brand">
+        <svg class="chat-logo" viewBox="0 0 953.78 195.8" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="VAGLO"><path fill="#1b2330" d="M651.87,99.23l-32.19-.09.1-18.48,51.39-.06.04,65-61.21-.25c-16.93-.07-31.34-9.45-41-22.79-11.8-18.76-13.89-41.38-5.11-61.82,8.09-18.83,25.42-31.26,46.28-32.56l60.82-.57.05,18.57-56.99.18c-14.94.05-27.51,9.96-32.81,23.8-4.68,12.25-4.22,25.75,1.76,37.44,5.76,11.25,16.98,19.31,29.74,19.36l39.13.14-.02-27.86Z"/><path fill="#1b2330" d="M950.45,107.59c-10.31,31.65-42.68,44.13-74.12,37.44-13.97-2.97-26.37-10.74-34.27-22.79-20.3-30.95-10.81-76.69,23.61-90.58,18.34-7.4,39.53-7.16,57.36,1.56,26.94,13.17,36.47,46.55,27.41,74.37ZM934.58,86.64c0-23.19-18.8-41.98-41.98-41.98s-41.98,18.8-41.98,41.98,18.8,41.98,41.98,41.98,41.98-18.8,41.98-41.98Z"/><polygon fill="#1b2330" points="382.27 28.22 404.38 27.97 342.89 146.67 281.6 28.26 303.48 27.74 342.92 105.35 382.27 28.22"/><polygon fill="#1b2330" points="473.05 68.45 433.45 145.55 411.45 145.5 472.94 27.06 534.43 145.2 512.78 145.62 473.05 68.45"/><polygon fill="#1b2330" points="810.64 127.04 811.06 145.59 717.58 145.71 717.59 27.85 737.52 27.93 737.53 127.04 810.64 127.04"/><polygon fill="#1b2330" points="201.93 136.65 100.77 195.8 .04 136.74 .12 108.13 100.73 167.34 201.51 108.09 201.93 136.65"/><polygon fill="#1b2330" points="201.87 82.44 100.62 142.43 .05 82.67 .21 53.9 100.62 114.06 201.51 53.98 201.87 82.44"/><polygon fill="#1b2330" points="201.86 28.4 100.87 89.06 77.1 75 201.52 0 201.86 28.4"/><polygon fill="#295541" points="57.5 62.54 0 28.63 .05 .15 80.77 48.51 57.5 62.54"/></svg>
+      </span>
+      <button class="chat-x" id="chatClose" type="button" aria-label="Close">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M18 6 6 18M6 6l12 12"/></svg>
+      </button>
+    </div>
+    <h3>Hi there<br>Ask me anything about&nbsp;VAGLO.</h3>
+  </div>
+
+  <div class="chat-log" id="chatLog" aria-live="polite"></div>
+
+  <div class="chat-chips" id="chatChips">
+    <button type="button">What does it cost?</button>
+    <button type="button">Where does my data live?</button>
+    <button type="button">Does the AI make things up?</button>
+    <button type="button">How long does setup take?</button>
+    <button type="button">Is it a fit for my firm?</button>
+    <button type="button">What does it actually produce?</button>
+  </div>
+
+  <form class="chat-input" id="chatForm">
+    <input type="text" id="chatText" placeholder="Type your question" autocomplete="off" aria-label="Your question">
+    <button type="submit" aria-label="Send">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h13M13 6l6 6-6 6"/></svg>
+    </button>
+  </form>
+</div>
+
+<script src="app.js?v=1787501874"></script>
+</body>
+</html>
