@@ -379,6 +379,7 @@ em { font-style: normal; color: var(--brand); }
 .cta-band { background: var(--ink-block); border-radius: var(--r-lg); padding: clamp(2.5rem, 7vw, 5.5rem) clamp(1.5rem, 5vw, 3.5rem); text-align: center; }
 .cta-band h2 { color: #fff; max-width: 17ch; margin-inline: auto; }
 .cta-band .lead { color: rgba(242,240,237,.7); max-width: 48ch; margin: 1.125rem auto 0; }
+.cta-band p { color: rgba(242,240,237,.72); }
 .cta-band .hero-cta { margin-top: 1.875rem; }
 .cta-band .btn-ghost { color: var(--on-dark); background: rgba(255,255,255,.10); border-color: transparent; box-shadow: none; }
 .cta-band .btn-ghost:hover { background: rgba(255,255,255,.19); box-shadow: none; }
