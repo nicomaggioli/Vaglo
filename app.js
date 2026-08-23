@@ -161,7 +161,7 @@
 
   var KB = [
     { k: ['cost','price','pricing','how much','expensive','budget','quote','afford'],
-      a: 'There is no price list, because there is no single thing being sold. What a build costs comes down to how much history there is to load and how much of your process you want it to carry. You get a number in writing after the call, before you commit to anything.' },
+      a: 'Two parts. A one-time setup that scales with how much history has to be loaded into the database, and a flat monthly covering the nightly watch, updates and a set number of support hours. The setup is the half that varies, because a firm with twenty projects is not the same job as one with two hundred. <a href="pricing.html">How pricing works</a> explains it, and you get your actual number in writing after the call, before you commit to anything.' },
     { k: ['data','cloud','secure','security','privacy','server','on-prem','premise','where does'],
       a: 'On your machine. Not in anyone’s cloud. There is no shared database and nothing leaves your building. That is also an honest limit: it is a per-firm install, so there are no user accounts or permissions. If you need a hosted product ten people log into, this is not that.' },
     { k: ['make things up','hallucinat','invent','made up','accurate','trust','wrong','fabricat'],

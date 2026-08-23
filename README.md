@@ -52,7 +52,11 @@ once more with fresh eyes before launch and confirm you're comfortable publishin
 
 The figures used: 94 nights · 7,442 notices · 139 opportunities · 327 decisions · 61-page
 package · 727 résumés · 586 person-project links · 5,997 tests · 136 completed plans ·
-29 generator modules · 4 review passes.
+29 generator modules · 4 review passes · 20+ hours saved per SF330 package.
+
+The "20+ hours saved" figure came from the first installation's own account of what an
+SF330 used to take. It is the one number on the site sourced from a person rather than
+from disk, so confirm you are happy standing behind it.
 
 **5. Make an OG image.** There's no `og:image` yet, so links shared in email or Slack will
 preview without a picture. A 1200×630 PNG of the hero — bone ground, green wordmark —

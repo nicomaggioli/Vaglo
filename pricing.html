@@ -3,8 +3,8 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Request a call · VAGLO</title>
-<meta name="description" content="Tell me how your firm runs a pursuit today. No deck, no demo script, no obligation.">
+<title>How pricing works · VAGLO</title>
+<meta name="description" content="A one-time setup that scales with your archive, and a flat monthly. Why the number depends on what is in your records.">
 <meta name="theme-color" content="#f2f0ed">
 <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
 <link rel="alternate icon" href="assets/mark.svg" type="image/svg+xml">
@@ -27,136 +27,82 @@
   </div>
 </nav>
 
-<main id="main">
+<main>
+
+<header class="hero">
+  <div class="wrap">
+    <span class="eyebrow">HOW PRICING WORKS</span>
+    <h1>Two numbers, and one of them<br>depends on your&nbsp;archive.</h1>
+    <p class="lead">There is no price list here, and it is not a negotiating tactic. Half the cost is
+      determined by something neither of us can see until we look at&nbsp;it.</p>
+  </div>
+</header>
+
 <section class="sec">
   <div class="wrap">
-    <div class="split">
-
-      <div class="rv stack">
-        <span class="eyebrow">Discovery</span>
-        <h2 style="max-width:15ch">Tell me how your shop runs a&nbsp;pursuit.</h2>
-        <p class="lead">Start to finish. Who spots the opportunity, who decides, who assembles it, what breaks, and what you'd do with a weekend if you got one&nbsp;back.</p>
-        <p>That conversation <i>is</i> the first step. No deck, no demo script, and you're not on the hook either way. If the honest answer is that you don't need this yet, I'll say so instead of selling you&nbsp;something.</p>
-
-        <div class="steps" style="margin-top:10px">
-          <article class="step" style="padding:20px 22px">
-            <div class="step-n">1</div>
-            <div><h3 style="font-size:1.05rem">A 30 to 45 minute&nbsp;call</h3>
-            <p>Your process, your agencies, your archive, your bottleneck. Mostly me asking questions.</p></div>
-          </article>
-          <article class="step" style="padding:20px 22px">
-            <div class="step-n">2</div>
-            <div><h3 style="font-size:1.05rem">A written read-back</h3>
-            <p>Your pursuit process as I understood it, and where the hours go. Useful to you whether or not you hire&nbsp;me.</p></div>
-          </article>
-          <article class="step" style="padding:20px 22px">
-            <div class="step-n">3</div>
-            <div><h3 style="font-size:1.05rem">Scope and price, in&nbsp;writing</h3>
-            <p>Only if there's a fit. I won't price anything before I understand what you need&nbsp;built.</p></div>
-          </article>
-        </div>
-
-        <div class="card">
-          <h3>Before you fill anything&nbsp;in</h3>
-          <p>This is a build. You don't subscribe to it. It works best for firms that already win federal
-          qualifications-based work and want to chase more of it without hiring a proposal department.</p>
-          <p style="margin-bottom:0">If you're bidding commercial RFPs, or you don't have a project archive yet, it's probably not the right time. Better you read that here than hear it on a&nbsp;call.</p>
-        </div>
+    <div class="cards c2 rv">
+      <div class="card">
+        <h3>A one-time setup</h3>
+        <p>This is the real work, and it is the half that varies. Your projects, your people, their
+          licences and certifications, your past performance ratings and who did what on which job
+          all have to come out of old proposals and into a database that is actually correct.</p>
+        <p>A firm with twenty projects and eight people is not the same job as one with two hundred
+          projects and sixty. That is the whole reason this number cannot be printed on a&nbsp;page.</p>
       </div>
-
-      <div class="rv">
-        <form class="form" id="callform" data-email="hello@vaglo.example">
-          <div class="field-row">
-            <div class="field">
-              <label for="name">Your name <i>*</i></label>
-              <input id="name" name="name" type="text" required autocomplete="name">
-            </div>
-            <div class="field">
-              <label for="role">Your role</label>
-              <input id="role" name="role" type="text" autocomplete="organization-title" placeholder="Principal, BD, proposal manager…">
-            </div>
-          </div>
-
-          <div class="field-row">
-            <div class="field">
-              <label for="firm">Firm <i>*</i></label>
-              <input id="firm" name="firm" type="text" required autocomplete="organization">
-            </div>
-            <div class="field">
-              <label for="email">Email <i>*</i></label>
-              <input id="email" name="email" type="email" required autocomplete="email">
-            </div>
-          </div>
-
-          <div class="field-row">
-            <div class="field">
-              <label for="size">Headcount</label>
-              <select id="size" name="headcount">
-                <option value="">Select…</option>
-                <option>1 to 5</option><option>6 to 20</option><option>21 to 50</option>
-                <option>51 to 150</option><option>150+</option>
-              </select>
-            </div>
-            <div class="field">
-              <label for="setaside">Set-aside status</label>
-              <select id="setaside" name="set_aside">
-                <option value="">Select…</option>
-                <option>SDVOSB</option><option>VOSB</option><option>8(a)</option>
-                <option>WOSB / EDWOSB</option><option>HUBZone</option>
-                <option>Small business, no set-aside</option><option>Other / unrestricted</option>
-              </select>
-            </div>
-          </div>
-
-          <div class="field">
-            <label for="disc">What kind of work do you do?</label>
-            <input id="disc" name="discipline" type="text" placeholder="Mechanical / HVAC, civil, structural, CM, commissioning…">
-          </div>
-
-          <div class="field">
-            <label for="agencies">Who do you bid to?</label>
-            <input id="agencies" name="agencies" type="text" placeholder="VA, USACE, NAVFAC, GSA, state, private healthcare…">
-          </div>
-
-          <div class="field">
-            <label>What's actually painful right now?</label>
-            <div class="checks">
-              <label class="check"><input type="checkbox" name="pain" value="Never reading enough notices"> We never get through the notices, so good work goes by unread</label>
-              <label class="check"><input type="checkbox" name="pain" value="Package assembly eats the week"> Assembling the package eats the week before every deadline</label>
-              <label class="check"><input type="checkbox" name="pain" value="Knowledge in one head"> All the knowledge about who and what to submit lives in one head</label>
-              <label class="check"><input type="checkbox" name="pain" value="Archive is dead PDFs"> Years of project history sitting in a shared drive, unusable</label>
-              <label class="check"><input type="checkbox" name="pain" value="Chasing partner forms"> Chasing teaming partners for current qualification forms</label>
-              <label class="check"><input type="checkbox" name="pain" value="No review before submit"> Nobody reviews the package properly before it goes out</label>
-              <label class="check"><input type="checkbox" name="pain" value="Losing and not knowing why"> We lose and can't tell why</label>
-            </div>
-          </div>
-
-          <div class="field">
-            <label for="process">How does a pursuit run today? <i>*</i></label>
-            <textarea id="process" name="process" required placeholder="Rough is fine. Who spots it, who decides, who builds the package, what tools, roughly how long it takes, and where it goes wrong."></textarea>
-            <p class="field-hint">This is the part I read&nbsp;first.</p>
-          </div>
-
-          <div class="field">
-            <label for="archive">Roughly what's in your archive?</label>
-            <input id="archive" name="archive" type="text" placeholder="e.g. ~80 submitted proposals, 20 years, mostly PDF">
-          </div>
-
-          <button class="btn btn-primary btn-lg" type="submit">Send it</button>
-
-          <p class="form-note" id="formok" hidden>
-            <strong>Your mail client should have opened</strong> with everything filled in, so just hit
-            send. If it didn't, send the same details to
-            <a href="mailto:hello@vaglo.example">hello@vaglo.example</a>.
-          </p>
-
-          <p class="form-note"><strong>What I do with this:</strong> read it, and reply to book a time. Your details don't go on a list and don't get sold, and I don't send newsletters. If we don't end up working together, I delete&nbsp;them.</p>
-        </form>
+      <div class="card">
+        <h3>A flat monthly</h3>
+        <p>The nightly watch on SAM.gov, the updates, and a set number of support hours every month.
+          Same figure every month regardless of how many pursuits you run through&nbsp;it.</p>
+        <p>Support past the included hours is billed hourly at a rate agreed up front. Most months
+          nobody gets near&nbsp;it.</p>
       </div>
-
     </div>
   </div>
 </section>
+
+<section class="sec bg-soft">
+  <div class="wrap">
+    <div class="sec-head center"><span class="eyebrow">Why the setup drives it</span><h2>Everything downstream inherits the&nbsp;database.</h2></div>
+    <div class="stack rv" style="max-width:44rem;margin-inline:auto">
+      <p>The first installation taught this the expensive way. A project sheet came out with the
+        wrong city on it. Not because the system invented one, but because the wrong one had been
+        entered years earlier and nobody had ever had a reason to look. A r&eacute;sum&eacute; went out short a
+        licence that the engineer had held the whole&nbsp;time.</p>
+      <p>Neither of those is a software problem, and no amount of AI fixes them. Every r&eacute;sum&eacute;,
+        every project sheet, every matrix and every narrative paragraph is generated from that
+        record. If the record is wrong, the package is wrong, confidently and in&nbsp;triplicate.</p>
+      <p>So the setup is not data entry. It is reading your archive, reconciling what disagrees with
+        itself, and asking you about the parts only you can settle. Get it right once and it stays
+        right. That is what you are paying for, and it is why a bigger archive costs&nbsp;more.</p>
+    </div>
+  </div>
+</section>
+
+<section class="sec">
+  <div class="wrap">
+    <div class="sec-head center"><span class="eyebrow">What to weigh it against</span><h2>The comparison is not other&nbsp;software.</h2></div>
+    <div class="cards c3 rv">
+      <div class="card"><h3>A marketing hire</h3><p>The usual answer to not having enough proposal capacity is a salary, plus benefits, plus the months it takes them to learn how you&nbsp;work.</p></div>
+      <div class="card"><h3>The pursuits you skip</h3><p>Most small firms pass on work they could win because nobody had the days. That cost never shows up on a&nbsp;ledger.</p></div>
+      <div class="card"><h3>The ones thrown out</h3><p>A package rejected for a missing signature cost you the entire effort, and you do not find out until after the&nbsp;deadline.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="sec bg-soft">
+  <div class="wrap">
+    <div class="sec-head center"><span class="eyebrow">Getting a number</span><h2>You get it in writing, before you commit to&nbsp;anything.</h2></div>
+    <div class="steps rv">
+      <article class="step"><div class="step-n">1</div><div><h3>We&nbsp;talk</h3><p>How your shop runs a pursuit today, what you bid on, and what is in your archive. Thirty minutes, no&nbsp;deck.</p></div></article>
+      <article class="step"><div class="step-n">2</div><div><h3>You see it&nbsp;running</h3><p>A walk through a working install, on real solicitations, so you are not buying a&nbsp;description.</p></div></article>
+      <article class="step"><div class="step-n">3</div><div><h3>You get the&nbsp;number</h3><p>Setup and monthly, in writing, scoped to what we actually found in your archive. Then you decide.</p></div></article>
+    </div>
+    <div class="center" style="margin-top:2.5rem">
+      <a class="btn btn-primary btn-lg" href="contact.html">Request a call</a>
+    </div>
+  </div>
+</section>
+
 </main>
 
 <footer class="foot">

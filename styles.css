@@ -100,6 +100,7 @@ em { font-style: normal; color: var(--brand); }
 .kicker { font-size: .82rem; font-weight: 600; letter-spacing: .06em; text-transform: uppercase; color: var(--ink-dim); }
 
 .sec { padding: clamp(4rem, 8vw, 7rem) 0; }
+.sec.bg-soft { background: var(--bg-soft); }
 .sec-head { margin-bottom: clamp(2.25rem, 4.5vw, 3.75rem); }
 .sec-head.center { max-width: 47.5rem; margin-inline: auto; }
 .sec-head .eyebrow { margin-bottom: 1.25rem; }
