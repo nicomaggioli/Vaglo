@@ -181,7 +181,7 @@
     { k: ['who','you','founder','team','company','behind','support'],
       a: 'A small shop, and you will be talking to the person who builds it. The system was built for a working federal engineering firm and used on live pursuits for months before it was offered to anyone else.' },
     { k: ['windows','mac','linux','platform','install','software','maintain'],
-      a: 'Nothing. There is no software to install, no tool to learn and nothing to maintain on your side. Whatever your office runs on makes no difference; you get a brief in your inbox and a draft package when you say go.' },
+      a: 'Nothing to install and nothing to maintain: we host it, sweep SAM.gov every morning and keep it current. Whatever your office runs on makes no difference. One person on your team learns the dashboard, and we train them; they assemble the package there when you decide to pursue.' },
     { k: ['cm','construction management','civil','structural','environmental','discipline','not engineering'],
       a: 'The discovery and analysis half transfers to construction management and adjacent disciplines. What changes is the vocabulary and the deliverable format, which is authoring work rather than a rewrite. It produces the federal qualifications package specifically, so it does not write general commercial RFP responses.' },
     { k: ['contract','cancel','stop','lock','leave','own'],
