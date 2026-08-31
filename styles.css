@@ -496,6 +496,49 @@ em { font-style: normal; color: var(--brand); }
   .t-coarse { display: inline; }
 }
 
+/* ---------- guided tour ---------- */
+.demo-btns { display: flex; flex-wrap: wrap; gap: 0.625rem; justify-content: center; }
+@media (max-width: 460px) { .demo-btns { flex-direction: column; align-items: stretch; } }
+
+.tour-replay {
+  position: absolute; top: 0.5rem; right: 0.75rem; z-index: 6;
+  font: 500 .78rem/1 var(--font); color: var(--brand-deep);
+  background: var(--brand-wash); border: 1px solid var(--brand-line);
+  border-radius: var(--pill); padding: .5em 1em; cursor: pointer;
+}
+.tour-replay:hover { background: var(--mint-tint); }
+
+/* the moving highlight -- page coordinates, so it tracks on scroll without listeners */
+.tour-ring {
+  position: absolute; z-index: 60; pointer-events: none; border-radius: 0.5rem;
+  box-shadow: 0 0 0 3px var(--mint), 0 0 0 9999px rgba(12, 12, 23, .55);
+  transition: top .28s ease, left .28s ease, width .28s ease, height .28s ease;
+}
+.tour-pop {
+  position: absolute; z-index: 61; width: min(20rem, calc(100vw - 2rem));
+  background: var(--card); border-radius: var(--r-lg); padding: 1.125rem 1.25rem 1rem;
+  box-shadow: 0 1.5rem 3.5rem rgba(12, 12, 23, .3);
+  transition: top .28s ease, left .28s ease;
+}
+.tour-pop h4 { font-size: 1rem; font-weight: 600; letter-spacing: -.015em; margin-bottom: 0.4375rem; color: var(--ink); }
+.tour-pop p { font-size: .92rem; line-height: 1.5; color: var(--ink-mid); margin: 0 0 1rem; }
+.tour-foot { display: flex; align-items: center; gap: 0.5rem; }
+.tour-step { font-size: .78rem; color: var(--ink-dim); margin-right: auto; font-variant-numeric: tabular-nums; }
+.tour-btn {
+  font: 500 .85rem/1 var(--font); border-radius: var(--pill); padding: .6em 1.1em;
+  cursor: pointer; border: 1px solid var(--line); background: var(--card); color: var(--ink);
+}
+.tour-btn:hover { background: var(--bg-soft); }
+.tour-btn.primary { background: var(--brand); border-color: var(--brand); color: #fff; }
+.tour-btn.primary:hover { background: var(--brand-deep); }
+.tour-skip {
+  background: none; border: 0; padding: .6em .25em; cursor: pointer;
+  font: 400 .82rem/1 var(--font); color: var(--ink-dim); text-decoration: underline;
+  text-underline-offset: 3px;
+}
+.tour-skip:hover { color: var(--ink); }
+@media (prefers-reduced-motion: reduce) { .tour-ring, .tour-pop { transition: none; } }
+
 /* ---------- assistant ---------- */
 .chat-fab {
   position: fixed; right: 1.375rem; bottom: 1.375rem; z-index: 80;

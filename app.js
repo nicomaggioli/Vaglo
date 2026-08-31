@@ -37,6 +37,172 @@
     startBtn.addEventListener('click', function () { veil.classList.add('gone'); });
   }
 
+  /* ---------- guided tour of the demo dashboard ---------- */
+  // Each step teaches what the product does, not just where a control is.
+  var TOUR = [
+    { view: 'pipeline', sel: '.mock-board',
+      title: 'Every pursuit, in one place',
+      body: 'Opportunities move left to right, Analyzed through Accepted. Nothing sits in an inbox waiting for somebody to notice it.' },
+    { view: 'pipeline', sel: '.mock-card .mc-fit',
+      title: 'The fit score',
+      body: 'Each one is read against your own project history and scored out of a hundred. High means it is worth your week. Middling means read it before you commit one.' },
+    { view: 'pipeline', sel: '.mock-card .mc-hr',
+      title: 'What it will cost you',
+      body: 'An estimate of the hours the package will take, so you can weigh the effort against the fee before you say yes.' },
+    { view: 'pipeline', sel: '.mock-card .mc-pf',
+      title: 'Whether it is safe to send',
+      body: 'Ready means every required field is filled. Not Ready means something is missing, and the package stays shut until a person resolves it.' },
+    { view: 'documents', sel: '.mock-view[data-view="documents"] .mock-table',
+      title: 'Drop anything in',
+      body: 'Files get sorted by what is inside them rather than by their filename, then routed. An amendment that moves a deadline is caught here.' },
+    { view: 'personnel', sel: '.mock-view[data-view="personnel"] .mock-table',
+      title: 'Your firm, written down',
+      body: 'Who holds which registration, licensed in which states, and what they have actually worked on. This is what makes staffing a pursuit arithmetic instead of memory.' },
+    { view: 'scoring', sel: '.mock-view[data-view="scoring"] .mock-rules',
+      title: 'It learns your taste',
+      body: 'Rules you write yourself, alongside rules it worked out from your own accept and decline history. Every score shows which of them moved it.' }
+  ];
+
+  var replayBtn = document.getElementById('tourReplay');
+  var tourBtn = document.getElementById('demoTour');
+  var ring = null, pop = null, at = 0, live = false;
+
+  function scrollTop() {
+    return window.scrollY || document.scrollingElement.scrollTop || document.body.scrollTop || 0;
+  }
+  function scrollLeft() {
+    return window.scrollX || document.scrollingElement.scrollLeft || document.body.scrollLeft || 0;
+  }
+  function scrollTo(y) {
+    var el = document.scrollingElement || document.documentElement;
+    if (el.scrollTo) el.scrollTo({ top: y, behavior: prefersReduced() ? 'auto' : 'smooth' });
+    else el.scrollTop = y;
+  }
+
+  function place(el) {
+    var r = el.getBoundingClientRect();
+    var pad = 6;
+    var top = r.top + scrollTop() - pad, left = r.left + scrollLeft() - pad;
+    ring.style.top = top + 'px'; ring.style.left = left + 'px';
+    ring.style.width = (r.width + pad * 2) + 'px'; ring.style.height = (r.height + pad * 2) + 'px';
+
+    // If the target could not be brought on screen, a spotlight whose hole is off
+    // screen just dims the page for no reason. Drop the dimming instead.
+    var offscreen = r.bottom < 0 || r.top > window.innerHeight;
+    ring.style.opacity = offscreen ? '0' : '1';
+
+    // prefer below the target; flip above when it would leave the viewport
+    var pw = pop.offsetWidth, ph = pop.offsetHeight;
+    var below = r.bottom + 14, above = r.top - ph - 14;
+    var y = (below + ph < window.innerHeight || above < 8) ? below : above;
+    var x = Math.min(Math.max(r.left + r.width / 2 - pw / 2, 12), window.innerWidth - pw - 12);
+    pop.style.top = (y + scrollTop()) + 'px';
+    pop.style.left = (x + scrollLeft()) + 'px';
+  }
+
+  function render() {
+    var step = TOUR[at];
+    var nav = mockRootEl && mockRootEl.querySelector('.mock-navitem[data-view="' + step.view + '"]');
+    if (nav && !nav.classList.contains('on')) nav.click();
+
+    var target = document.querySelector(step.sel);
+    if (!target) { at + 1 < TOUR.length ? (at++, render()) : end(); return; }
+
+    pop.innerHTML = '';
+    var h = document.createElement('h4'); h.textContent = step.title;
+    var b = document.createElement('p'); b.textContent = step.body;
+    var foot = document.createElement('div'); foot.className = 'tour-foot';
+    var count = document.createElement('span'); count.className = 'tour-step';
+    count.textContent = (at + 1) + ' of ' + TOUR.length;
+    var skip = document.createElement('button'); skip.type = 'button'; skip.className = 'tour-skip';
+    skip.textContent = 'Skip'; skip.addEventListener('click', end);
+    foot.appendChild(count); foot.appendChild(skip);
+    if (at > 0) {
+      var back = document.createElement('button'); back.type = 'button'; back.className = 'tour-btn';
+      back.textContent = 'Back'; back.addEventListener('click', function () { at--; render(); });
+      foot.appendChild(back);
+    }
+    var next = document.createElement('button'); next.type = 'button'; next.className = 'tour-btn primary';
+    next.textContent = at === TOUR.length - 1 ? 'Done' : 'Next';
+    next.addEventListener('click', function () {
+      if (at === TOUR.length - 1) { end(); return; }
+      at++; render();
+    });
+    foot.appendChild(next);
+    pop.appendChild(h); pop.appendChild(b); pop.appendChild(foot);
+
+    var r = target.getBoundingClientRect();
+    if (r.top < 70 || r.bottom > window.innerHeight - 20) {
+      // scrollIntoView handles nested scroll containers, which a manual
+      // scrollTo on the document does not
+      try {
+        target.scrollIntoView({ block: 'center', inline: 'nearest',
+                                behavior: prefersReduced() ? 'auto' : 'smooth' });
+      } catch (e) { target.scrollIntoView(false); }
+      setTimeout(function () { place(target); }, prefersReduced() ? 0 : 400);
+    }
+    place(target);
+    next.focus();
+  }
+
+  function prefersReduced() {
+    return window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  }
+
+  function start() {
+    if (live || !mockRootEl) return;
+    // Ask whether the dashboard is actually on screen rather than inferring it from
+    // viewport width -- a hidden or zero-width pane reports as mobile and would
+    // otherwise silently refuse to start.
+    if (getComputedStyle(mockRootEl).display === 'none') return;
+    live = true; at = 0;
+    if (veil) veil.classList.add('gone');
+    ring = document.createElement('div'); ring.className = 'tour-ring';
+    pop = document.createElement('div'); pop.className = 'tour-pop';
+    pop.setAttribute('role', 'dialog'); pop.setAttribute('aria-label', 'Dashboard tour');
+    document.body.appendChild(ring); document.body.appendChild(pop);
+    document.addEventListener('keydown', onKey);
+    window.addEventListener('resize', onResize);
+    window.addEventListener('scroll', onResize, { passive: true });
+    document.addEventListener('scroll', onResize, { passive: true, capture: true });
+    if (replayBtn) replayBtn.hidden = true;
+    var frame = mockRootEl.closest('.frame');
+    if (frame) {
+      var fr = frame.getBoundingClientRect();
+      if (fr.top < 0 || fr.top > window.innerHeight * 0.4) {
+        try { frame.scrollIntoView({ block: 'start', behavior: prefersReduced() ? 'auto' : 'smooth' }); }
+        catch (e) { frame.scrollIntoView(); }
+      }
+    }
+    setTimeout(render, prefersReduced() ? 0 : 420);
+  }
+
+  function end() {
+    live = false;
+    document.removeEventListener('keydown', onKey);
+    window.removeEventListener('resize', onResize);
+    window.removeEventListener('scroll', onResize);
+    document.removeEventListener('scroll', onResize, true);
+    if (ring) { ring.remove(); ring = null; }
+    if (pop) { pop.remove(); pop = null; }
+    if (replayBtn) replayBtn.hidden = false;
+  }
+
+  function onKey(e) {
+    if (e.key === 'Escape') end();
+    else if (e.key === 'ArrowRight' && at < TOUR.length - 1) { at++; render(); }
+    else if (e.key === 'ArrowLeft' && at > 0) { at--; render(); }
+  }
+  function onResize() {
+    if (!live) return;
+    var t = document.querySelector(TOUR[at].sel);
+    if (t) place(t);
+  }
+
+  var mockRootEl = document.getElementById('mock');
+  if (tourBtn) tourBtn.addEventListener('click', start);
+  if (replayBtn) replayBtn.addEventListener('click', start);
+
   /* ---------- mock dashboard: view switching + drag/drop ---------- */
   var mockRoot = document.getElementById('mock');
   if (mockRoot) {

@@ -11,7 +11,7 @@
 <meta property="og:type" content="website">
 <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
 <link rel="alternate icon" href="assets/mark.svg" type="image/svg+xml">
-<link rel="stylesheet" href="styles.css?v=1787610787">
+<link rel="stylesheet" href="styles.css?v=1788193329">
 <noscript><style>.rv{opacity:1;transform:none}</style></noscript>
 </head>
 <body>
@@ -57,12 +57,16 @@
       <div class="demo-card">
         <h3>See how VAGLO works</h3>
         <p><span class="t-fine">Not a draft and not a screenshot. Click the sidebar, drag a card between stages, open any tab. All of it&nbsp;works.</span><span class="t-coarse">Not a draft and not a screenshot. Tap through the sidebar, open any tab, read any table. All of it&nbsp;works.</span></p>
-        <button class="btn btn-primary" type="button" id="demoStart">Start demo</button>
+        <div class="demo-btns">
+          <button class="btn btn-primary" type="button" id="demoTour">Show me around</button>
+          <button class="btn btn-ghost" type="button" id="demoStart">I&rsquo;ll explore myself</button>
+        </div>
       </div>
     </div>
     <p class="demo-small"><strong>The dashboard on this page is live.</strong>
       It needs a full screen to be worth clicking through, so it sits out on phones.
       Open this page on a laptop and you can work every tab of&nbsp;it.</p>
+    <button class="tour-replay" type="button" id="tourReplay" hidden>Replay the tour</button>
     <div class="mock" id="mock" aria-label="Interactive dashboard demo with placeholder data">
       <aside class="mock-side">
         <div class="mock-logo"><svg class="mock-logo-svg" viewBox="0 0 953.78 195.8" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="VAGLO"><path fill="#ffffff" d="M651.87,99.23l-32.19-.09.1-18.48,51.39-.06.04,65-61.21-.25c-16.93-.07-31.34-9.45-41-22.79-11.8-18.76-13.89-41.38-5.11-61.82,8.09-18.83,25.42-31.26,46.28-32.56l60.82-.57.05,18.57-56.99.18c-14.94.05-27.51,9.96-32.81,23.8-4.68,12.25-4.22,25.75,1.76,37.44,5.76,11.25,16.98,19.31,29.74,19.36l39.13.14-.02-27.86Z"/><path fill="#ffffff" d="M950.45,107.59c-10.31,31.65-42.68,44.13-74.12,37.44-13.97-2.97-26.37-10.74-34.27-22.79-20.3-30.95-10.81-76.69,23.61-90.58,18.34-7.4,39.53-7.16,57.36,1.56,26.94,13.17,36.47,46.55,27.41,74.37ZM934.58,86.64c0-23.19-18.8-41.98-41.98-41.98s-41.98,18.8-41.98,41.98,18.8,41.98,41.98,41.98,41.98-18.8,41.98-41.98Z"/><polygon fill="#ffffff" points="382.27 28.22 404.38 27.97 342.89 146.67 281.6 28.26 303.48 27.74 342.92 105.35 382.27 28.22"/><polygon fill="#ffffff" points="473.05 68.45 433.45 145.55 411.45 145.5 472.94 27.06 534.43 145.2 512.78 145.62 473.05 68.45"/><polygon fill="#ffffff" points="810.64 127.04 811.06 145.59 717.58 145.71 717.59 27.85 737.52 27.93 737.53 127.04 810.64 127.04"/><polygon fill="#ffffff" points="201.93 136.65 100.77 195.8 .04 136.74 .12 108.13 100.73 167.34 201.51 108.09 201.93 136.65"/><polygon fill="#ffffff" points="201.87 82.44 100.62 142.43 .05 82.67 .21 53.9 100.62 114.06 201.51 53.98 201.87 82.44"/><polygon fill="#ffffff" points="201.86 28.4 100.87 89.06 77.1 75 201.52 0 201.86 28.4"/><polygon fill="#8fe3c0" points="57.5 62.54 0 28.63 .05 .15 80.77 48.51 57.5 62.54"/></svg></div>
@@ -324,6 +328,6 @@
 </div>
 
 
-<script src="app.js?v=1787610760"></script>
+<script src="app.js?v=1788193329"></script>
 </body>
 </html>
