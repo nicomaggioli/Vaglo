@@ -1,0 +1,529 @@
+/* Photographic and cutout assets extracted from the supplied brand PDF. */
+.hero-botanical {
+  height: 850px;
+  min-height: 0;
+  background: #fff;
+  color: var(--ink);
+  isolation: isolate;
+  overflow: hidden;
+}
+.hero-daylight {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0.34;
+  z-index: -2;
+  pointer-events: none;
+}
+.hero-botanical:after {
+  content: "";
+  position: absolute;
+  inset: 100px 18% 220px;
+  background: radial-gradient(
+    ellipse,
+    #ffffffee 25%,
+    #ffffff80 55%,
+    transparent 75%
+  );
+  z-index: -1;
+  pointer-events: none;
+}
+.hero-botanical .hero-content {
+  padding: 218px 4% 0;
+  text-align: center;
+  max-width: 1200px;
+  z-index: 3;
+  position: relative;
+}
+.hero-botanical h1 {
+  font-size: clamp(60px, 6.4vw, 92px);
+  font-weight: 450;
+  line-height: 1.025;
+  letter-spacing: -0.059em;
+  margin: 26px 0 25px;
+}
+.hero-botanical .eyebrow {
+  font-size: 10px;
+  letter-spacing: 0.08em;
+}
+.hero-botanical .status-dot {
+  background: #168746;
+  width: 5px;
+  height: 5px;
+}
+.hero-description {
+  font-size: 14px;
+  line-height: 1.8;
+  color: #697169;
+}
+.hero-actions {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 27px;
+  margin-top: 28px;
+}
+.hero-actions .button {
+  font-size: 12px;
+  border-radius: 5px;
+  min-height: 51px;
+  padding: 15px 20px;
+  gap: 13px;
+}
+.hero-text-link {
+  display: flex;
+  gap: 22px;
+  align-items: center;
+  font-size: 12px;
+}
+.hero-text-link span {
+  font-size: 19px;
+}
+.hero-branch {
+  position: absolute;
+  height: auto;
+  max-width: none;
+  z-index: 2;
+  pointer-events: none;
+}
+
+.hero-branch-right {
+  width: 115%;
+  left: -7.5%;
+  right: auto;
+  bottom: -300px;
+  transform: none;
+}
+.hero-botanical .hero-caption {
+  bottom: 162px;
+  right: auto;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 9px;
+  letter-spacing: 0.04em;
+  color: #677268;
+  white-space: nowrap;
+  z-index: 4;
+}
+.hero-botanical .hero-scroll {
+  position: absolute;
+  right: auto;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 122px;
+  font-size: 24px;
+  padding: 0;
+  color: #0b0d11;
+  z-index: 4;
+}
+.intro {
+  padding-top: 90px;
+  padding-bottom: 72px;
+}
+.intro h2 {
+  font-weight: 450;
+  font-size: clamp(36px, 3.5vw, 51px);
+}
+.purpose-line {
+  margin-top: 55px;
+}
+.material-spread {
+  max-width: 1600px;
+  margin: 0 auto;
+  padding: 0 6% 90px;
+  display: grid;
+  grid-template-columns: 1fr 2.35fr 1fr;
+  gap: 17px;
+  align-items: center;
+}
+.material-shot {
+  overflow: hidden;
+  height: 250px;
+}
+.material-shot img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.shot-leaf {
+  height: 216px;
+  transform: translateY(-10px);
+}
+.shot-shadows {
+  height: 310px;
+}
+.shot-blur {
+  height: 260px;
+  transform: translateY(22px);
+}
+.film-section {
+  background: #0b0d11;
+}
+.film-inner {
+  padding-top: 77px;
+}
+.demo-screen {
+  border-radius: 6px;
+  border-width: 7px;
+}
+.demo-play {
+  border-radius: 5px;
+}
+.workflow {
+  padding-bottom: 90px;
+}
+.feature-image {
+  border-radius: 0;
+  background: #f4f5f2;
+}
+.human {
+  background: #fff;
+  border-top: 1px solid #e6e9e2;
+  border-bottom: 1px solid #e6e9e2;
+}
+.human-photo {
+  background: #fff url("assets/brand-daylight-shadows.webp") center/cover;
+  min-height: 620px;
+}
+.human-photo img {
+  object-fit: contain;
+  padding: 60px 17% 72px;
+  object-position: center;
+}
+.human-photo > span {
+  background: transparent;
+  left: 0;
+  width: 100%;
+  text-align: center;
+  font-size: 9px;
+  bottom: 30px;
+  color: #747b71;
+}
+.human-copy {
+  padding: 85px 12% 75px;
+}
+.human-copy h2 {
+  font-weight: 450;
+}
+.human-principles span {
+  border-color: #dfe5db;
+}
+.closing {
+  position: relative;
+  isolation: isolate;
+  background: #244614 url("assets/brand-green-shadows.webp") center 58% / cover;
+  color: #fff;
+  padding-top: 82px;
+  padding-bottom: 82px;
+}
+.closing:before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: #071e0a38;
+  z-index: -1;
+}
+.closing .black {
+  background: white;
+  color: var(--ink);
+}
+.closing h2 {
+  font-weight: 450;
+}
+.page-hero {
+  background:
+    linear-gradient(90deg, #fff 30%, #ffffff50),
+    url("assets/brand-daylight-shadows.webp") center/cover;
+}
+.system-image {
+  background: #6d8b41 url("assets/brand-green-shadows.webp") center/cover;
+  padding-top: 65px;
+  padding-bottom: 65px;
+}
+.service-split {
+  position: relative;
+  padding-top: 230px;
+}
+.service-material {
+  position: absolute;
+  top: 57px;
+  left: calc(50% - 250px);
+  width: 500px;
+  height: 173px;
+  object-fit: contain;
+}
+.service-split article:first-of-type {
+  background: #eff4e9;
+}
+.service-split article:nth-of-type(2) {
+  background: #0b0d11;
+}
+.contact-intro img {
+  border-radius: 0;
+  aspect-ratio: 1.5;
+  object-position: center 50%;
+}
+@media (min-width: 1700px) {
+  .hero-botanical {
+    height: 920px;
+  }
+  .hero-botanical .hero-content {
+    padding-top: 248px;
+  }
+  .hero-botanical h1 {
+    font-size: 104px;
+  }
+  .hero-branch-right {
+    width: 110%;
+    left: -5%;
+    bottom: -390px;
+  }
+}
+@media (max-width: 1000px) {
+  .hero-botanical {
+    height: 800px;
+  }
+  .hero-botanical .hero-content {
+    padding-top: 213px;
+  }
+  .hero-botanical h1 {
+    font-size: 70px;
+  }
+  .hero-branch-right {
+    width: 130%;
+    left: -15%;
+    bottom: -250px;
+  }
+  .hero-botanical .hero-caption {
+    bottom: 142px;
+  }
+  .material-spread {
+    padding: 0 5% 75px;
+    gap: 14px;
+  }
+  .material-shot {
+    height: 210px;
+  }
+  .shot-shadows {
+    height: 260px;
+  }
+  .shot-leaf {
+    height: 185px;
+  }
+  .human-photo {
+    min-height: 580px;
+  }
+  .human-photo img {
+    padding: 75px 12%;
+  }
+  .human-copy {
+    padding: 70px 9%;
+  }
+}
+@media (max-width: 700px) {
+  .hero-botanical {
+    height: 790px;
+  }
+  .hero-botanical .hero-content {
+    padding: 203px 5% 0;
+  }
+  .hero-botanical h1 {
+    font-size: 58px;
+  }
+  .hero-description {
+    font-size: 13px;
+    max-width: 430px;
+    margin: auto;
+  }
+  .hero-branch-right {
+    width: 160%;
+    left: -30%;
+    bottom: -250px;
+  }
+  .hero-botanical .hero-caption {
+    bottom: 110px;
+  }
+  .hero-botanical .hero-scroll {
+    display: block;
+  }
+  .material-spread {
+    gap: 12px;
+    padding-bottom: 65px;
+  }
+  .material-shot {
+    height: 170px;
+  }
+  .shot-shadows {
+    height: 210px;
+  }
+  .shot-leaf {
+    height: 145px;
+  }
+  .human-photo {
+    height: 460px;
+    min-height: 0;
+  }
+  .human-photo img {
+    padding: 25px 25% 55px;
+  }
+  .human-copy {
+    padding: 55px 7%;
+  }
+  .closing {
+    padding-top: 64px;
+    padding-bottom: 64px;
+  }
+  .service-split {
+    padding-top: 215px;
+  }
+  .service-material {
+    top: 65px;
+    width: 440px;
+    max-width: 85%;
+    left: 50%;
+    transform: translateX(-50%);
+    height: 150px;
+  }
+  .service-split article:nth-of-type(2) {
+    color: #fff;
+  }
+}
+@media (max-width: 580px) {
+  .hero-botanical {
+    height: 790px;
+  }
+  .hero-botanical .hero-content {
+    padding: 185px 6% 0;
+  }
+  .hero-botanical h1 {
+    font-size: clamp(43px, 10.8vw, 61px);
+    line-height: 1.04;
+    letter-spacing: -0.06em;
+    margin-top: 24px;
+    margin-bottom: 23px;
+  }
+  .hero-botanical .eyebrow {
+    font-size: 8px;
+    letter-spacing: 0.07em;
+  }
+  .hero-description {
+    font-size: 12px;
+    line-height: 1.8;
+    max-width: 315px;
+  }
+  .hero-description br {
+    display: none;
+  }
+  .hero-actions {
+    flex-direction: column;
+    gap: 19px;
+    margin-top: 25px;
+  }
+  .hero-actions .button {
+    font-size: 11px;
+    min-height: 48px;
+    padding: 14px 19px;
+  }
+  .hero-text-link {
+    font-size: 10px;
+    gap: 17px;
+  }
+  .hero-text-link span {
+    font-size: 15px;
+  }
+  .hero-branch-right {
+    width: 950px;
+    left: calc(50% - 475px);
+    bottom: -180px;
+    transform: none;
+  }
+  .hero-botanical .hero-caption {
+    font-size: 8px;
+    bottom: 85px;
+  }
+  .hero-botanical .hero-scroll {
+    font-size: 21px;
+    bottom: 43px;
+  }
+  .hero-daylight {
+    object-position: 70% center;
+    opacity: 0.25;
+  }
+  .intro {
+    padding-top: 60px;
+    padding-bottom: 45px;
+  }
+  .intro h2 {
+    font-size: 36px;
+  }
+  .material-spread {
+    grid-template-columns: 0.8fr 1.5fr 0.8fr;
+    padding: 0 0 50px;
+    gap: 8px;
+    overflow: hidden;
+  }
+  .material-shot {
+    height: 150px;
+  }
+  .shot-leaf {
+    height: 125px;
+  }
+  .shot-shadows {
+    height: 175px;
+  }
+  .shot-blur {
+    transform: translateY(12px);
+  }
+  .film-inner {
+    padding-top: 58px;
+  }
+  .human-photo {
+    height: 390px;
+  }
+  .human-photo img {
+    padding: 15px 20% 50px;
+  }
+  .human-copy {
+    padding: 45px 6% 55px;
+  }
+  .human-photo > span {
+    bottom: 20px;
+    font-size: 8px;
+  }
+  .closing {
+    padding-top: 58px;
+    padding-bottom: 58px;
+  }
+  .closing h2 {
+    font-size: 38px;
+  }
+  .system-image {
+    padding: 35px 5%;
+  }
+  .service-split {
+    padding-top: 195px;
+  }
+  .service-material {
+    top: 60px;
+    height: 135px;
+  }
+  .page-hero {
+    background-position: 60% center;
+  }
+  .contact-intro img {
+    display: block;
+    aspect-ratio: 1.8;
+    margin-top: 28px;
+  }
+  .purpose-line {
+    margin-top: 35px;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .hero-branch,
+  .material-shot {
+    transition: none;
+  }
+}

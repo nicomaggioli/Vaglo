@@ -1,6 +1,6 @@
 # Ellery — federal pursuits, handled with care
 
-A responsive marketing site for independent architecture and engineering firms. The current creative direction uses the working name **Ellery**, an original overlapping-leaf symbol, black and mint, Geist and Inter typography, and original botanical and architectural imagery. `brand-directions.html` retains Ellery, Bracken, and Avenell for comparison.
+A responsive marketing site for independent architecture and engineering firms. The current creative direction uses the working name **Ellery**, an original overlapping-leaf symbol, black and mint, Geist and Inter typography, and the original photography and moss artwork extracted from the supplied Ophelia brand PDF. The name and logo remain provisional while a new shortlist is discussed. `brand-directions.html` retains Ellery, Bracken, and Avenell for comparison.
 
 ## Preview
 
@@ -35,7 +35,7 @@ python3 -m venv .venv
 .venv/bin/python tools/render_demo.py
 ```
 
-`tools/demo-scenes.json` contains narration, timing, and captions. `assets/demo-stills/` contains the captured screen states; `assets/demo-narration.m4a` is the audio source. `assets/brand-sources.md` documents the visual direction and generated imagery.
+`tools/demo-scenes.json` contains narration, timing, and captions. `assets/demo-stills/` contains the captured screen states; `assets/demo-narration.m4a` is the audio source. `assets/brand-sources.md` documents the visual direction and source PDF assets; `assets/reference-assets.json` records the PDF object numbers and source hashes.
 
 ## Configure inquiries before launch
 

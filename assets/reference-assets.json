@@ -1,0 +1,113 @@
+[
+  {
+    "file": "brand-green-shadows.webp",
+    "source": "Branding Ophelia.pdf",
+    "page": 1,
+    "pdf_object": 882,
+    "original_dimensions": [
+      2688,
+      1792
+    ],
+    "alpha_crop": null,
+    "extracted_sha256": "1fb872f779a4fb62b01080024f3fa860e03e11a6715937c4772ec35ef8ea1608"
+  },
+  {
+    "file": "brand-moss-branch-right.webp",
+    "source": "Branding Ophelia.pdf",
+    "page": 1,
+    "pdf_object": 810,
+    "original_dimensions": [
+      2048,
+      2048
+    ],
+    "alpha_crop": [
+      0,
+      568,
+      2048,
+      1411
+    ],
+    "extracted_sha256": "9b08691de93e0c13735d9181f8761a53e3d9d4268ca98516c76f3b342a306bc6"
+  },
+  {
+    "file": "brand-daylight-shadows.webp",
+    "source": "Branding Ophelia.pdf",
+    "page": 1,
+    "pdf_object": 594,
+    "original_dimensions": [
+      1502,
+      894
+    ],
+    "alpha_crop": null,
+    "extracted_sha256": "4ce4c00cb00cc880656418cafca86d00672dd86891fe0561decbe6b7776d7da5"
+  },
+  {
+    "file": "brand-green-blur.webp",
+    "source": "Branding Ophelia.pdf",
+    "page": 1,
+    "pdf_object": 856,
+    "original_dimensions": [
+      1856,
+      2464
+    ],
+    "alpha_crop": null,
+    "extracted_sha256": "4af829e230a344ca8b8524f9acb0d967f65f6cd235d742e6bb7b52e8e14308d0"
+  },
+  {
+    "file": "brand-leaf-detail.webp",
+    "source": "Branding Ophelia.pdf",
+    "page": 1,
+    "pdf_object": 750,
+    "original_dimensions": [
+      1856,
+      2464
+    ],
+    "alpha_crop": null,
+    "extracted_sha256": "3cf192be3a2bacec8bc7685df75202fecff154c41bc9255b3a01f90fd1b8133c"
+  },
+  {
+    "file": "brand-floating-garden.webp",
+    "source": "Branding Ophelia.pdf",
+    "page": 1,
+    "pdf_object": 914,
+    "original_dimensions": [
+      1856,
+      2464
+    ],
+    "alpha_crop": [
+      175,
+      277,
+      1717,
+      2121
+    ],
+    "extracted_sha256": "2de7d8c965f7e8b11437f795e40fea0a4f83c182d8b99f655c8c1433336a2747"
+  },
+  {
+    "file": "brand-moss-stone.webp",
+    "source": "Branding Ophelia.pdf",
+    "page": 1,
+    "pdf_object": 554,
+    "original_dimensions": [
+      2912,
+      1632
+    ],
+    "alpha_crop": [
+      0,
+      626,
+      2912,
+      1632
+    ],
+    "extracted_sha256": "92e9141079c9e13f4ff2ae0fef203ad4b74e2d13aa711b4be293365a525868a6"
+  },
+  {
+    "file": "brand-meadow.webp",
+    "source": "Branding Ophelia.pdf",
+    "page": 1,
+    "pdf_object": 604,
+    "original_dimensions": [
+      2748,
+      4096
+    ],
+    "alpha_crop": null,
+    "extracted_sha256": "f083bf3e23330946173e8dbc010807d8cb6fc546d571044e9145d8ebdaf0e494"
+  }
+]
