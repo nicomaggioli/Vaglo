@@ -4,3 +4,7 @@ __pycache__/
 LAUNCH-NOTES.local.md
 *.local.md
 assets/IMAGE-PROMPTS.md
+
+.venv/
+
+assets/trailer-frame-*.jpg

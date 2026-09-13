@@ -1,177 +1,250 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>How pricing works · VAGLO</title>
-<meta name="description" content="A one-time setup that scales with your archive, and a flat monthly. Why the number depends on what is in your records.">
-<meta name="theme-color" content="#f2f0ed">
-<link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
-<link rel="alternate icon" href="assets/mark.svg" type="image/svg+xml">
-<link rel="stylesheet" href="styles.css?v=1788193329">
-<noscript><style>.rv{opacity:1;transform:none}</style></noscript>
-</head>
-<body>
-<a class="skip" href="#main">Skip to content</a>
-
-<nav class="nav" id="nav">
-  <div class="wrap nav-in">
-    <a class="brand" href="index.html">
-      <svg class="brand-logo" viewBox="0 0 953.78 195.8" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="VAGLO"><polygon fill="#1b2330" points="201.93 136.65 100.77 195.8 .04 136.74 .12 108.13 100.73 167.34 201.51 108.09 201.93 136.65"/><polygon fill="#1b2330" points="201.87 82.44 100.62 142.43 .05 82.67 .21 53.9 100.62 114.06 201.51 53.98 201.87 82.44"/><polygon fill="#1b2330" points="201.86 28.4 100.87 89.06 77.1 75 201.52 0 201.86 28.4"/><polygon fill="#295541" points="57.5 62.54 0 28.63 .05 .15 80.77 48.51 57.5 62.54"/><path fill="#1b2330" d="M651.87,99.23l-32.19-.09.1-18.48,51.39-.06.04,65-61.21-.25c-16.93-.07-31.34-9.45-41-22.79-11.8-18.76-13.89-41.38-5.11-61.82,8.09-18.83,25.42-31.26,46.28-32.56l60.82-.57.05,18.57-56.99.18c-14.94.05-27.51,9.96-32.81,23.8-4.68,12.25-4.22,25.75,1.76,37.44,5.76,11.25,16.98,19.31,29.74,19.36l39.13.14-.02-27.86Z"/><path fill="#1b2330" d="M950.45,107.59c-10.31,31.65-42.68,44.13-74.12,37.44-13.97-2.97-26.37-10.74-34.27-22.79-20.3-30.95-10.81-76.69,23.61-90.58,18.34-7.4,39.53-7.16,57.36,1.56,26.94,13.17,36.47,46.55,27.41,74.37ZM934.58,86.64c0-23.19-18.8-41.98-41.98-41.98s-41.98,18.8-41.98,41.98,18.8,41.98,41.98,41.98,41.98-18.8,41.98-41.98Z"/><polygon fill="#1b2330" points="382.27 28.22 404.38 27.97 342.89 146.67 281.6 28.26 303.48 27.74 342.92 105.35 382.27 28.22"/><polygon fill="#1b2330" points="473.05 68.45 433.45 145.55 411.45 145.5 472.94 27.06 534.43 145.2 512.78 145.62 473.05 68.45"/><polygon fill="#1b2330" points="810.64 127.04 811.06 145.59 717.58 145.71 717.59 27.85 737.52 27.93 737.53 127.04 810.64 127.04"/></svg>
-    </a>
-    <div class="nav-links">
-      <a href="index.html#how">How it works</a>
-      <a href="index.html#yours">What it produces</a>
-      <a href="pricing.html" aria-current="page">Pricing</a>
-      <a href="system.html">Details</a>
-    </div>
-    <a class="btn btn-primary" href="contact.html">Request a call</a>
-  </div>
-</nav>
-
-<main id="main">
-
-<header class="hero">
-  <div class="wrap">
-    <span class="eyebrow">HOW PRICING WORKS</span>
-    <h1>Two numbers, and one of them<br>depends on your&nbsp;archive.</h1>
-    <p class="lead">There is no price list here, and it is not a negotiating tactic. Half the cost is
-      determined by something neither of us can see until we look at&nbsp;it.</p>
-  </div>
-</header>
-
-<section class="sec">
-  <div class="wrap">
-    <div class="cards c2 rv">
-      <div class="card">
-        <h3>A one-time setup</h3>
-        <p>This is the real work, and it is the half that varies. Your projects, your people, their
-          licences and certifications, your past performance ratings and who did what on which job
-          all have to come out of old proposals and into a database that is actually correct.</p>
-        <p>A firm with twenty projects and eight people is not the same job as one with two hundred
-          projects and sixty. That is the whole reason this number cannot be printed on a&nbsp;page.</p>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Pricing built around your firm · VAGLO</title>
+    <meta
+      name="description"
+      content="One-time setup based on your archive, then a flat monthly fee. See how VAGLO pricing works."
+    />
+    <meta name="theme-color" content="#f5f5ee" />
+    <meta
+      property="og:title"
+      content="Pricing built around your firm · VAGLO"
+    />
+    <meta
+      property="og:description"
+      content="One-time setup based on your archive, then a flat monthly fee. See how VAGLO pricing works."
+    />
+    <meta property="og:type" content="website" />
+    <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="styles.css?v=20260913" />
+    <script src="app.js?v=20260913" defer></script>
+  </head>
+  <body>
+    <a class="skip" href="#main">Skip to content</a>
+    <header class="site-header">
+      <div class="container nav-inner">
+        <a class="brand" href="index.html" aria-label="VAGLO home"
+          ><img src="assets/vaglo-logo.svg" width="146" height="30" alt="VAGLO"
+        /></a>
+        <nav class="desktop-nav" aria-label="Main navigation">
+          <a href="index.html#how">How it works</a
+          ><a href="system.html">The platform</a
+          ><a href="pricing.html" aria-current="page">Pricing</a>
+        </nav>
+        <a class="button nav-cta" href="contact.html"
+          >Book a demo
+          <svg
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="1.6"
+            aria-hidden="true"
+          >
+            <path d="M4 12h15M13 5l7 7-7 7" /></svg></a
+        ><button
+          class="menu-toggle"
+          aria-label="Open menu"
+          aria-expanded="false"
+          aria-controls="mobile-menu"
+        >
+          <span></span><span></span>
+        </button>
       </div>
-      <div class="card">
-        <h3>A flat monthly</h3>
-        <p>The nightly watch on SAM.gov, the updates, and a set number of support hours every month.
-          Same figure every month regardless of how many pursuits you run through&nbsp;it.</p>
-        <p>Support past the included hours is billed hourly at a rate agreed up front. Most months
-          nobody gets near&nbsp;it.</p>
+      <nav
+        id="mobile-menu"
+        class="mobile-nav"
+        aria-label="Mobile navigation"
+        hidden
+      >
+        <a href="index.html#how">How it works</a
+        ><a href="system.html">The platform</a><a href="pricing.html">Pricing</a
+        ><a href="contact.html"
+          >Book a demo
+          <svg
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="1.6"
+            aria-hidden="true"
+          >
+            <path d="M4 12h15M13 5l7 7-7 7" /></svg
+        ></a>
+      </nav>
+    </header>
+    <main id="main">
+      <section class="page-hero container">
+        <span class="eyebrow">PRICING, WITH CONTEXT</span>
+        <h1>
+          Built around your firm.<br /><span class="serif green"
+            >Priced that way, too.</span
+          >
+        </h1>
+        <p class="page-lead">
+          One setup. One monthly fee. A clear scope before you commit.
+        </p>
+      </section>
+      <section class="pricing-grid container">
+        <article class="price-card">
+          <span class="eyebrow">01 / GET SET UP</span>
+          <h2>A foundation<br />that’s yours.</h2>
+          <span class="price-type"
+            >One-time setup · scoped to your archive</span
+          >
+          <p>
+            We turn your existing project and personnel records into a reliable
+            foundation for every pursuit that follows.
+          </p>
+          <ul class="check-list">
+            <li>Project and personnel archive review</li>
+            <li>Conflicting records reconciled with your team</li>
+            <li>Private database and pipeline configuration</li>
+            <li>Training for your point person</li>
+          </ul>
+          <div class="price-foot">
+            The size and condition of your archive determine the setup.
+          </div>
+        </article>
+        <article class="price-card dark">
+          <span class="eyebrow light">02 / KEEP MOVING</span>
+          <h2>A system<br />that stays with you.</h2>
+          <span class="price-type">Flat monthly fee · agreed up front</span>
+          <p>
+            Your platform keeps watching for opportunities, maintaining the
+            workflow, and supporting your team.
+          </p>
+          <ul class="check-list">
+            <li>Scheduled opportunity monitoring</li>
+            <li>Platform updates and maintenance</li>
+            <li>A defined number of support hours</li>
+            <li>The same fee regardless of pursuit volume</li>
+          </ul>
+          <div class="price-foot">
+            Additional support is hourly at a rate agreed in advance.
+          </div>
+        </article>
+      </section>
+      <section class="pricing-explainer container">
+        <span class="eyebrow">WHY THERE ISN’T A PRICE GRID</span>
+        <h2>
+          Twenty projects.<br />Or two hundred.<br /><span class="serif green"
+            >Different starting points.</span
+          >
+        </h2>
+        <div>
+          <p>
+            The work starts with your archive. A firm with eight people and
+            twenty projects needs a different setup from one with sixty people
+            and two hundred projects.
+          </p>
+          <p>
+            We review what you have, agree on what needs to happen, and put the
+            setup and monthly figures in writing. You decide with the full
+            picture.
+          </p>
+        </div>
+      </section>
+      <section class="container next-steps">
+        <div class="section-heading">
+          <h2>Three steps.<br /><span class="serif">No guesswork.</span></h2>
+          <a class="button" href="contact.html"
+            >Start the conversation
+            <svg
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="1.6"
+              aria-hidden="true"
+            >
+              <path d="M4 12h15M13 5l7 7-7 7" /></svg
+          ></a>
+        </div>
+        <div class="workflow">
+          <article>
+            <span class="step-no">01</span>
+            <h3>Talk about your process.</h3>
+            <p>
+              What you pursue, how your team works, and what is in your archive.
+            </p>
+          </article>
+          <article>
+            <span class="step-no">02</span>
+            <h3>See the system running.</h3>
+            <p>
+              Walk through a working installation and ask the questions that
+              matter to your firm.
+            </p>
+          </article>
+          <article>
+            <span class="step-no">03</span>
+            <h3>Get the scope in writing.</h3>
+            <p>
+              Setup, monthly service, and responsibilities. Clear before you
+              commit.
+            </p>
+          </article>
+        </div>
+      </section>
+      <section class="closing">
+        <div class="container closing-inner">
+          <span class="eyebrow light">YOUR NEXT CHAPTER</span>
+          <h2>Built for the work<br />you <em>could</em> be winning.</h2>
+          <div>
+            <p>
+              Show us how your firm runs a pursuit.<br />We’ll show you what
+              comes next.
+            </p>
+            <a class="button lime" href="contact.html"
+              >Let’s see what’s possible
+              <svg
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.6"
+                aria-hidden="true"
+              >
+                <path d="M4 12h15M13 5l7 7-7 7" /></svg
+            ></a>
+          </div>
+          <div class="closing-mark" aria-hidden="true">V</div>
+        </div>
+      </section>
+    </main>
+    <footer class="site-footer">
+      <div class="container footer-top">
+        <div>
+          <a class="brand" href="index.html"
+            ><img
+              src="assets/vaglo-logo.svg"
+              width="146"
+              height="30"
+              alt="VAGLO"
+          /></a>
+          <p>Built around your firm.<br />Built for your next opportunity.</p>
+        </div>
+        <div class="footer-links">
+          <a href="index.html#how">How it works</a
+          ><a href="system.html">The platform</a
+          ><a href="pricing.html">Pricing</a
+          ><a href="contact.html"
+            >Let’s talk
+            <svg
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="1.6"
+              aria-hidden="true"
+            >
+              <path d="M4 12h15M13 5l7 7-7 7" /></svg
+          ></a>
+        </div>
       </div>
-    </div>
-  </div>
-</section>
-
-<section class="sec bg-soft">
-  <div class="wrap">
-    <div class="sec-head center"><span class="eyebrow">Why the setup drives it</span><h2>Everything downstream inherits the&nbsp;database.</h2></div>
-    <div class="stack rv" style="max-width:44rem;margin-inline:auto">
-      <p>The first installation taught this the expensive way. A project sheet came out with the
-        wrong city on it. Not because the system invented one, but because the wrong one had been
-        entered years earlier and nobody had ever had a reason to look. A r&eacute;sum&eacute; went out short a
-        licence that the engineer had held the whole&nbsp;time.</p>
-      <p>Neither of those is a software problem, and no amount of AI fixes them. Every r&eacute;sum&eacute;,
-        every project sheet, every matrix and every narrative paragraph is generated from that
-        record. If the record is wrong, the package is wrong, confidently and in&nbsp;triplicate.</p>
-      <p>So the setup is not data entry. It is reading your archive, reconciling what disagrees with
-        itself, and asking you about the parts only you can settle. Get it right once and it stays
-        right. That is what you are paying for, and it is why a bigger archive costs&nbsp;more.</p>
-    </div>
-  </div>
-</section>
-
-<section class="sec">
-  <div class="wrap">
-    <div class="sec-head center"><span class="eyebrow">What to weigh it against</span><h2>The comparison is not other&nbsp;software.</h2></div>
-    <div class="cards c3 rv">
-      <div class="card"><h3>A marketing hire</h3><p>The usual answer to not having enough proposal capacity is a salary, plus benefits, plus the months it takes them to learn how you&nbsp;work.</p></div>
-      <div class="card"><h3>The pursuits you skip</h3><p>Most small firms pass on work they could win because nobody had the days. That cost never shows up on a&nbsp;ledger.</p></div>
-      <div class="card"><h3>The ones thrown out</h3><p>A package rejected for a missing signature cost you the entire effort, and you do not find out until after the&nbsp;deadline.</p></div>
-    </div>
-  </div>
-</section>
-
-<section class="sec bg-soft">
-  <div class="wrap">
-    <div class="sec-head center"><span class="eyebrow">Getting a number</span><h2>You get it in writing, before you commit to&nbsp;anything.</h2></div>
-    <div class="steps rv">
-      <article class="step"><div class="step-n">1</div><div><h3>We&nbsp;talk</h3><p>How your shop runs a pursuit today, what you bid on, and what is in your archive. Thirty minutes, no&nbsp;deck.</p></div></article>
-      <article class="step"><div class="step-n">2</div><div><h3>You see it&nbsp;running</h3><p>A walk through a working install, on real solicitations, so you are not buying a&nbsp;description.</p></div></article>
-      <article class="step"><div class="step-n">3</div><div><h3>You get the&nbsp;number</h3><p>Setup and monthly, in writing, scoped to what we actually found in your archive. Then you decide.</p></div></article>
-    </div>
-    <div class="center" style="margin-top:2.5rem">
-      <a class="btn btn-primary btn-lg" href="contact.html">Request a call</a>
-    </div>
-  </div>
-</section>
-
-</main>
-
-<footer class="foot">
-  <div class="wrap">
-    <div class="foot-in">
-      <div class="foot-brand">
-        <a class="brand" href="index.html">
-          <svg class="brand-logo" viewBox="0 0 953.78 195.8" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="VAGLO"><polygon fill="#1b2330" points="201.93 136.65 100.77 195.8 .04 136.74 .12 108.13 100.73 167.34 201.51 108.09 201.93 136.65"/><polygon fill="#1b2330" points="201.87 82.44 100.62 142.43 .05 82.67 .21 53.9 100.62 114.06 201.51 53.98 201.87 82.44"/><polygon fill="#1b2330" points="201.86 28.4 100.87 89.06 77.1 75 201.52 0 201.86 28.4"/><polygon fill="#295541" points="57.5 62.54 0 28.63 .05 .15 80.77 48.51 57.5 62.54"/><path fill="#1b2330" d="M651.87,99.23l-32.19-.09.1-18.48,51.39-.06.04,65-61.21-.25c-16.93-.07-31.34-9.45-41-22.79-11.8-18.76-13.89-41.38-5.11-61.82,8.09-18.83,25.42-31.26,46.28-32.56l60.82-.57.05,18.57-56.99.18c-14.94.05-27.51,9.96-32.81,23.8-4.68,12.25-4.22,25.75,1.76,37.44,5.76,11.25,16.98,19.31,29.74,19.36l39.13.14-.02-27.86Z"/><path fill="#1b2330" d="M950.45,107.59c-10.31,31.65-42.68,44.13-74.12,37.44-13.97-2.97-26.37-10.74-34.27-22.79-20.3-30.95-10.81-76.69,23.61-90.58,18.34-7.4,39.53-7.16,57.36,1.56,26.94,13.17,36.47,46.55,27.41,74.37ZM934.58,86.64c0-23.19-18.8-41.98-41.98-41.98s-41.98,18.8-41.98,41.98,18.8,41.98,41.98,41.98,41.98-18.8,41.98-41.98Z"/><polygon fill="#1b2330" points="382.27 28.22 404.38 27.97 342.89 146.67 281.6 28.26 303.48 27.74 342.92 105.35 382.27 28.22"/><polygon fill="#1b2330" points="473.05 68.45 433.45 145.55 411.45 145.5 472.94 27.06 534.43 145.2 512.78 145.62 473.05 68.45"/><polygon fill="#1b2330" points="810.64 127.04 811.06 145.59 717.58 145.71 717.59 27.85 737.52 27.93 737.53 127.04 810.64 127.04"/></svg>
-        </a>
-        <p>Private RFP systems for firms that bid federal&nbsp;work.</p>
+      <div class="container footer-bottom">
+        <span>© 2026 VAGLO</span><span>Federal pursuits. Human judgment.</span
+        ><a href="#main">Back to top ↑</a>
       </div>
-      <div class="foot-col">
-        <span class="kicker">Site</span>
-        <a href="index.html#how">How it works</a>
-        <a href="index.html#yours">What it produces</a>
-        <a href="pricing.html">Pricing</a>
-        <a href="system.html">Details</a>
-      </div>
-      <div class="foot-col">
-        <span class="kicker">Start</span>
-        <a href="contact.html">Request a call</a>
-        <a href="mailto:hello@vaglo.example">Email</a>
-      </div>
-    </div>
-    <div class="foot-bar"><span>VAGLO</span><span>Built for federal contractors</span></div>
-  </div>
-</footer>
-
-
-<!-- ───────────────────────────── ASSISTANT ───────────────────────────── -->
-<button class="chat-fab" id="chatFab" type="button" aria-label="Ask a question" aria-expanded="false">
-  <svg class="ic-open" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
-  <svg class="ic-close" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M18 6 6 18M6 6l12 12"/></svg>
-</button>
-
-<div class="chat-panel" id="chatPanel" role="dialog" aria-label="Ask about VAGLO" aria-modal="false">
-  <div class="chat-head">
-    <div class="chat-head-top">
-      <span class="chat-brand">
-        <svg class="chat-logo" viewBox="0 0 953.78 195.8" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="VAGLO"><path fill="#1b2330" d="M651.87,99.23l-32.19-.09.1-18.48,51.39-.06.04,65-61.21-.25c-16.93-.07-31.34-9.45-41-22.79-11.8-18.76-13.89-41.38-5.11-61.82,8.09-18.83,25.42-31.26,46.28-32.56l60.82-.57.05,18.57-56.99.18c-14.94.05-27.51,9.96-32.81,23.8-4.68,12.25-4.22,25.75,1.76,37.44,5.76,11.25,16.98,19.31,29.74,19.36l39.13.14-.02-27.86Z"/><path fill="#1b2330" d="M950.45,107.59c-10.31,31.65-42.68,44.13-74.12,37.44-13.97-2.97-26.37-10.74-34.27-22.79-20.3-30.95-10.81-76.69,23.61-90.58,18.34-7.4,39.53-7.16,57.36,1.56,26.94,13.17,36.47,46.55,27.41,74.37ZM934.58,86.64c0-23.19-18.8-41.98-41.98-41.98s-41.98,18.8-41.98,41.98,18.8,41.98,41.98,41.98,41.98-18.8,41.98-41.98Z"/><polygon fill="#1b2330" points="382.27 28.22 404.38 27.97 342.89 146.67 281.6 28.26 303.48 27.74 342.92 105.35 382.27 28.22"/><polygon fill="#1b2330" points="473.05 68.45 433.45 145.55 411.45 145.5 472.94 27.06 534.43 145.2 512.78 145.62 473.05 68.45"/><polygon fill="#1b2330" points="810.64 127.04 811.06 145.59 717.58 145.71 717.59 27.85 737.52 27.93 737.53 127.04 810.64 127.04"/><polygon fill="#1b2330" points="201.93 136.65 100.77 195.8 .04 136.74 .12 108.13 100.73 167.34 201.51 108.09 201.93 136.65"/><polygon fill="#1b2330" points="201.87 82.44 100.62 142.43 .05 82.67 .21 53.9 100.62 114.06 201.51 53.98 201.87 82.44"/><polygon fill="#1b2330" points="201.86 28.4 100.87 89.06 77.1 75 201.52 0 201.86 28.4"/><polygon fill="#295541" points="57.5 62.54 0 28.63 .05 .15 80.77 48.51 57.5 62.54"/></svg>
-      </span>
-      <button class="chat-x" id="chatClose" type="button" aria-label="Close">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M18 6 6 18M6 6l12 12"/></svg>
-      </button>
-    </div>
-    <h3>Hi there<br>Ask me anything about&nbsp;VAGLO.</h3>
-  </div>
-
-  <div class="chat-log" id="chatLog" aria-live="polite"></div>
-
-  <div class="chat-chips" id="chatChips">
-    <button type="button">What does it cost?</button>
-    <button type="button">Where does my data live?</button>
-    <button type="button">Does the AI make things up?</button>
-    <button type="button">How long does setup take?</button>
-    <button type="button">Is it a fit for my firm?</button>
-    <button type="button">What does it actually produce?</button>
-  </div>
-
-  <form class="chat-input" id="chatForm">
-    <input type="text" id="chatText" placeholder="Type your question" autocomplete="off" aria-label="Your question">
-    <button type="submit" aria-label="Send">
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h13M13 6l6 6-6 6"/></svg>
-    </button>
-  </form>
-</div>
-
-<script src="app.js?v=1788193329"></script>
-</body>
+    </footer>
+  </body>
 </html>
