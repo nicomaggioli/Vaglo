@@ -1,6 +1,8 @@
-# Ellery — federal pursuits, handled with care
+# Rhodo — find the opportunities worth pursuing
 
-A responsive marketing site for independent architecture and engineering firms. The current creative direction uses the working name **Ellery**, an original overlapping-leaf symbol, black and mint, Geist and Inter typography, and the original photography and moss artwork extracted from the supplied Ophelia brand PDF. The name and logo remain provisional while a new shortlist is discussed. `brand-directions.html` retains Ellery, Bracken, and Avenell for comparison.
+A responsive marketing site for independent architecture and engineering firms. Rhodo takes its name from rhodonite, Massachusetts’ state gemstone. The original faceted gem symbol and Geist wordmark reflect the idea of finding valuable opportunities among the noise.
+
+The site retains the previous botanical images from the supplied brand reference at the user’s request. The countryside photo, decorative green status dots, and hero caption/down arrow have been removed. See `assets/brand-sources.md` for provenance.
 
 ## Preview
 
@@ -8,26 +10,15 @@ A responsive marketing site for independent architecture and engineering firms. 
 python3 serve.py
 ```
 
-Run from the repository and open http://localhost:8747. Static HTML/CSS/JavaScript; no application build or runtime packages. The preview supports byte ranges for reliable video seeking. All site assets and fonts are local, with relative paths suitable for a GitHub Pages repository subpath.
-
-## Pages
-
-- `index.html`: positioning, video walkthrough, feature tabs, and FAQs.
-- `system.html`: the complete pursuit workflow and human checkpoints.
-- `pricing.html`: one-time setup and managed monthly support, without invented prices.
-- `contact.html`: a clear, local introduction-preparation form.
-- `demo-transcript.html`: accessible text transcript of the walkthrough.
-- `brand-directions.html`: the three exploratory naming and identity directions.
+Open http://localhost:8747. Six static HTML pages, local assets/fonts, no application build or runtime packages. The preview supports byte ranges for video seeking. Relative paths support GitHub Pages repository subpaths.
 
 ## Feature walkthrough
 
-`assets/ellery-demo.mp4` is an 85-second H.264/AAC video at 1440 × 1000, 24 fps. It follows the actual dashboard frontend through the opportunity pipeline, fit assessment, project recommendations, personnel selection, experience matrix, proposal documents, and searchable firm library. It includes a team-alternate interaction and a project search. Native controls, English captions, a transcript, and five chapter shortcuts are available. The video only loads after a visitor chooses to watch it. Escape closes the player and returns focus.
+`assets/rhodo-demo.mp4` is a 48-second H.264/AAC walkthrough at 3840 × 2160, 60 fps. It follows the supplied dashboard frontend through pipeline, fit assessment, project recommendations, team alternatives, experience matrix, documents, SF330 review, and searchable firm records. Native controls, English captions, an accessible transcript, and five chapter shortcuts are included. Video loads on demand. Escape closes the player and restores focus.
 
-The supplied `alares_testing` frontend ran in an **isolated local fixture environment**, with synthetic API responses. The capture copy received the new brand and a compact pipeline layout; no production dashboard source or backend was changed. The edit combines actual captured interface states and scrolling with reading pauses, a pointer overlay, explanatory subtitles, and synthesized macOS Samantha narration. It is an edited feature walkthrough, not a continuous recording of a live customer deployment. Prepared documents and scores shown are sample fixture records; this recording does not demonstrate backend generation speed or quality.
+The actual frontend ran in an isolated local fixture environment with synthetic records and Rhodo branding. This is an edited sequence of native 4K interface captures, smooth scrolling, and a small pointer overlay. It does not represent a continuous customer session or demonstrate backend generation speed. No customer database, private documents, credentials, or private dashboard source is included.
 
-No customer database, private documents, signatures, credentials, or private dashboard source files are included. The dashboard's main HTML and CSS were checked against the supplied Downloads folder and matched the repository reference.
-
-To reproduce the video from the included captures and narration:
+Narration uses Roger (Laid-Back, Casual, Resonant), Eleven v3, Natural stability (0.5), and a conversational script. Six long pauses were shortened to 450 ms without changing speech speed or pitch in editing. The original MP3 and `narration-production.json` preserve the source and edit decisions. A brief Rhodo end card follows the narration.
 
 ```sh
 python3 -m venv .venv
@@ -35,13 +26,11 @@ python3 -m venv .venv
 .venv/bin/python tools/render_demo.py
 ```
 
-`tools/demo-scenes.json` contains narration, timing, and captions. `assets/demo-stills/` contains the captured screen states; `assets/demo-narration.m4a` is the audio source. `assets/brand-sources.md` documents the visual direction and source PDF assets; `assets/reference-assets.json` records the PDF object numbers and source hashes.
+`tools/demo-scenes.json` contains the transcript and timings. `assets/demo-stills/` contains lossless 4K captures; `assets/demo-narration-elevenlabs.wav` contains the voice track.
 
-## Configure inquiries before launch
+## Inquiries
 
-A real recipient or form endpoint has not been supplied. The form explicitly says it prepares a local request and sends nothing. It validates required fields, then supports copying or saving the introduction.
-
-Set `contactEmail` at the top of `app.js` to an approved recipient to enable a mail-app draft. Visitors still press Send themselves. For automatic delivery, integrate a real form endpoint and only show success after the endpoint accepts the request.
+The contact form prepares a local introduction that visitors can copy or save. It clearly states that nothing is sent. Set `contactEmail` in `app.js` to an approved recipient to enable an email draft, or integrate a real form endpoint before enabling automatic delivery.
 
 ## Checks and release
 
@@ -51,6 +40,4 @@ python3 tools/check_site.py
 python3 tools/test_preview.py
 ```
 
-The link checker validates page IDs, local references and anchors, fonts, image labels, captions, and media assets. Browser review covers desktop/mobile layout, feature-tab keyboard navigation, video playback and chapter seeking, Escape/focus restoration, FAQ disclosure, and the introduction form. The video is also decoded end to end with FFmpeg.
-
-The changes stay on `codex/cinematic-rebuild` for review. Main has not been merged or deployed by this task. Naming is a creative working direction, not a claim of trademark or domain availability.
+Checks validate local assets/links, unique IDs, captions, and byte-range support. Browser review covers desktop/mobile layout, video playback/seeking, navigation, and the contact layout. The video is decoded with FFmpeg. Changes remain on `codex/cinematic-rebuild`; main is not merged or deployed.

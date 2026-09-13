@@ -32,7 +32,7 @@ for css in ROOT.glob('*.css'):
  for ref in re.findall(r"url\(['\"]?([^)'\"]+)",css.read_text()):
   if ref.startswith(('data:','https:','http:')):continue
   if not (css.parent/unquote(urlsplit(ref).path)).is_file():errors.append(f'{css.name}: missing {ref}')
-for asset in ['assets/ellery-demo.mp4','assets/demo-narration.m4a','assets/demo.vtt']:
+for asset in ['assets/rhodo-demo.mp4','assets/demo-narration-elevenlabs.wav','assets/demo.vtt']:
  if not (ROOT/asset).is_file() or (ROOT/asset).stat().st_size<20:errors.append(f'Missing/empty {asset}')
 if not (ROOT/'assets/demo.vtt').read_text().startswith('WEBVTT'):errors.append('Invalid caption header')
 if errors:raise SystemExit('\n'.join(errors))

@@ -1,0 +1,18 @@
+{
+  "voice": "Roger \u2014 Laid-Back, Casual, Resonant",
+  "model": "Eleven v3",
+  "stability": 0.5,
+  "direction": "conversational",
+  "source": "demo-narration-roger-original.mp3",
+  "edited": "demo-narration-elevenlabs.wav",
+  "generation": "Generation 1",
+  "cuts_seconds": [
+    [6.809308000000001, 7.189376],
+    [13.793707, 14.304273999999998],
+    [17.440374000000002, 17.80949],
+    [22.17305, 22.48949],
+    [31.268991, 31.767108999999998],
+    [42.10763, 42.751712]
+  ],
+  "notes": "Six long pauses shortened to 450 ms; no speech speed or pitch adjustment in editing."
+}

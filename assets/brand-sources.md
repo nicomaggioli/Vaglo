@@ -1,30 +1,25 @@
 # Brand and asset notes
 
-## Direction
+Rhodo is the selected name, derived from rhodonite, Massachusetts’ state gemstone. The original faceted gemstone symbol and Geist-derived vector wordmark are specific to Rhodo. The Ophelia wordmark and sun symbol are not used.
 
-The user supplied `Branding Ophelia.pdf` and https://www.ophelias.ai/ as references, then explicitly requested the same images and materials from the PDF. The site now uses the embedded source images from that PDF: moss-covered branches, leaf details, soft green photography, daylight shadows, a floating garden, and meadow photography. The previous generated canopy and architecture images have been removed.
+## Botanical direction
 
-Palette: Obsidian `#0B0D11`, mint `#65FC9F`, white `#FFFFFF`, and ash `#BDBDBD`. Geist and Inter are bundled with their SIL Open Font Licenses. The layout uses white space, black typography, rectangular photo compositions, and the PDF's botanical artwork.
+The user supplied `Branding Ophelia.pdf` and https://www.ophelias.ai/ as visual references, then requested the same images from the PDF. After reviewing newly generated alternatives, the user asked to restore the previous images. The deployed site therefore retains the original PDF images, apart from the countryside photograph which the user asked to remove. No newly generated alternatives are deployed.
 
-Ellery is a provisional working name. Its original overlapping-leaf symbol and Geist-derived vector wordmark remain while new names are discussed. No new name has been selected. The Ophelia wordmark and sun symbol are not used as this product's identity.
+Palette: Obsidian `#0B0D11`, mint `#65FC9F`, white `#FFFFFF`, and ash `#BDBDBD`. Geist and Inter are bundled with their SIL Open Font Licenses.
 
-## Supplied PDF images
+The embedded images were decoded with their transparency masks, trimmed only around empty padding, resized, and encoded as WebP. `reference-assets.json` preserves the extraction provenance and source hashes; its meadow entry is historical and that image is no longer deployed. The full PDF stays outside this repository.
 
-Extracted from page 1 of the user-supplied `Branding Ophelia.pdf`. Embedded image streams were decoded with their original transparency masks, cropped only to trim empty transparent padding, resized, and encoded as WebP. The images were not regenerated or repainted.
-
-| Deployable asset               | PDF image object | Use                                              |
-| ------------------------------ | ---------------- | ------------------------------------------------ |
-| `brand-moss-branch-right.webp` | 810              | Continuous moss frame across the hero            |
-| `brand-daylight-shadows.webp`  | 594              | White daylight texture behind page introductions |
-| `brand-green-shadows.webp`     | 882              | Photo spread, product backdrop, closing section  |
-| `brand-green-blur.webp`        | 856              | Soft green photographic detail                   |
-| `brand-leaf-detail.webp`       | 750              | Macro leaf detail                                |
-| `brand-floating-garden.webp`   | 914              | Human judgment section                           |
-| `brand-moss-stone.webp`        | 554              | Working-together page                            |
-| `brand-meadow.webp`            | 604              | Contact page                                     |
-
-`reference-assets.json` records source object numbers, original dimensions, transparency crops, and SHA-256 hashes of the extracted sources. The full PDF and unused extracts remain outside the website repository.
+| Asset | PDF object | Use |
+| --- | --- | --- |
+| `brand-moss-branch-right.webp` | 810 | Hero foreground |
+| `brand-daylight-shadows.webp` | 594 | Daylight texture |
+| `brand-green-shadows.webp` | 882 | Photo spread and closing section |
+| `brand-green-blur.webp` | 856 | Photographic detail |
+| `brand-leaf-detail.webp` | 750 | Macro leaf detail |
+| `brand-floating-garden.webp` | 914 | Human judgment section |
+| `brand-moss-stone.webp` | 554 | Working-together page |
 
 ## Product imagery
 
-All `demo-*.webp` and `demo-stills/*.webp` assets were captured from the supplied dashboard frontend running with synthetic fixtures and the working brand. These are actual interface layouts with fictional demonstration records, not real customer results. The private application source is excluded from this website repository.
+The demo stills and video show the supplied frontend using synthetic records and Rhodo branding. They are actual interface layouts, not real customer results. The private application source is excluded. The 48-second video uses native 4K captures and authorized ElevenLabs Roger narration; see the repository README for reproducibility.

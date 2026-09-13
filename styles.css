@@ -110,14 +110,6 @@ textarea:focus-visible {
 .muted {
   color: #8a8f8c;
 }
-.status-dot {
-  display: inline-block;
-  width: 6px;
-  height: 6px;
-  background: var(--mint);
-  border-radius: 50%;
-  margin-right: 7px;
-}
 .section {
   padding: 112px 6%;
   max-width: 1600px;
@@ -297,24 +289,6 @@ textarea:focus-visible {
   max-width: 500px;
   margin-bottom: 26px;
   color: #f0fff2;
-}
-.hero-scroll {
-  font-size: 12px;
-  display: flex;
-  gap: 40px;
-  align-items: center;
-  padding-bottom: 10px;
-}
-.hero-scroll span {
-  font-size: 26px;
-}
-.hero-caption {
-  position: absolute;
-  bottom: 25px;
-  right: 6%;
-  font-size: 9px;
-  letter-spacing: 0.04em;
-  color: #dcf5df;
 }
 .intro > .eyebrow {
   margin-bottom: 34px;
@@ -836,11 +810,6 @@ li:before {
   color: #656e66;
   margin-bottom: 40px;
 }
-.contact-intro img {
-  border-radius: 6px;
-  aspect-ratio: 1.7;
-  object-fit: cover;
-}
 .contact-form > .eyebrow {
   margin-bottom: 25px;
 }
@@ -1114,13 +1083,6 @@ dialog video {
   .hero-bottom p {
     font-size: 14px;
   }
-  .hero-scroll {
-    display: none;
-  }
-  .hero-caption {
-    left: 5%;
-    font-size: 9px;
-  }
   .intro-grid {
     grid-template-columns: 1fr;
     gap: 30px;
@@ -1294,9 +1256,6 @@ dialog video {
   .contact-intro h1 {
     font-size: 67px;
   }
-  .contact-intro img {
-    display: none;
-  }
   .contact-intro > p:not(.eyebrow) {
     margin-bottom: 0;
   }
@@ -1399,10 +1358,6 @@ dialog video {
   }
   .hero .button > span:last-child {
     margin-left: 6px;
-  }
-  .hero-caption {
-    bottom: 25px;
-    left: 6%;
   }
   .section {
     padding: 65px 6%;

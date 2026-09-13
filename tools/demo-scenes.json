@@ -1,74 +1,65 @@
 [
   {
     "start": 0,
-    "end": 10,
     "shot": "01-pipeline",
-    "chapter": "01  Opportunity pipeline",
-    "voice": "Let's take a look inside Ellery. Here's the opportunity pipeline, with each pursuit organized by stage. This walkthrough uses sample records.",
-    "caption": "Start with your opportunity pipeline. Every pursuit has a place."
+    "chapter": "Opportunity pipeline",
+    "voice": "Here\u2019s the pipeline. At a glance, you can see what\u2019s new, what\u2019s ready, and what needs a closer look.",
+    "end": 6.934
   },
   {
-    "start": 10,
-    "end": 23,
+    "start": 6.934,
     "shot": "02-analysis",
-    "chapter": "02  Review the fit",
-    "voice": "Open an opportunity to see the fit score and the reasoning behind it. Here, we can review the scope, deadlines, strengths, and action items before deciding whether to pursue.",
-    "caption": "Open an opportunity. Review the fit, scope, deadline, and open questions."
+    "chapter": "Review the fit",
+    "voice": "Click into a pursuit. You get the fit, the relevant experience, and the gaps you\u2019ll want to check.",
+    "end": 13.539
   },
   {
-    "start": 23,
-    "end": 33,
+    "start": 13.539,
     "shot": "03-projects",
-    "chapter": "03  Projects and team",
-    "voice": "Next, open Selection. Ellery starts with relevant projects from your firm's records. You can review the recommended examples and choose the work that best supports your case.",
-    "caption": "In Selection, relevant projects come first. Review the evidence behind each choice."
+    "chapter": "Select relevant projects",
+    "voice": "Next, pick the projects that tell your story.",
+    "end": 16.675
   },
   {
-    "start": 33,
-    "end": 41,
+    "start": 16.675,
     "shot": "04-team",
-    "chapter": "03  Projects and team",
-    "voice": "Scroll down to the proposed team. Each role connects to a person's experience on the selected projects, with alternatives available for review.",
-    "caption": "Review the people, qualifications, and project experience behind your team."
+    "chapter": "Review your team",
+    "voice": "Review the suggested team\u2014or swap someone in who\u2019s a better match.",
+    "end": 21.038
   },
   {
-    "start": 41,
-    "end": 47,
+    "start": 21.038,
     "shot": "05-matrix",
-    "chapter": "03  Projects and team",
-    "voice": "The experience matrix forms from those choices. Your team reviews the selections before approving the workflow.",
-    "caption": "The Section G matrix connects people to projects. You approve the choices."
+    "chapter": "Connect people and projects",
+    "voice": "Those choices feed straight into the experience matrix.",
+    "end": 24.844
   },
   {
-    "start": 47,
-    "end": 57,
+    "start": 24.844,
     "shot": "06-documents",
-    "chapter": "04  Prepare the package",
-    "voice": "In Documents, the solicitation and amendments sit alongside the prepared sections. Resumes, the team chart, the experience matrix, and narratives are available in one place.",
-    "caption": "Keep the solicitation, amendments, and prepared SF330 sections together."
+    "chapter": "Keep the documents together",
+    "voice": "Your solicitation, amendments, and prepared sections are all here.",
+    "end": 29.818
   },
   {
-    "start": 57,
-    "end": 67,
+    "start": 29.818,
     "shot": "07-proposal",
-    "chapter": "04  Prepare the package",
-    "voice": "The Proposal tab shows which sections are ready and brings the package together. These are sample outputs. Your team checks the content and handles the final submission.",
-    "caption": "Review section status and the compiled package. Final submission stays with you."
+    "chapter": "Review the SF330",
+    "voice": "Review the SF330 package before it goes out.",
+    "end": 33.812
   },
   {
-    "start": 67,
-    "end": 76,
+    "start": 33.812,
     "shot": "08-library",
-    "chapter": "05  Your firm's knowledge",
-    "voice": "Behind every pursuit is your firm's project library. Search past work by name, location, or type to find the experience you need.",
-    "caption": "Search your project library. Find the experience that supports your next pursuit."
+    "chapter": "Search your firm\u2019s library",
+    "voice": "Need to find a project, or check someone\u2019s qualifications? Just search your firm\u2019s library.",
+    "end": 40.158
   },
   {
-    "start": 76,
-    "end": 85,
+    "start": 40.158,
     "shot": "10-personnel",
-    "chapter": "05  Your firm's knowledge",
-    "voice": "Personnel records bring qualifications and experience together too. Your people, your projects, and your next opportunity, connected in one workspace. That's Ellery.",
-    "caption": "Keep your people, projects, and pursuit knowledge connected."
+    "chapter": "One connected workspace",
+    "voice": "That\u2019s it. Your people, your projects, and your next opportunity, all in one place.",
+    "end": 46.8
   }
 ]
