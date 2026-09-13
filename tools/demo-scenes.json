@@ -1,65 +1,114 @@
 [
   {
-    "start": 0,
-    "shot": "01-pipeline",
-    "chapter": "Opportunity pipeline",
-    "voice": "Here\u2019s the pipeline. At a glance, you can see what\u2019s new, what\u2019s ready, and what needs a closer look.",
-    "end": 6.934
+    "key": "sam",
+    "chapter": "SAM.gov discovery",
+    "voice": "Everything starts with SAM.gov. Rhodo monitors federal opportunities using the filters set for your firm, brings in the solicitation documents, and analyzes the work against your capabilities. So you start with relevant opportunities, and a reason to consider each one.",
+    "start": 0.0,
+    "end": 17.743,
+    "shot": "20-help"
   },
   {
-    "start": 6.934,
-    "shot": "02-analysis",
-    "chapter": "Review the fit",
-    "voice": "Click into a pursuit. You get the fit, the relevant experience, and the gaps you\u2019ll want to check.",
-    "end": 13.539
+    "key": "pipeline",
+    "chapter": "Your opportunity pipeline",
+    "voice": "Here’s where those opportunities land. The pipeline shows what’s been analyzed, what’s moving into proposal preparation, and what’s been submitted or decided. Deadlines and fit scores help you see where to focus.",
+    "start": 17.743,
+    "end": 31.199,
+    "shot": "01-pipeline"
   },
   {
-    "start": 13.539,
-    "shot": "03-projects",
-    "chapter": "Select relevant projects",
-    "voice": "Next, pick the projects that tell your story.",
-    "end": 16.675
+    "key": "analysis",
+    "chapter": "Understand the fit",
+    "voice": "Open a pursuit, and the analysis is already there: scope, a bid recommendation, strengths, and gaps that need attention. You can review the requirements before committing time. The score gives you a starting point; the supporting evidence explains it.",
+    "start": 31.199,
+    "end": 47.457,
+    "shot": "02-analysis"
   },
   {
-    "start": 16.675,
-    "shot": "04-team",
-    "chapter": "Review your team",
-    "voice": "Review the suggested team\u2014or swap someone in who\u2019s a better match.",
-    "end": 21.038
+    "key": "projects",
+    "chapter": "Recommended experience",
+    "voice": "In Selection, Rhodo recommends relevant past projects from your firm’s records. Each suggestion includes the experience supporting that choice, ready for your review.",
+    "start": 47.457,
+    "end": 57.992,
+    "shot": "03-projects"
   },
   {
-    "start": 21.038,
-    "shot": "05-matrix",
-    "chapter": "Connect people and projects",
-    "voice": "Those choices feed straight into the experience matrix.",
-    "end": 24.844
+    "key": "team",
+    "chapter": "The proposed team",
+    "voice": "It then recommends people whose qualifications and project history fit the roles. You can accept the team or compare an alternative, instead of assembling the roster from scratch.",
+    "start": 57.992,
+    "end": 68.997,
+    "shot": "04-team"
   },
   {
-    "start": 24.844,
-    "shot": "06-documents",
-    "chapter": "Keep the documents together",
-    "voice": "Your solicitation, amendments, and prepared sections are all here.",
-    "end": 29.818
+    "key": "matrix",
+    "chapter": "Experience matrix",
+    "voice": "Those choices build the experience matrix, connecting people to the projects they worked on. Your approval moves the selected team and projects into the workflow.",
+    "start": 68.997,
+    "end": 79.252,
+    "shot": "05-matrix"
   },
   {
-    "start": 29.818,
-    "shot": "07-proposal",
-    "chapter": "Review the SF330",
-    "voice": "Review the SF330 package before it goes out.",
-    "end": 33.812
+    "key": "documents",
+    "chapter": "Prepare the sections",
+    "voice": "The preparation tools generate resumes, project sheets, and supporting narratives from that material. Documents keeps the original solicitation, amendments, and generated sections together, so you can check both the source and the output.",
+    "start": 79.252,
+    "end": 94.197,
+    "shot": "12-generators"
   },
   {
-    "start": 33.812,
-    "shot": "08-library",
-    "chapter": "Search your firm\u2019s library",
-    "voice": "Need to find a project, or check someone\u2019s qualifications? Just search your firm\u2019s library.",
-    "end": 40.158
+    "key": "proposal",
+    "chapter": "The SF330 package",
+    "voice": "The Proposal tab brings the sections into one SF330 package. Review what’s ready, address any missing information, and give it your final check before submission.",
+    "start": 94.197,
+    "end": 105.499,
+    "shot": "07-proposal"
   },
   {
-    "start": 40.158,
-    "shot": "10-personnel",
-    "chapter": "One connected workspace",
-    "voice": "That\u2019s it. Your people, your projects, and your next opportunity, all in one place.",
-    "end": 46.8
+    "key": "feedback",
+    "chapter": "Ask for changes",
+    "voice": "And you don’t need to fix everything by hand. Tell the assistant what’s wrong or what you want changed. Feedback keeps those corrections visible, and our team can help refine the result.",
+    "start": 105.499,
+    "end": 117.027,
+    "shot": "13-analysis-feedback"
+  },
+  {
+    "key": "library",
+    "chapter": "Your firm’s knowledge",
+    "voice": "Behind every pursuit is your firm’s knowledge base. Projects lets you search past work. Personnel brings together qualifications and experience. Subconsultants keeps your partner firms in view, so you can build the right team with the records you already have.",
+    "start": 117.027,
+    "end": 134.251,
+    "shot": "08-library"
+  },
+  {
+    "key": "intake",
+    "chapter": "Add source documents",
+    "voice": "The main Documents page is where new source files enter the system. Upload your records, follow processing, and review information that needs clarification.",
+    "start": 134.251,
+    "end": 144.133,
+    "shot": "16-intake"
+  },
+  {
+    "key": "oversight",
+    "chapter": "Across your pursuits",
+    "voice": "Proposals gives you a view across active packages. Scoring Rules captures your firm’s preferences, while Metrics shows pipeline activity and processing health.",
+    "start": 144.133,
+    "end": 155.771,
+    "shot": "17-proposals"
+  },
+  {
+    "key": "support",
+    "chapter": "Supporting tools",
+    "voice": "Help explains the workflow. Additional Folders connects supporting files, and Roadmap shows planned work. Lifecycle and Availability are marked as work in progress in this dashboard.",
+    "start": 155.771,
+    "end": 168.617,
+    "shot": "20-help"
+  },
+  {
+    "key": "close",
+    "chapter": "From discovery to review",
+    "voice": "That’s Rhodo: the monitoring, analysis, matching, and proposal preparation handled for you, with your team in control of the decisions—and support when something needs changing.",
+    "start": 168.617,
+    "end": 180.95,
+    "shot": "01-pipeline"
   }
 ]

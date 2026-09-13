@@ -22,4 +22,4 @@ The embedded images were decoded with their transparency masks, trimmed only aro
 
 ## Product imagery
 
-The demo stills and video show the supplied frontend using synthetic records and Rhodo branding. They are actual interface layouts, not real customer results. The private application source is excluded. The 48-second video uses native 4K captures and authorized ElevenLabs Roger narration; see the repository README for reproducibility.
+The demo stills and video show the supplied frontend using synthetic records and Rhodo branding. They are actual interface layouts, not real customer results. The private application source is excluded. The 3:03 video uses native 4K captures and authorized ElevenLabs Roger narration; see the repository README for reproducibility.

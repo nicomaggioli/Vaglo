@@ -14,11 +14,11 @@ Open http://localhost:8747. Six static HTML pages, local assets/fonts, no applic
 
 ## Feature walkthrough
 
-`assets/rhodo-demo.mp4` is a 48-second H.264/AAC walkthrough at 3840 × 2160, 60 fps. It follows the supplied dashboard frontend through pipeline, fit assessment, project recommendations, team alternatives, experience matrix, documents, SF330 review, and searchable firm records. Native controls, English captions, an accessible transcript, and five chapter shortcuts are included. Video loads on demand. Escape closes the player and restores focus.
+`assets/rhodo-demo.mp4` is a 3:03 H.264/AAC walkthrough at 3840 × 2160, 60 fps. It starts with SAM.gov monitoring and document analysis, then follows an opportunity through fit assessment, recommended projects, team alternatives, the experience matrix, section generation, documents, and SF330 review. It also covers corrections, projects, personnel, partner firms, uploads, proposals, scoring rules, metrics, help, folders, and roadmap. Lifecycle and Availability are explicitly identified as work in progress. Native controls, English captions, an accessible transcript, and thirteen chapter shortcuts are included. Video loads on demand. Escape closes the player and restores focus.
 
 The actual frontend ran in an isolated local fixture environment with synthetic records and Rhodo branding. This is an edited sequence of native 4K interface captures, smooth scrolling, and a small pointer overlay. It does not represent a continuous customer session or demonstrate backend generation speed. No customer database, private documents, credentials, or private dashboard source is included.
 
-Narration uses Roger (Laid-Back, Casual, Resonant), Eleven v3, Natural stability (0.5), and a conversational script. Six long pauses were shortened to 450 ms without changing speech speed or pitch in editing. The original MP3 and `narration-production.json` preserve the source and edit decisions. A brief Rhodo end card follows the narration.
+Narration uses Roger (Laid-Back, Casual, Resonant), Eleven v3, Natural stability (0.5), and a conversational script. Fourteen pauses longer than 800 ms were shortened to 550 ms, followed by a pitch-preserving 1.10× tempo adjustment. No speech was removed. The original MP3 and `narration-production.json` preserve the source and edit decisions. A brief Rhodo end card follows the narration.
 
 ```sh
 python3 -m venv .venv

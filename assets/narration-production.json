@@ -1,18 +1,71 @@
 {
-  "voice": "Roger \u2014 Laid-Back, Casual, Resonant",
+  "voice": "Roger — Laid-Back, Casual, Resonant",
   "model": "Eleven v3",
   "stability": 0.5,
   "direction": "conversational",
+  "generation": "Generation 1",
   "source": "demo-narration-roger-original.mp3",
   "edited": "demo-narration-elevenlabs.wav",
-  "generation": "Generation 1",
   "cuts_seconds": [
-    [6.809308000000001, 7.189376],
-    [13.793707, 14.304273999999998],
-    [17.440374000000002, 17.80949],
-    [22.17305, 22.48949],
-    [31.268991, 31.767108999999998],
-    [42.10763, 42.751712]
+    [
+      2.9732309999999997,
+      3.4101470000000003
+    ],
+    [
+      19.954477999999998,
+      20.743707
+    ],
+    [
+      31.691961,
+      31.997018000000004
+    ],
+    [
+      35.849558,
+      36.434977
+    ],
+    [
+      54.319399,
+      54.862143
+    ],
+    [
+      78.55661,
+      78.89017
+    ],
+    [
+      90.17026100000001,
+      90.565726
+    ],
+    [
+      107.00500000000001,
+      107.32973899999999
+    ],
+    [
+      119.762506,
+      120.08744899999999
+    ],
+    [
+      132.768265,
+      133.278878
+    ],
+    [
+      152.224751,
+      152.542347
+    ],
+    [
+      176.21407,
+      176.614637
+    ],
+    [
+      185.125862,
+      185.513005
+    ],
+    [
+      191.132166,
+      191.609717
+    ]
   ],
-  "notes": "Six long pauses shortened to 450 ms; no speech speed or pitch adjustment in editing."
+  "tempo": 1.1,
+  "audio_duration": 180.9498866213152,
+  "video_duration": 183,
+  "notes": "Fourteen pauses longer than 800 ms reduced to 550 ms before a pitch-preserving 1.10× tempo adjustment. No speech removed. Native dashboard captures use synthetic records."
 }
