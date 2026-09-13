@@ -30,8 +30,8 @@ for name,page in pages.items():
   if u.fragment and target.suffix=='.html' and target.name in pages and unquote(u.fragment) not in pages[target.name].ids:errors.append(f'{name}: broken anchor {ref}')
 for ref in re.findall(r'url\([\'"]?([^\)\'\"]+)',(ROOT/'styles.css').read_text()):
  if not (ROOT/ref).is_file():errors.append(f'CSS missing {ref}')
-for asset in ['assets/vaglo-trailer.mp4','assets/hero-loop.mp4','assets/trailer.vtt']:
+for asset in ['assets/ellery-demo.mp4','assets/demo-narration.m4a','assets/demo.vtt']:
  if not (ROOT/asset).is_file() or (ROOT/asset).stat().st_size<20:errors.append(f'Missing/empty {asset}')
-if not (ROOT/'assets/trailer.vtt').read_text().startswith('WEBVTT'):errors.append('Invalid caption header')
+if not (ROOT/'assets/demo.vtt').read_text().startswith('WEBVTT'):errors.append('Invalid caption header')
 if errors:raise SystemExit('\n'.join(errors))
 print(f'PASS: {len(pages)} pages, {count} local references, unique IDs, internal anchors, font assets, image labels and media assets.')

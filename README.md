@@ -1,6 +1,6 @@
-# VAGLO — the pursuit platform
+# Ellery — federal pursuits, handled with care
 
-A responsive, four-page marketing site for federal architecture and engineering firms. Static HTML, CSS, and JavaScript; no application build or runtime dependencies.
+A responsive marketing site for independent architecture and engineering firms. The current creative direction uses the working name **Ellery**, an original overlapping-leaf symbol, black and mint, Geist and Inter typography, and original botanical and architectural imagery. `brand-directions.html` retains Ellery, Bracken, and Avenell for comparison.
 
 ## Preview
 
@@ -8,50 +8,49 @@ A responsive, four-page marketing site for federal architecture and engineering 
 python3 serve.py
 ```
 
-Open http://localhost:8747. The preview server disables caching. It serves the current directory, so run it from this repository.
+Run from the repository and open http://localhost:8747. Static HTML/CSS/JavaScript; no application build or runtime packages. The preview supports byte ranges for reliable video seeking. All site assets and fonts are local, with relative paths suitable for a GitHub Pages repository subpath.
 
 ## Pages
 
-- `index.html` — positioning, the product film, Discover / Build / Review, fit, and FAQs.
-- `system.html` — the workflow, human checkpoints, and product scope.
-- `pricing.html` — setup, monthly service, and the discovery process.
-- `contact.html` — demo-request preparation with copy and text-download options.
+- `index.html`: positioning, video walkthrough, feature tabs, and FAQs.
+- `system.html`: the complete pursuit workflow and human checkpoints.
+- `pricing.html`: one-time setup and managed monthly support, without invented prices.
+- `contact.html`: a clear, local introduction-preparation form.
+- `demo-transcript.html`: accessible text transcript of the walkthrough.
+- `brand-directions.html`: the three exploratory naming and identity directions.
 
-`styles.css` contains the shared responsive design system. `app.js` handles mobile navigation, accessible product tabs, video playback, and request preparation. Fonts are bundled with their SIL Open Font Licenses in `assets/fonts/`; no third-party requests are required to render the site.
+## Feature walkthrough
 
-## Product film
+`assets/ellery-demo.mp4` is an 85-second H.264/AAC video at 1440 × 1000, 24 fps. It follows the actual dashboard frontend through the opportunity pipeline, fit assessment, project recommendations, personnel selection, experience matrix, proposal documents, and searchable firm library. It includes a team-alternate interaction and a project search. Native controls, English captions, a transcript, and five chapter shortcuts are available. The video only loads after a visitor chooses to watch it. Escape closes the player and returns focus.
 
-`assets/vaglo-trailer.mp4` is a 42-second H.264/AAC film, 1280 × 720 at 24 fps, with an original synthesized instrumental score. `assets/hero-loop.mp4` is a short silent ambient preview. Both load only after a visitor asks to play them. The full film includes native playback, volume and fullscreen controls, caption support, and chapter shortcuts. Escape closes the dialog and restores focus.
+The supplied `alares_testing` frontend ran in an **isolated local fixture environment**, with synthetic API responses. The capture copy received the new brand and a compact pipeline layout; no production dashboard source or backend was changed. The edit combines actual captured interface states and scrolling with reading pauses, a pointer overlay, explanatory subtitles, and synthesized macOS Samantha narration. It is an edited feature walkthrough, not a continuous recording of a live customer deployment. Prepared documents and scores shown are sample fixture records; this recording does not demonstrate backend generation speed or quality.
 
-The dashboard image uses the actual dashboard CSS and pipeline markup patterns from the supplied `alares_testing` project, branded for VAGLO and populated only with synthetic opportunities. It is not a recording of a live customer installation. Proposal and review sequences are illustrative motion graphics and are labeled accordingly. No client database, personnel records, signatures, credentials, or original proposal documents are included.
+No customer database, private documents, signatures, credentials, or private dashboard source files are included. The dashboard's main HTML and CSS were checked against the supplied Downloads folder and matched the repository reference.
 
-The dashboard reference was checked against the user-supplied Downloads copy on 2026-09-13; its `index.html` and `dashboard/dashboard.css` matched the repository copy.
-
-To regenerate the main film and poster:
+To reproduce the video from the included captures and narration:
 
 ```sh
 python3 -m venv .venv
 .venv/bin/pip install -r tools/requirements-media.txt
-.venv/bin/python tools/render_trailer.py
+.venv/bin/python tools/render_demo.py
 ```
 
-The renderer reads `assets/dashboard.webp` and the bundled fonts. It uses no live services. The media dependencies are only needed to regenerate the film, not to serve or deploy the site.
+`tools/demo-scenes.json` contains narration, timing, and captions. `assets/demo-stills/` contains the captured screen states; `assets/demo-narration.m4a` is the audio source. `assets/brand-sources.md` documents the visual direction and generated imagery.
 
-## Configure demo requests before launch
+## Configure inquiries before launch
 
-The original site used the placeholder `hello@vaglo.example`. A real recipient has not been supplied. Until then, the form explicitly prepares a local request that visitors can copy or download; it does not claim delivery.
+A real recipient or form endpoint has not been supplied. The form explicitly says it prepares a local request and sends nothing. It validates required fields, then supports copying or saving the introduction.
 
-To enable opening an email draft, set `contactEmail` at the top of `app.js` to the approved recipient address. The visitor still needs to press Send in their mail app. For automatic delivery, replace that mail-draft flow with your chosen form endpoint and show success only after the endpoint accepts the request.
+Set `contactEmail` at the top of `app.js` to an approved recipient to enable a mail-app draft. Visitors still press Send themselves. For automatic delivery, integrate a real form endpoint and only show success after the endpoint accepts the request.
 
-## Deployment
-
-The existing repository uses GitHub Pages from `main`. Review these changes on the feature branch before merging. All paths are relative and work under a GitHub Pages repository subpath. Bump the stylesheet and script query versions when updating a deployed build.
-
-## Checks
+## Checks and release
 
 ```sh
 node --check app.js
 python3 tools/check_site.py
+python3 tools/test_preview.py
 ```
 
-The static checker validates internal files and anchors, unique IDs, local CSS assets, required accessibility labels, video captions, and the absence of placeholder email destinations. Browser QA also covers desktop and mobile layouts, product-tab keyboard navigation, video play/pause and chapters, Escape/focus restoration, FAQ disclosure, and form validation/preparation.
+The link checker validates page IDs, local references and anchors, fonts, image labels, captions, and media assets. Browser review covers desktop/mobile layout, feature-tab keyboard navigation, video playback and chapter seeking, Escape/focus restoration, FAQ disclosure, and the introduction form. The video is also decoded end to end with FFmpeg.
+
+The changes stay on `codex/cinematic-rebuild` for review. Main has not been merged or deployed by this task. Naming is a creative working direction, not a claim of trademark or domain availability.

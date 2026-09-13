@@ -3,317 +3,224 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width,initial-scale=1" />
-    <title>Meet the platform · VAGLO</title>
+    <title>The product — Ellery</title>
     <meta
       name="description"
-      content="Explore how VAGLO finds federal opportunities, builds SF330 qualifications packages, and keeps your firm in control of review."
+      content="See the Ellery workflow from SAM.gov discovery to SF330 review."
     />
-    <meta name="theme-color" content="#f5f5ee" />
-    <meta property="og:title" content="Meet the platform · VAGLO" />
+    <meta name="theme-color" content="#0b0d11" />
+    <meta property="og:title" content="The product — Ellery" />
     <meta
       property="og:description"
-      content="Explore how VAGLO finds federal opportunities, builds SF330 qualifications packages, and keeps your firm in control of review."
+      content="See the Ellery workflow from SAM.gov discovery to SF330 review."
     />
     <meta property="og:type" content="website" />
     <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
-    <link rel="stylesheet" href="styles.css?v=20260913" />
-    <script src="app.js?v=20260913" defer></script>
+    <link rel="stylesheet" href="styles.css?v=3" />
+    <link
+      rel="preload"
+      href="assets/fonts/geist.ttf"
+      as="font"
+      type="font/ttf"
+      crossorigin
+    />
+    <script src="app.js?v=3" defer></script>
   </head>
   <body>
-    <a class="skip" href="#main">Skip to content</a>
+    <a class="skip-link" href="#main">Skip to content</a>
     <header class="site-header">
-      <div class="container nav-inner">
-        <a class="brand" href="index.html" aria-label="VAGLO home"
-          ><img src="assets/vaglo-logo.svg" width="146" height="30" alt="VAGLO"
-        /></a>
-        <nav class="desktop-nav" aria-label="Main navigation">
-          <a href="index.html#how">How it works</a
-          ><a href="system.html" aria-current="page">The platform</a
-          ><a href="pricing.html">Pricing</a>
-        </nav>
-        <a class="button nav-cta" href="contact.html"
-          >Book a demo
-          <svg
-            viewBox="0 0 24 24"
-            fill="none"
-            stroke="currentColor"
-            stroke-width="1.6"
-            aria-hidden="true"
-          >
-            <path d="M4 12h15M13 5l7 7-7 7" /></svg></a
-        ><button
-          class="menu-toggle"
-          aria-label="Open menu"
-          aria-expanded="false"
-          aria-controls="mobile-menu"
-        >
-          <span></span><span></span>
-        </button>
-      </div>
-      <nav
-        id="mobile-menu"
-        class="mobile-nav"
-        aria-label="Mobile navigation"
-        hidden
+      <a class="brand" href="index.html" aria-label="Ellery home"
+        ><img
+          src="assets/ellery-logo-light.svg"
+          width="148"
+          height="33"
+          alt="Ellery"
+      /></a>
+      <nav class="desktop-nav" aria-label="Main navigation">
+        <a href="system.html" aria-current="page">The product</a
+        ><a href="pricing.html">Working together</a>
+      </nav>
+      <a class="nav-cta" href="contact.html"
+        >Let’s talk <span aria-hidden="true">↗</span></a
+      ><button
+        class="menu-toggle"
+        aria-label="Open menu"
+        aria-controls="mobile-menu"
+        aria-expanded="false"
       >
-        <a href="index.html#how">How it works</a
-        ><a href="system.html">The platform</a><a href="pricing.html">Pricing</a
-        ><a href="contact.html"
-          >Book a demo
-          <svg
-            viewBox="0 0 24 24"
-            fill="none"
-            stroke="currentColor"
-            stroke-width="1.6"
-            aria-hidden="true"
-          >
-            <path d="M4 12h15M13 5l7 7-7 7" /></svg
-        ></a>
+        Menu <span>+</span>
+      </button>
+      <nav id="mobile-menu" aria-label="Mobile navigation" hidden>
+        <a href="system.html">The product</a
+        ><a href="pricing.html">Working together</a
+        ><a href="contact.html">Let’s talk ↗</a>
       </nav>
     </header>
     <main id="main">
-      <section class="page-hero container">
-        <span class="eyebrow">THE PLATFORM</span>
-        <h1>
-          From the first notice<br />to the
-          <span class="serif green">final review.</span>
-        </h1>
-        <p class="page-lead">
-          One connected workflow for the work you want to win. Here is what
-          happens at each step, and where your team stays in control.
-        </p>
-        <div class="anchor-nav">
-          <a href="#discover">01 / Discover</a><a href="#build">02 / Build</a
-          ><a href="#review">03 / Review</a>
+      <section class="page-hero">
+        <p class="eyebrow">The product / A closer look</p>
+        <h1>From possibility<br />to proposal.</h1>
+        <div class="page-intro">
+          <p>
+            Ellery connects your firm’s experience to the work ahead. Here’s how
+            a pursuit moves through the system.
+          </p>
+          <button class="button black" data-trailer>
+            <span class="play-glyph" aria-hidden="true">▶</span> Watch the
+            walkthrough
+          </button>
         </div>
       </section>
-      <section class="system-hero container">
+      <section class="system-image">
         <img
-          src="assets/dashboard.webp"
-          width="1280"
-          height="720"
-          alt="VAGLO dashboard with sample data"
-          fetchpriority="high"
-        /><span class="image-caption"
-          >Dashboard styling from the working product. Sample opportunities
-          shown.</span
-        >
+          src="assets/demo-poster.webp"
+          alt="The Ellery opportunity analysis dashboard"
+          width="1440"
+          height="900"
+        />
       </section>
-      <section class="system-step container" id="discover">
-        <div>
-          <span class="eyebrow">01 / THE WORKFLOW</span>
-          <h2>Discover the right work.</h2>
-        </div>
-        <div class="system-step-content">
+      <section class="section steps">
+        <article class="step">
+          <span class="step-number">01</span>
+          <h2>Keep an eye on the right work.</h2>
           <div>
-            <h3>A more useful starting point.</h3>
             <p>
-              VAGLO monitors SAM.gov on a schedule configured for your firm,
-              filters notices using your NAICS codes and set-aside criteria, and
-              gathers the solicitation package.
+              Scheduled SAM.gov monitoring brings opportunities into your
+              pipeline using the filters agreed with your firm.
             </p>
+            <ul>
+              <li>NAICS codes, geography, and set-asides</li>
+              <li>Notice details, amendments, and deadlines</li>
+              <li>A shared view from analyzed to accepted</li>
+            </ul>
           </div>
+        </article>
+        <article class="step">
+          <span class="step-number">02</span>
+          <h2>Understand the opportunity.</h2>
           <div>
-            <h3>Keep the pursuit current.</h3>
             <p>
-              Tracked notices are checked for amendments, deadline changes, and
-              withdrawals. The system reads the base solicitation and
-              attachments, with amendments taking precedence.
+              Read a fit assessment against your capabilities, with the scope,
+              strengths, and open questions in one place.
             </p>
+            <ul>
+              <li>Source-based solicitation analysis</li>
+              <li>Firm-specific scoring rules</li>
+              <li>A human check on the scope before proceeding</li>
+            </ul>
           </div>
+        </article>
+        <article class="step">
+          <span class="step-number">03</span>
+          <h2>Choose the proof. Then the people.</h2>
           <div>
-            <h3>See why it fits.</h3>
             <p>
-              Opportunities are scored against your firm’s experience,
-              geography, roles, and qualifications. Your own rules can adjust
-              that score, with the reasoning visible.
+              Review the most relevant completed projects, then the personnel
+              with evidence of doing that work.
             </p>
+            <ul>
+              <li>Project-first Section F recommendations</li>
+              <li>Role coverage, qualifications, and alternates</li>
+              <li>Visible experience matrix and team approval</li>
+            </ul>
           </div>
-          <aside class="checkpoint">
-            <span>✳</span>
-            <div>
-              <b>Your checkpoint</b>
-              <p>
-                Review the extracted scope and requirements beside their source
-                text. Approve the reading before the proposal is built.
-              </p>
-            </div>
-          </aside>
-        </div>
+        </article>
+        <article class="step">
+          <span class="step-number">04</span>
+          <h2>Bring the package together.</h2>
+          <div>
+            <p>
+              Prepare the SF330 around your approved choices and inspect each
+              section before the final submission.
+            </p>
+            <ul>
+              <li>Section E resumes and Section F project sheets</li>
+              <li>
+                Section G matrix, Section H narratives, and firm information
+              </li>
+              <li>Compiled package with final review by your team</li>
+            </ul>
+          </div>
+        </article>
       </section>
-      <section class="system-step container" id="build">
-        <div>
-          <span class="eyebrow">02 / THE WORKFLOW</span>
-          <h2>Build from what you know.</h2>
-        </div>
-        <div class="system-step-content">
-          <div>
-            <h3>Start with the right experience.</h3>
-            <p>
-              Your portfolio is ranked against the solicitation. Projects that
-              fail a threshold remain visible with a reason. You choose the
-              projects, personnel, and subconsultants.
-            </p>
-          </div>
-          <div>
-            <h3>Turn records into sections.</h3>
-            <p>
-              Generate personnel résumés, project sheets, the participation
-              matrix, and a qualifications narrative. The package is assembled
-              with its cover, contents, dividers, and page numbers.
-            </p>
-          </div>
-          <div>
-            <h3>Keep the team connected.</h3>
-            <p>
-              Partner qualifications and project participation come into the
-              same workflow, so the submission reflects who actually did the
-              work.
-            </p>
-          </div>
-          <aside class="checkpoint">
-            <span>✳</span>
-            <div>
-              <b>Your checkpoint</b>
-              <p>
-                Review the selections and generated language. The system flags
-                unsupported claims and missing information for your team to
-                resolve.
-              </p>
-            </div>
-          </aside>
-        </div>
-      </section>
-      <section class="system-step container" id="review">
-        <div>
-          <span class="eyebrow">03 / THE WORKFLOW</span>
-          <h2>Know what still needs you.</h2>
-        </div>
-        <div class="system-step-content">
-          <div>
-            <h3>Check against the actual ask.</h3>
-            <p>
-              The finished package is checked against the solicitation’s
-              requirements. Findings sit beside the source language, so a
-              reviewer can understand what needs attention.
-            </p>
-          </div>
-          <div>
-            <h3>Make missing facts visible.</h3>
-            <p>
-              Unverified details stay as blanks. Staffing commitments and other
-              facts only your firm can confirm need a human answer before the
-              package is ready.
-            </p>
-          </div>
-          <div>
-            <h3>Review the finished story.</h3>
-            <p>
-              A final pass assesses the package against the published evaluation
-              factors, giving your team another view before making the
-              submission decision.
-            </p>
-          </div>
-          <aside class="checkpoint">
-            <span>✳</span>
-            <div>
-              <b>Your checkpoint</b>
-              <p>
-                Your firm reviews and approves the package. VAGLO supports the
-                preparation; the decision to submit stays with you.
-              </p>
-            </div>
-          </aside>
-        </div>
-      </section>
-      <section class="fit-section">
-        <div class="container fit-grid">
-          <div>
-            <span class="eyebrow">A GOOD FIT STARTS WITH CLARITY</span>
-            <h2>
-              Purpose-built.<br /><span class="serif">With a clear scope.</span>
-            </h2>
-          </div>
-          <div>
-            <h3>Made for federal qualifications.</h3>
-            <p>
-              The proposal workflow produces SF330 packages for federal design
-              work. It does not write general commercial RFP responses.
-            </p>
-            <h3>Your archive matters.</h3>
-            <p>
-              The quality of the package depends on the quality of the records.
-              Setup includes reconciling your project and personnel history with
-              your team.
-            </p>
-            <h3>A private, managed installation.</h3>
-            <p>
-              Your firm has its own database and pipeline. We handle setup and
-              upkeep, and train your point person. The product has been used by
-              one firm with one primary user; simultaneous editing by a large
-              proposal team is not yet proven.
-            </p>
-          </div>
-        </div>
+      <section class="dark-note">
+        <p class="eyebrow">Built-in judgment calls</p>
+        <h2>The system prepares.<br />Your team approves.</h2>
+        <p>
+          Missing information is a prompt to check the source. Personnel
+          recommendations are a starting point for a conversation. Your team
+          owns the final staffing decisions, claims, and submission.
+        </p>
       </section>
       <section class="closing">
-        <div class="container closing-inner">
-          <span class="eyebrow light">YOUR NEXT CHAPTER</span>
-          <h2>Built for the work<br />you <em>could</em> be winning.</h2>
-          <div>
-            <p>
-              Show us how your firm runs a pursuit.<br />We’ll show you what
-              comes next.
-            </p>
-            <a class="button lime" href="contact.html"
-              >Let’s see what’s possible
-              <svg
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                stroke-width="1.6"
-                aria-hidden="true"
-              >
-                <path d="M4 12h15M13 5l7 7-7 7" /></svg
-            ></a>
-          </div>
-          <div class="closing-mark" aria-hidden="true">V</div>
+        <div>
+          <p class="eyebrow">A little more room to grow.</p>
+          <h2>Your next chapter<br />starts with a conversation.</h2>
         </div>
+        <a class="button black" href="contact.html"
+          >Let’s talk about your firm <span aria-hidden="true">↗</span></a
+        >
       </section>
     </main>
-    <footer class="site-footer">
-      <div class="container footer-top">
-        <div>
-          <a class="brand" href="index.html"
-            ><img
-              src="assets/vaglo-logo.svg"
-              width="146"
-              height="30"
-              alt="VAGLO"
-          /></a>
-          <p>Built around your firm.<br />Built for your next opportunity.</p>
-        </div>
-        <div class="footer-links">
-          <a href="index.html#how">How it works</a
-          ><a href="system.html">The platform</a
-          ><a href="pricing.html">Pricing</a
-          ><a href="contact.html"
-            >Let’s talk
-            <svg
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              stroke-width="1.6"
-              aria-hidden="true"
-            >
-              <path d="M4 12h15M13 5l7 7-7 7" /></svg
-          ></a>
-        </div>
+    <footer class="footer">
+      <div class="footer-top">
+        <a href="index.html" aria-label="Ellery home"
+          ><img
+            src="assets/ellery-logo-light.svg"
+            alt="Ellery"
+            width="175"
+            height="39"
+        /></a>
+        <p>More time for the work<br />you’re here to do.</p>
+        <nav aria-label="Footer navigation">
+          <a href="system.html">The product ↗</a
+          ><a href="pricing.html">Working together ↗</a
+          ><a href="contact.html">Get in touch ↗</a>
+        </nav>
       </div>
-      <div class="container footer-bottom">
-        <span>© 2026 VAGLO</span><span>Federal pursuits. Human judgment.</span
-        ><a href="#main">Back to top ↑</a>
+      <div class="footer-word" aria-hidden="true">Ellery<span>↗</span></div>
+      <div class="footer-bottom">
+        <span>Built for independent A/E firms.</span><span>© 2026 Ellery</span
+        ><a href="index.html#main">Back to top ↑</a>
       </div>
     </footer>
+    <dialog id="trailer-dialog" aria-labelledby="film-title">
+      <div class="dialog-top">
+        <div>
+          <span class="eyebrow">Inside the product</span>
+          <h2 id="film-title">One pursuit, from start to finish.</h2>
+        </div>
+        <button class="dialog-close" aria-label="Close demo">✕</button>
+      </div>
+      <video
+        id="full-video"
+        controls
+        playsinline
+        preload="none"
+        poster="assets/demo-poster.webp"
+      >
+        <source src="assets/ellery-demo.mp4" type="video/mp4" />
+        <track
+          kind="captions"
+          src="assets/demo.vtt"
+          srclang="en"
+          label="English"
+        />
+        Your browser does not support video.
+        <a href="assets/ellery-demo.mp4">Download the demo</a>.
+      </video>
+      <div class="chapters" aria-label="Demo chapters">
+        <button data-time="0">01 Pipeline</button
+        ><button data-time="10">02 Fit analysis</button
+        ><button data-time="23">03 Projects & team</button
+        ><button data-time="47">04 Proposal package</button
+        ><button data-time="67">05 Firm library</button>
+      </div>
+      <p class="demo-note">
+        Actual dashboard interface, rebranded with sample records. Narrated
+        feature walkthrough.
+        <a href="demo-transcript.html">Read the transcript ↗</a>
+      </p>
+    </dialog>
   </body>
 </html>

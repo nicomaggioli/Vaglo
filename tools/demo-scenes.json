@@ -1,0 +1,74 @@
+[
+  {
+    "start": 0,
+    "end": 10,
+    "shot": "01-pipeline",
+    "chapter": "01  Opportunity pipeline",
+    "voice": "Let's take a look inside Ellery. Here's the opportunity pipeline, with each pursuit organized by stage. This walkthrough uses sample records.",
+    "caption": "Start with your opportunity pipeline. Every pursuit has a place."
+  },
+  {
+    "start": 10,
+    "end": 23,
+    "shot": "02-analysis",
+    "chapter": "02  Review the fit",
+    "voice": "Open an opportunity to see the fit score and the reasoning behind it. Here, we can review the scope, deadlines, strengths, and action items before deciding whether to pursue.",
+    "caption": "Open an opportunity. Review the fit, scope, deadline, and open questions."
+  },
+  {
+    "start": 23,
+    "end": 33,
+    "shot": "03-projects",
+    "chapter": "03  Projects and team",
+    "voice": "Next, open Selection. Ellery starts with relevant projects from your firm's records. You can review the recommended examples and choose the work that best supports your case.",
+    "caption": "In Selection, relevant projects come first. Review the evidence behind each choice."
+  },
+  {
+    "start": 33,
+    "end": 41,
+    "shot": "04-team",
+    "chapter": "03  Projects and team",
+    "voice": "Scroll down to the proposed team. Each role connects to a person's experience on the selected projects, with alternatives available for review.",
+    "caption": "Review the people, qualifications, and project experience behind your team."
+  },
+  {
+    "start": 41,
+    "end": 47,
+    "shot": "05-matrix",
+    "chapter": "03  Projects and team",
+    "voice": "The experience matrix forms from those choices. Your team reviews the selections before approving the workflow.",
+    "caption": "The Section G matrix connects people to projects. You approve the choices."
+  },
+  {
+    "start": 47,
+    "end": 57,
+    "shot": "06-documents",
+    "chapter": "04  Prepare the package",
+    "voice": "In Documents, the solicitation and amendments sit alongside the prepared sections. Resumes, the team chart, the experience matrix, and narratives are available in one place.",
+    "caption": "Keep the solicitation, amendments, and prepared SF330 sections together."
+  },
+  {
+    "start": 57,
+    "end": 67,
+    "shot": "07-proposal",
+    "chapter": "04  Prepare the package",
+    "voice": "The Proposal tab shows which sections are ready and brings the package together. These are sample outputs. Your team checks the content and handles the final submission.",
+    "caption": "Review section status and the compiled package. Final submission stays with you."
+  },
+  {
+    "start": 67,
+    "end": 76,
+    "shot": "08-library",
+    "chapter": "05  Your firm's knowledge",
+    "voice": "Behind every pursuit is your firm's project library. Search past work by name, location, or type to find the experience you need.",
+    "caption": "Search your project library. Find the experience that supports your next pursuit."
+  },
+  {
+    "start": 76,
+    "end": 85,
+    "shot": "10-personnel",
+    "chapter": "05  Your firm's knowledge",
+    "voice": "Personnel records bring qualifications and experience together too. Your people, your projects, and your next opportunity, connected in one workspace. That's Ellery.",
+    "caption": "Keep your people, projects, and pursuit knowledge connected."
+  }
+]

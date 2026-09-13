@@ -3,250 +3,180 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width,initial-scale=1" />
-    <title>Let’s talk about your next win · VAGLO</title>
+    <title>Let’s talk — Ellery</title>
     <meta
       name="description"
-      content="Book a personal VAGLO demo and explore a pursuit platform built around your firm."
+      content="Tell us about your firm and the work you want to pursue."
     />
-    <meta name="theme-color" content="#f5f5ee" />
-    <meta
-      property="og:title"
-      content="Let’s talk about your next win · VAGLO"
-    />
+    <meta name="theme-color" content="#0b0d11" />
+    <meta property="og:title" content="Let’s talk — Ellery" />
     <meta
       property="og:description"
-      content="Book a personal VAGLO demo and explore a pursuit platform built around your firm."
+      content="Tell us about your firm and the work you want to pursue."
     />
     <meta property="og:type" content="website" />
     <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
-    <link rel="stylesheet" href="styles.css?v=20260913" />
-    <script src="app.js?v=20260913" defer></script>
+    <link rel="stylesheet" href="styles.css?v=3" />
+    <link
+      rel="preload"
+      href="assets/fonts/geist.ttf"
+      as="font"
+      type="font/ttf"
+      crossorigin
+    />
+    <script src="app.js?v=3" defer></script>
   </head>
   <body>
-    <a class="skip" href="#main">Skip to content</a>
+    <a class="skip-link" href="#main">Skip to content</a>
     <header class="site-header">
-      <div class="container nav-inner">
-        <a class="brand" href="index.html" aria-label="VAGLO home"
-          ><img src="assets/vaglo-logo.svg" width="146" height="30" alt="VAGLO"
-        /></a>
-        <nav class="desktop-nav" aria-label="Main navigation">
-          <a href="index.html#how">How it works</a
-          ><a href="system.html">The platform</a
-          ><a href="pricing.html">Pricing</a>
-        </nav>
-        <a class="button nav-cta" href="contact.html"
-          >Book a demo
-          <svg
-            viewBox="0 0 24 24"
-            fill="none"
-            stroke="currentColor"
-            stroke-width="1.6"
-            aria-hidden="true"
-          >
-            <path d="M4 12h15M13 5l7 7-7 7" /></svg></a
-        ><button
-          class="menu-toggle"
-          aria-label="Open menu"
-          aria-expanded="false"
-          aria-controls="mobile-menu"
-        >
-          <span></span><span></span>
-        </button>
-      </div>
-      <nav
-        id="mobile-menu"
-        class="mobile-nav"
-        aria-label="Mobile navigation"
-        hidden
+      <a class="brand" href="index.html" aria-label="Ellery home"
+        ><img
+          src="assets/ellery-logo-light.svg"
+          width="148"
+          height="33"
+          alt="Ellery"
+      /></a>
+      <nav class="desktop-nav" aria-label="Main navigation">
+        <a href="system.html">The product</a
+        ><a href="pricing.html">Working together</a>
+      </nav>
+      <a class="nav-cta" href="contact.html"
+        >Let’s talk <span aria-hidden="true">↗</span></a
+      ><button
+        class="menu-toggle"
+        aria-label="Open menu"
+        aria-controls="mobile-menu"
+        aria-expanded="false"
       >
-        <a href="index.html#how">How it works</a
-        ><a href="system.html">The platform</a><a href="pricing.html">Pricing</a
-        ><a href="contact.html"
-          >Book a demo
-          <svg
-            viewBox="0 0 24 24"
-            fill="none"
-            stroke="currentColor"
-            stroke-width="1.6"
-            aria-hidden="true"
-          >
-            <path d="M4 12h15M13 5l7 7-7 7" /></svg
-        ></a>
+        Menu <span>+</span>
+      </button>
+      <nav id="mobile-menu" aria-label="Mobile navigation" hidden>
+        <a href="system.html">The product</a
+        ><a href="pricing.html">Working together</a
+        ><a href="contact.html">Let’s talk ↗</a>
       </nav>
     </header>
     <main id="main">
-      <section class="contact-layout container">
-        <div class="contact-copy">
-          <span class="eyebrow">LET’S TALK ABOUT YOUR NEXT WIN</span>
-          <h1>
-            Bring your process.<br /><span class="serif green"
-              >We’ll bring <br />the possibilities.</span
-            >
-          </h1>
+      <section class="contact-layout">
+        <div class="contact-intro">
+          <p class="eyebrow">Let’s talk.</p>
+          <h1>What’s next<br />for your firm?</h1>
           <p>
-            Tell us a little about your firm. We’ll use the first conversation
-            to understand how you pursue work, where time gets lost, and whether
-            VAGLO fits.
+            Tell us a little about your team and the work you want to win. It’s
+            a good place to start.
           </p>
-          <div class="call-details">
-            <div>
-              <span>01</span>
-              <p>
-                <b>Your work, in context.</b>A 30–45 minute conversation about
-                your pursuits, team, and archive.
-              </p>
-            </div>
-            <div>
-              <span>02</span>
-              <p>
-                <b>A look at what’s possible.</b>A walkthrough of the platform
-                and a discussion of your workflow.
-              </p>
-            </div>
-            <div>
-              <span>03</span>
-              <p>
-                <b>A clear next step.</b>If there’s a fit, a written scope and
-                price before you commit.
-              </p>
-            </div>
-          </div>
-          <span class="contact-fit"
-            >Best for A&amp;E firms already pursuing federal
-            qualifications-based work.</span
-          >
+          <img
+            src="assets/ellery-architecture.webp"
+            width="1536"
+            height="1024"
+            alt="Sunlight and tree shadows on an architectural walkway"
+          />
         </div>
-        <form class="contact-form" id="callform">
-          <div class="form-heading">
-            <h2>Meet your next advantage.</h2>
-            <p>A little context makes for a better conversation.</p>
-          </div>
-          <div class="field-row">
+        <div class="contact-form">
+          <p class="eyebrow">A first introduction</p>
+          <form id="callform">
+            <div class="field-pair">
+              <label
+                >Your name<input
+                  name="name"
+                  autocomplete="name"
+                  required
+                  placeholder="Alex Taylor" /></label
+              ><label
+                >Work email<input
+                  name="email"
+                  type="email"
+                  autocomplete="email"
+                  required
+                  placeholder="alex@yourfirm.com"
+              /></label>
+            </div>
             <label
-              >Your name <span>*</span
-              ><input
-                name="name"
-                autocomplete="name"
+              >Firm<input
+                name="firm"
+                autocomplete="organization"
                 required
-                placeholder="Full name" /></label
-            ><label
-              >Work email <span>*</span
-              ><input
-                type="email"
-                name="email"
-                autocomplete="email"
-                required
-                placeholder="you@yourfirm.com"
+                placeholder="Your firm’s name"
             /></label>
-          </div>
-          <label
-            >Firm <span>*</span
-            ><input
-              name="firm"
-              autocomplete="organization"
-              required
-              placeholder="Your firm’s name"
-          /></label>
-          <div class="field-row">
+            <div class="field-pair">
+              <label
+                >Team size<select name="team_size">
+                  <option value="">Select size</option>
+                  <option>1–10</option>
+                  <option>11–25</option>
+                  <option>26–50</option>
+                  <option>51+</option>
+                </select></label
+              ><label
+                >Primary discipline<select name="discipline">
+                  <option value="">Select discipline</option>
+                  <option>Architecture</option>
+                  <option>Engineering</option>
+                  <option>Multidisciplinary</option>
+                  <option>Other</option>
+                </select></label
+              >
+            </div>
             <label
-              >Team size<select name="team_size">
-                <option value="">Select team size</option>
-                <option>1–5 people</option>
-                <option>6–20 people</option>
-                <option>21–50 people</option>
-                <option>51–150 people</option>
-                <option>150+ people</option>
-              </select></label
-            ><label
-              >Primary discipline<select name="discipline">
-                <option value="">Select discipline</option>
-                <option>Architecture</option>
-                <option>Engineering</option>
-                <option>Construction management</option>
-                <option>Multidisciplinary</option>
-                <option>Other</option>
-              </select></label
-            >
-          </div>
-          <label
-            >Where does the pursuit get difficult? <span>*</span
-            ><textarea
-              name="workflow"
-              required
-              rows="4"
-              placeholder="Finding the right work, assembling the team, building the SF330…"
-            ></textarea></label
-          ><button class="button form-submit" type="submit">
-            Prepare demo request <span aria-hidden="true">↗</span>
-          </button>
-          <p class="form-hint" id="delivery-note">
-            Prepare a request you can copy or save. Online delivery is not
-            configured yet.
-          </p>
-          <div id="form-result" role="status" hidden>
-            <h3>Your request is ready.</h3>
-            <p id="result-message">
-              Nothing has been sent. Copy or save your request to share with the
-              VAGLO team.
+              >Where does the pursuit process get difficult?<textarea
+                name="workflow"
+                rows="4"
+                required
+                placeholder="Finding the right work, tracking down project details, preparing the SF330…"
+              ></textarea>
+            </label>
+            <p class="delivery-note" id="delivery-note">
+              Demo preview: this form prepares a request you can copy or save.
+              Nothing is sent.
             </p>
-            <textarea
-              id="request-text"
-              aria-label="Your prepared demo request"
-              readonly
-              rows="8"
-            ></textarea>
-            <div class="request-actions">
-              <button type="button" class="button secondary" id="copy-request">
+            <button class="button black" type="submit">
+              Prepare introduction <span aria-hidden="true">↗</span>
+            </button>
+          </form>
+          <section
+            id="form-result"
+            class="form-result"
+            hidden
+            aria-live="polite"
+          >
+            <h2>Your introduction is ready.</h2>
+            <p id="result-message">
+              Nothing has been sent. Copy or save your introduction below.
+            </p>
+            <label class="sr-only" for="request-text"
+              >Prepared introduction</label
+            ><textarea id="request-text" rows="8" readonly></textarea>
+            <div class="result-actions">
+              <button id="copy-request" class="button black">
                 Copy request</button
-              ><button type="button" class="button secondary" id="save-request">
-                Save as text
+              ><button id="save-request" class="button outline">
+                Save request
               </button>
             </div>
-          </div>
-          <p class="privacy-note">
-            This page does not store your form details on a server.
-          </p>
-          <noscript
-            ><p>
-              JavaScript is needed to prepare this request. Please enable it to
-              continue.
-            </p></noscript
-          >
-        </form>
+          </section>
+        </div>
       </section>
     </main>
-    <footer class="site-footer">
-      <div class="container footer-top">
-        <div>
-          <a class="brand" href="index.html"
-            ><img
-              src="assets/vaglo-logo.svg"
-              width="146"
-              height="30"
-              alt="VAGLO"
-          /></a>
-          <p>Built around your firm.<br />Built for your next opportunity.</p>
-        </div>
-        <div class="footer-links">
-          <a href="index.html#how">How it works</a
-          ><a href="system.html">The platform</a
-          ><a href="pricing.html">Pricing</a
-          ><a href="contact.html"
-            >Let’s talk
-            <svg
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              stroke-width="1.6"
-              aria-hidden="true"
-            >
-              <path d="M4 12h15M13 5l7 7-7 7" /></svg
-          ></a>
-        </div>
+    <footer class="footer">
+      <div class="footer-top">
+        <a href="index.html" aria-label="Ellery home"
+          ><img
+            src="assets/ellery-logo-light.svg"
+            alt="Ellery"
+            width="175"
+            height="39"
+        /></a>
+        <p>More time for the work<br />you’re here to do.</p>
+        <nav aria-label="Footer navigation">
+          <a href="system.html">The product ↗</a
+          ><a href="pricing.html">Working together ↗</a
+          ><a href="contact.html">Get in touch ↗</a>
+        </nav>
       </div>
-      <div class="container footer-bottom">
-        <span>© 2026 VAGLO</span><span>Federal pursuits. Human judgment.</span
-        ><a href="#main">Back to top ↑</a>
+      <div class="footer-word" aria-hidden="true">Ellery<span>↗</span></div>
+      <div class="footer-bottom">
+        <span>Built for independent A/E firms.</span><span>© 2026 Ellery</span
+        ><a href="index.html#main">Back to top ↑</a>
       </div>
     </footer>
   </body>

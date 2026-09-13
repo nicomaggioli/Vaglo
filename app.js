@@ -1,4 +1,4 @@
-/* VAGLO marketing site. No dependencies. Set contactEmail to enable mail drafts. */
+/* Ellery marketing site. No dependencies. Set contactEmail to enable mail drafts. */
 (() => {
   "use strict";
   const config = { contactEmail: "" };
@@ -62,58 +62,8 @@
 
   const dialog = document.querySelector("#trailer-dialog");
   const video = document.querySelector("#full-video");
-  const preview = document.querySelector("#hero-video");
-  const previewToggle = document.querySelector("#preview-toggle");
   const reducedMotion = matchMedia("(prefers-reduced-motion: reduce)");
-  let lastFocus = null,
-    previewRequested = false;
-  function previewLabel() {
-    if (!previewToggle) return;
-    previewToggle.setAttribute(
-      "aria-label",
-      preview.paused ? "Play background preview" : "Pause background preview",
-    );
-    previewToggle.textContent = preview.paused ? "▶" : "Ⅱ";
-  }
-  function playPreview() {
-    if (!preview.src) {
-      preview.src = "assets/hero-loop.mp4";
-      preview.load();
-    }
-    preview
-      .play()
-      .catch(() => {})
-      .finally(previewLabel);
-  }
-  if (preview) {
-    preview.addEventListener("play", previewLabel);
-    preview.addEventListener("pause", previewLabel);
-    previewToggle.addEventListener("click", () => {
-      previewRequested = preview.paused;
-      if (previewRequested) playPreview();
-      else preview.pause();
-    });
-    // Static poster by default: visitors choose when the film starts.
-    document.addEventListener("visibilitychange", () => {
-      if (document.hidden) preview.pause();
-      else if (previewRequested && !dialog.open) playPreview();
-    });
-    if ("IntersectionObserver" in window)
-      new IntersectionObserver(
-        (entries) => {
-          if (!entries[0].isIntersecting) preview.pause();
-          else if (previewRequested && !dialog.open && !document.hidden)
-            playPreview();
-        },
-        { threshold: 0.1 },
-      ).observe(preview);
-    reducedMotion.addEventListener("change", (e) => {
-      if (e.matches) {
-        previewRequested = false;
-        preview.pause();
-      }
-    });
-  }
+  let lastFocus = null;
   function closeTrailer() {
     dialog.close();
   }
@@ -121,7 +71,6 @@
     document.querySelectorAll("[data-trailer]").forEach((button) =>
       button.addEventListener("click", () => {
         lastFocus = button;
-        preview.pause();
         dialog.showModal();
         document.body.classList.add("modal-open");
         video.play().catch(() => {
@@ -147,7 +96,6 @@
       video.pause();
       document.body.classList.remove("modal-open");
       lastFocus?.focus();
-      if (previewRequested && !document.hidden) playPreview();
     });
     dialog.querySelectorAll("[data-time]").forEach((button) =>
       button.addEventListener("click", () => {
@@ -178,12 +126,12 @@
       e.preventDefault();
       if (!form.reportValidity()) return;
       const d = new FormData(form);
-      const text = `VAGLO demo request\n\nName: ${d.get("name")}\nEmail: ${d.get("email")}\nFirm: ${d.get("firm")}\nTeam size: ${d.get("team_size") || "Not specified"}\nDiscipline: ${d.get("discipline") || "Not specified"}\n\nCurrent challenge:\n${d.get("workflow")}`;
+      const text = `Ellery demo request\n\nName: ${d.get("name")}\nEmail: ${d.get("email")}\nFirm: ${d.get("firm")}\nTeam size: ${d.get("team_size") || "Not specified"}\nDiscipline: ${d.get("discipline") || "Not specified"}\n\nCurrent challenge:\n${d.get("workflow")}`;
       request.value = text;
       result.hidden = false;
       if (validEmail) {
         const a = document.createElement("a");
-        a.href = `mailto:${config.contactEmail}?subject=${encodeURIComponent("VAGLO demo — " + d.get("firm"))}&body=${encodeURIComponent(text)}`;
+        a.href = `mailto:${config.contactEmail}?subject=${encodeURIComponent("Ellery demo — " + d.get("firm"))}&body=${encodeURIComponent(text)}`;
         a.click();
         document.querySelector("#result-message").textContent =
           "Your mail app should open with a draft. Review and send it there. If it does not open, copy or save the request below.";
@@ -211,7 +159,7 @@
       );
       const link = document.createElement("a");
       link.href = url;
-      link.download = "vaglo-demo-request.txt";
+      link.download = "ellery-demo-request.txt";
       link.click();
       setTimeout(() => URL.revokeObjectURL(url), 1000);
     });

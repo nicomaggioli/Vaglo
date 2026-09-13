@@ -1,0 +1,288 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>A new name / Three directions</title>
+    <style>
+      @font-face {
+        font-family: Geist;
+        src: url(assets/fonts/geist.ttf);
+        font-weight: 100 900;
+      }
+      * {
+        box-sizing: border-box;
+      }
+      body {
+        margin: 0;
+        background: #f6f7f2;
+        font-family: Geist, Arial;
+        color: #0b0d11;
+      }
+      header {
+        padding: 45px 5% 35px;
+        display: flex;
+        justify-content: space-between;
+        align-items: end;
+      }
+      h1 {
+        font-size: 42px;
+        line-height: 1;
+        letter-spacing: -0.05em;
+        font-weight: 450;
+        margin: 14px 0 0;
+      }
+      .small {
+        font-size: 10px;
+        text-transform: uppercase;
+        letter-spacing: 0.1em;
+      }
+      header > p {
+        font-size: 13px;
+        max-width: 310px;
+        color: #6b736b;
+      }
+      main {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        padding: 0 5% 45px;
+        gap: 20px;
+      }
+      .card {
+        background: #fff;
+        border: 1px solid #e0e5dd;
+      }
+      .identity {
+        height: 360px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 22px;
+      }
+      .identity svg {
+        width: 90px;
+        height: 90px;
+      }
+      .name {
+        font-size: 64px;
+        font-weight: 430;
+        letter-spacing: -0.065em;
+        line-height: 1;
+      }
+      .identity.black {
+        background: #0b0d11;
+        color: #65fc9f;
+        --cut: #0b0d11;
+      }
+      .identity.mint {
+        background: #65fc9f;
+        --cut: #65fc9f;
+      }
+      .detail {
+        padding: 26px;
+      }
+      .detail h2 {
+        font-size: 22px;
+        font-weight: 500;
+        letter-spacing: -0.035em;
+        margin: 10px 0;
+      }
+      .detail p {
+        font-size: 13px;
+        line-height: 1.7;
+        color: #636e64;
+        min-height: 65px;
+      }
+      .strip {
+        background: #0b0d11;
+        color: white;
+        padding: 18px 25px;
+        display: flex;
+        align-items: center;
+        gap: 9px;
+        font-size: 19px;
+        letter-spacing: -0.05em;
+        --cut: #0b0d11;
+      }
+      .strip svg {
+        width: 25px;
+        height: 25px;
+        color: #65fc9f;
+      }
+      .caption {
+        font-size: 10px;
+        letter-spacing: 0.01em;
+        opacity: 0.6;
+        margin-left: auto;
+      }
+      .brand-photo {
+        background: url(assets/ellery-canopy.webp) center/cover;
+        height: 160px;
+        color: #fff;
+        display: flex;
+        align-items: center;
+        padding: 25px;
+        font-size: 30px;
+        line-height: 1.05;
+        letter-spacing: -0.04em;
+      }
+      .footer {
+        padding: 0 5% 35px;
+        font-size: 11px;
+        color: #6b746b;
+      }
+      @media (max-width: 750px) {
+        main {
+          grid-template-columns: 1fr;
+        }
+        .identity {
+          height: 260px;
+        }
+        header {
+          align-items: start;
+          flex-direction: column;
+        }
+        .detail p {
+          min-height: 0;
+        }
+        .card {
+          max-width: 580px;
+          width: 100%;
+          margin: auto;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <div>
+        <span class="small">New brand / Direction studies</span>
+        <h1>Three different personalities.</h1>
+      </div>
+      <p>
+        Names with room to become a brand, each paired with an original symbol.
+      </p>
+    </header>
+    <main>
+      <article class="card">
+        <div class="identity black">
+          <svg viewBox="0 0 64 64" aria-hidden="true">
+            <path
+              d="M9 50C7 28 20 8 43 7C45 29 33 49 9 50Z"
+              fill="currentColor"
+            />
+            <path
+              d="M21 55C23 38 37 23 56 23C54 43 41 55 21 55Z"
+              fill="currentColor"
+            />
+            <path
+              d="M14 46 36 18M29 49 48 30"
+              fill="none"
+              stroke="var(--cut,#fff)"
+              stroke-width="3"
+            />
+          </svg>
+          <div class="name">ellery</div>
+        </div>
+        <div class="detail">
+          <span class="small">01 / Recommended direction</span>
+          <h2>Human. Assured. Understated.</h2>
+          <p>
+            An established-feeling name that works as a trusted partner. Paired
+            with two overlapping leaves: shared experience, carried forward.
+          </p>
+        </div>
+        <div class="strip">
+          <svg viewBox="0 0 64 64" aria-hidden="true">
+            <path
+              d="M9 50C7 28 20 8 43 7C45 29 33 49 9 50Z"
+              fill="currentColor"
+            />
+            <path
+              d="M21 55C23 38 37 23 56 23C54 43 41 55 21 55Z"
+              fill="currentColor"
+            />
+            <path
+              d="M14 46 36 18M29 49 48 30"
+              fill="none"
+              stroke="var(--cut,#fff)"
+              stroke-width="3"
+            /></svg
+          >ellery<span class="caption">Let’s talk ↗</span>
+        </div>
+        <div class="brand-photo">Good work, ahead.</div>
+      </article>
+      <article class="card">
+        <div class="identity mint">
+          <svg viewBox="0 0 64 64" aria-hidden="true">
+            <path d="M30 56V11" stroke="currentColor" stroke-width="4" />
+            <path
+              d="M30 40C14 42 5 34 6 23C20 22 29 29 30 40ZM30 48C44 50 55 41 55 30C41 29 31 35 30 48ZM30 24C19 24 13 16 15 7C25 8 31 15 30 24ZM30 31C43 31 49 22 47 13C37 13 29 20 30 31Z"
+              fill="currentColor"
+            />
+          </svg>
+          <div class="name">bracken</div>
+        </div>
+        <div class="detail">
+          <span class="small">02 / Alternative direction</span>
+          <h2>Grounded. Distinctive. Growing.</h2>
+          <p>
+            A real botanical name with strength and texture. A compact fern
+            emblem ties the identity naturally to the imagery you like.
+          </p>
+        </div>
+        <div class="strip">
+          <svg viewBox="0 0 64 64" aria-hidden="true">
+            <path d="M30 56V11" stroke="currentColor" stroke-width="4" />
+            <path
+              d="M30 40C14 42 5 34 6 23C20 22 29 29 30 40ZM30 48C44 50 55 41 55 30C41 29 31 35 30 48ZM30 24C19 24 13 16 15 7C25 8 31 15 30 24ZM30 31C43 31 49 22 47 13C37 13 29 20 30 31Z"
+              fill="currentColor"
+            /></svg
+          >bracken<span class="caption">Let’s talk ↗</span>
+        </div>
+        <div class="brand-photo">Built on what you know.</div>
+      </article>
+      <article class="card">
+        <div class="identity">
+          <svg viewBox="0 0 64 64" aria-hidden="true">
+            <path
+              d="M5 54V26C5 12 15 4 28 4S51 12 51 26V54H41V27C41 18 37 14 28 14S15 18 15 27V54Z"
+              fill="currentColor"
+            />
+            <path
+              d="M23 54V32C23 28 25 26 28 26S33 28 33 32V54Z"
+              fill="currentColor"
+            />
+          </svg>
+          <div class="name">avenell</div>
+        </div>
+        <div class="detail">
+          <span class="small">03 / Alternative direction</span>
+          <h2>Quiet confidence. Lasting presence.</h2>
+          <p>
+            A name with the character of an independent design practice. An open
+            colonnade symbol brings structure, light, and space.
+          </p>
+        </div>
+        <div class="strip">
+          <svg viewBox="0 0 64 64" aria-hidden="true">
+            <path
+              d="M5 54V26C5 12 15 4 28 4S51 12 51 26V54H41V27C41 18 37 14 28 14S15 18 15 27V54Z"
+              fill="currentColor"
+            />
+            <path
+              d="M23 54V32C23 28 25 26 28 26S33 28 33 32V54Z"
+              fill="currentColor"
+            /></svg
+          >avenell<span class="caption">Let’s talk ↗</span>
+        </div>
+        <div class="brand-photo">Make space for what’s next.</div>
+      </article>
+    </main>
+    <p class="footer">
+      Exploratory naming and identity concepts. These are visual directions, not
+      assertions of trademark or domain availability.
+    </p>
+  </body>
+</html>
