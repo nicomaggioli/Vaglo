@@ -6,66 +6,104 @@
   "generation": "Generation 1",
   "source": "demo-narration-roger-original.mp3",
   "edited": "demo-narration-elevenlabs.wav",
-  "cuts_seconds": [
-    [
-      2.9732309999999997,
-      3.4101470000000003
+  "base": {
+    "source": "demo-narration-roger-original.mp3",
+    "cuts_seconds": [
+      [
+        2.9732309999999997,
+        3.4101470000000003
+      ],
+      [
+        19.954477999999998,
+        20.743707
+      ],
+      [
+        31.691961,
+        31.997018000000004
+      ],
+      [
+        35.849558,
+        36.434977
+      ],
+      [
+        54.319399,
+        54.862143
+      ],
+      [
+        78.55661,
+        78.89017
+      ],
+      [
+        90.17026100000001,
+        90.565726
+      ],
+      [
+        107.00500000000001,
+        107.32973899999999
+      ],
+      [
+        119.762506,
+        120.08744899999999
+      ],
+      [
+        132.768265,
+        133.278878
+      ],
+      [
+        152.224751,
+        152.542347
+      ],
+      [
+        176.21407,
+        176.614637
+      ],
+      [
+        185.125862,
+        185.513005
+      ],
+      [
+        191.132166,
+        191.609717
+      ]
     ],
-    [
-      19.954477999999998,
-      20.743707
-    ],
-    [
-      31.691961,
-      31.997018000000004
-    ],
-    [
-      35.849558,
-      36.434977
-    ],
-    [
-      54.319399,
-      54.862143
-    ],
-    [
-      78.55661,
-      78.89017
-    ],
-    [
-      90.17026100000001,
-      90.565726
-    ],
-    [
-      107.00500000000001,
-      107.32973899999999
-    ],
-    [
-      119.762506,
-      120.08744899999999
-    ],
-    [
-      132.768265,
-      133.278878
-    ],
-    [
-      152.224751,
-      152.542347
-    ],
-    [
-      176.21407,
-      176.614637
-    ],
-    [
-      185.125862,
-      185.513005
-    ],
-    [
-      191.132166,
-      191.609717
-    ]
+    "tempo": 1.1,
+    "audio_duration": 180.9498866213152
+  },
+  "replacements": [
+    {
+      "key": "analysis",
+      "base_start": 31.199,
+      "base_end": 47.457,
+      "source": "demo-narration-ai-analysis-original.mp3",
+      "cuts_seconds": [
+        [
+          15.888265,
+          16.33076
+        ]
+      ],
+      "tempo": 1.0,
+      "duration": 20.951768707482994,
+      "start": 31.199,
+      "end": 52.150768707482996
+    },
+    {
+      "key": "feedback",
+      "base_start": 105.499,
+      "base_end": 117.027,
+      "source": "demo-narration-ai-learning-original.mp3",
+      "cuts_seconds": [
+        [
+          22.715703,
+          23.533141
+        ]
+      ],
+      "tempo": 1.0,
+      "duration": 35.54501133786848,
+      "start": 110.192768707483,
+      "end": 145.73778004535149
+    }
   ],
-  "tempo": 1.1,
-  "audio_duration": 180.9498866213152,
-  "video_duration": 183,
-  "notes": "Fourteen pauses longer than 800 ms reduced to 550 ms before a pitch-preserving 1.10× tempo adjustment. No speech removed. Native dashboard captures use synthetic records."
+  "notes": "Original approved tour retained except the AI-analysis and feedback chapters. Two new Roger / Eleven v3 takes explain source-grounded AI generation, saved wording preferences, and adaptive opportunity scoring. Their long pauses are shortened to 550 ms; new speech plays at its natural speed. The base narration retains its prior pitch-preserving 1.10× tempo edit.",
+  "audio_duration": 209.6606575963719,
+  "video_duration": 212
 }

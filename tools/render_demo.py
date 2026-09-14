@@ -6,7 +6,17 @@ R=Path(__file__).resolve().parents[1]; A=R/'assets'; S=A/'demo-stills'
 M=json.loads((A/'narration-production.json').read_text())
 SC=json.loads((R/'tools/demo-scenes.json').read_text())
 W,H,FPS,DURATION=3840,2160,60,M['video_duration']
-def mapped(t):return (t-sum(max(0,min(t,b)-a) for a,b in M['cuts_seconds'] if t>a))/M['tempo']
+def remap_base(t):
+    shift=0
+    for r in M['replacements']:
+        a,b=r['base_start'],r['base_end']
+        if t<a:return t+shift
+        if t<=b:return a+shift+(t-a)/(b-a)*r['duration']
+        shift+=r['duration']-(b-a)
+    return t+shift
+def mapped(t):
+    base=M['base']
+    return remap_base((t-sum(max(0,min(t,b)-a) for a,b in base['cuts_seconds'] if t>a))/base['tempo'])
 @functools.lru_cache(maxsize=32)
 def shot(name):
     im=Image.open(S/f'{name}.webp').convert('RGB')
@@ -44,6 +54,13 @@ cursor=cursor.resize((48,60),Image.Resampling.LANCZOS)
 TEAM=mapped(66.451);MATRIX=mapped(78.723)
 # Only brief navigation gestures; the small pointer clears the reading area.
 actions=[(mapped(36.14),(1250,740),(840,465)),(mapped(54.59),(850,700),(825,460)),(mapped(72.147),(2010,620),(2080,365)),(mapped(137.8),(2140,490),(2790,255))]
+# Replacement takes show the specific AI/feedback mechanism being described.
+REPLACEMENT_EDITS={
+    'analysis':[(0,'02-analysis'),(11.665,'11-analysis-scope'),(16.1,'12-generators')],
+    'feedback':[(0,'13-analysis-feedback'),(5.48,'14-feedback'),(11.61,'12-generators'),(16.08,'07-proposal'),(23.12,'18-scoring'),(28.67,'08-library')],
+}
+for r in M['replacements']:
+    r['shots']=[(r['start']+(t-sum(max(0,min(t,b)-a) for a,b in r['cuts_seconds'] if t>a))/r['tempo'],name) for t,name in REPLACEMENT_EDITS[r['key']]]
 end=Image.new('RGB',(W,H),'white');d=ImageDraw.Draw(end)
 font=lambda n:ImageFont.truetype(str(A/'fonts/geist.ttf'),n)
 d.text((W/2,H/2-110),'rhodo',font=font(196),fill='#0b0d11',anchor='mm')
@@ -51,6 +68,9 @@ d.text((W/2,H/2+90),'Find the opportunities worth pursuing.',font=font(55),fill=
 def frame(t):
     if t>=M['audio_duration']-.15:return end
     name=next(name for start,name in reversed(EDIT) if start<=t);im=shot(name)
+    for r in M['replacements']:
+        if r['start']<=t<r['end']:
+            im=shot(next(name for start,name in reversed(r['shots']) if start<=t))
     if TEAM-.25<=t<TEAM+.4:im=scroll_frame(676.125*ease((t-TEAM+.25)/.65))
     elif MATRIX-.25<=t<MATRIX+.35:im=scroll_frame(674.8125+(839.4375-674.8125)*ease((t-MATRIX+.25)/.6),True)
     for b,p,q in actions:

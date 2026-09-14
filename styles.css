@@ -56,6 +56,7 @@ button {
 }
 img {
   max-width: 100%;
+  height: auto;
   display: block;
 }
 h1,
@@ -361,7 +362,7 @@ textarea:focus-visible {
 }
 .demo-screen > img {
   width: 100%;
-  aspect-ratio: 1.6;
+  aspect-ratio: 16 / 9;
   object-fit: cover;
   transition: filter 0.25s;
 }
@@ -676,6 +677,9 @@ textarea:focus-visible {
   max-width: 460px;
   color: #646c67;
 }
+.page-intro > .button {
+  flex-shrink: 0;
+}
 .system-image {
   padding: 35px 6%;
   background: #e5efe4;
@@ -831,7 +835,7 @@ textarea {
   border: 1px solid #d5dad5;
   background: #fff;
   border-radius: 5px;
-  font-size: 12px;
+  font-size: 16px;
   color: var(--ink);
   min-width: 0;
 }
@@ -844,7 +848,7 @@ textarea::placeholder {
 }
 .field-pair {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 180px), 1fr));
   gap: 18px;
 }
 .delivery-note {
@@ -869,6 +873,7 @@ textarea::placeholder {
 }
 .result-actions {
   display: flex;
+  flex-wrap: wrap;
   gap: 10px;
   margin-top: 15px;
 }
@@ -890,6 +895,10 @@ dialog::backdrop {
   backdrop-filter: blur(7px);
 }
 .dialog-top {
+  position: sticky;
+  top: 0;
+  z-index: 2;
+  background: var(--ink);
   display: flex;
   justify-content: space-between;
   gap: 20px;
@@ -1204,6 +1213,11 @@ dialog video {
   .footer-top img {
     width: 135px;
   }
+  .footer-top nav a {
+    min-height: 44px;
+    display: flex;
+    align-items: center;
+  }
   .footer-word {
     margin-top: 45px;
     margin-bottom: 30px;
@@ -1274,6 +1288,7 @@ dialog video {
   .chapters button {
     font-size: 9px;
     padding: 7px;
+    min-height: 44px;
   }
   .demo-note {
     font-size: 8px;
@@ -1300,6 +1315,7 @@ dialog video {
     color: #fff;
     font-size: 11px;
     padding: 6px 3px;
+    min-height: 44px;
   }
   .menu-toggle span {
     font-size: 18px;
@@ -1388,14 +1404,15 @@ dialog video {
     max-width: 100%;
   }
   .demo-screen > img {
-    min-height: 235px;
-    object-fit: cover;
-    object-position: left top;
+    min-height: 0;
+    object-fit: contain;
   }
   .demo-play {
-    left: 9px;
-    bottom: 9px;
-    padding: 9px 11px;
+    position: relative;
+    left: auto;
+    bottom: auto;
+    padding: 12px;
+    min-height: 64px;
     border-radius: 5px;
     font-size: 11px;
   }
@@ -1403,7 +1420,7 @@ dialog video {
     font-size: 7px;
   }
   .demo-arrow {
-    margin-left: 4px;
+    margin-left: auto;
     font-size: 23px;
   }
   .film-meta {
@@ -1518,8 +1535,8 @@ dialog video {
     margin-bottom: 13px;
   }
   .dialog-close {
-    width: 32px;
-    height: 32px;
+    width: 44px;
+    height: 44px;
     font-size: 12px;
   }
   .chapters {
@@ -1527,6 +1544,37 @@ dialog video {
   }
   .button:hover {
     transform: none;
+  }
+}
+/* Give the form room before its desktop columns become cramped. */
+@media (min-width: 701px) and (max-width: 900px) {
+  .contact-layout {
+    grid-template-columns: 1fr;
+    gap: 45px;
+    padding-top: 160px;
+  }
+  .contact-form {
+    max-width: 620px;
+  }
+}
+@media (max-height: 500px) and (orientation: landscape) {
+  dialog {
+    width: min(1160px, 98vw);
+    max-height: 96dvh;
+    padding: 14px;
+  }
+  .dialog-top {
+    margin-bottom: 10px;
+  }
+  dialog video {
+    max-height: 58dvh;
+  }
+  .dialog-close {
+    width: 44px;
+    height: 44px;
+  }
+  .chapters button {
+    min-height: 44px;
   }
 }
 @media (prefers-reduced-motion: reduce) {

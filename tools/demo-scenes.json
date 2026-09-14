@@ -17,98 +17,98 @@
   },
   {
     "key": "analysis",
-    "chapter": "Understand the fit",
-    "voice": "Open a pursuit, and the analysis is already there: scope, a bid recommendation, strengths, and gaps that need attention. You can review the requirements before committing time. The score gives you a starting point; the supporting evidence explains it.",
+    "chapter": "How AI analyzes the fit",
+    "voice": "Open a pursuit, and you can see the AI’s analysis. It reads the solicitation, identifies requirements, and compares them with your firm’s experience and qualifications. You get a bid recommendation, strengths, and gaps to review. That same source material grounds the AI-generated proposal sections.",
     "start": 31.199,
-    "end": 47.457,
+    "end": 52.151,
     "shot": "02-analysis"
   },
   {
     "key": "projects",
     "chapter": "Recommended experience",
     "voice": "In Selection, Rhodo recommends relevant past projects from your firm’s records. Each suggestion includes the experience supporting that choice, ready for your review.",
-    "start": 47.457,
-    "end": 57.992,
+    "start": 52.151,
+    "end": 62.686,
     "shot": "03-projects"
   },
   {
     "key": "team",
     "chapter": "The proposed team",
     "voice": "It then recommends people whose qualifications and project history fit the roles. You can accept the team or compare an alternative, instead of assembling the roster from scratch.",
-    "start": 57.992,
-    "end": 68.997,
+    "start": 62.686,
+    "end": 73.691,
     "shot": "04-team"
   },
   {
     "key": "matrix",
     "chapter": "Experience matrix",
     "voice": "Those choices build the experience matrix, connecting people to the projects they worked on. Your approval moves the selected team and projects into the workflow.",
-    "start": 68.997,
-    "end": 79.252,
+    "start": 73.691,
+    "end": 83.946,
     "shot": "05-matrix"
   },
   {
     "key": "documents",
     "chapter": "Prepare the sections",
     "voice": "The preparation tools generate resumes, project sheets, and supporting narratives from that material. Documents keeps the original solicitation, amendments, and generated sections together, so you can check both the source and the output.",
-    "start": 79.252,
-    "end": 94.197,
+    "start": 83.946,
+    "end": 98.891,
     "shot": "12-generators"
   },
   {
     "key": "proposal",
     "chapter": "The SF330 package",
     "voice": "The Proposal tab brings the sections into one SF330 package. Review what’s ready, address any missing information, and give it your final check before submission.",
-    "start": 94.197,
-    "end": 105.499,
+    "start": 98.891,
+    "end": 110.193,
     "shot": "07-proposal"
   },
   {
     "key": "feedback",
-    "chapter": "Ask for changes",
-    "voice": "And you don’t need to fix everything by hand. Tell the assistant what’s wrong or what you want changed. Feedback keeps those corrections visible, and our team can help refine the result.",
-    "start": 105.499,
-    "end": 117.027,
+    "chapter": "Feedback, learning, and adaptation",
+    "voice": "And you don’t need to fix everything by hand. Tell the assistant what you want changed. Rhodo can save your feedback on tone, terminology, and how you describe your work, then use those preferences to guide future proposal drafts. Over time, that helps the writing sound more like your team, with fewer repeated corrections. Your pursue-or-decline decisions also help refine opportunity scoring. That’s how the workflow adapts: your firm’s knowledge and feedback carry forward, while you stay in control.",
+    "start": 110.193,
+    "end": 145.738,
     "shot": "13-analysis-feedback"
   },
   {
     "key": "library",
     "chapter": "Your firm’s knowledge",
     "voice": "Behind every pursuit is your firm’s knowledge base. Projects lets you search past work. Personnel brings together qualifications and experience. Subconsultants keeps your partner firms in view, so you can build the right team with the records you already have.",
-    "start": 117.027,
-    "end": 134.251,
+    "start": 145.738,
+    "end": 162.962,
     "shot": "08-library"
   },
   {
     "key": "intake",
     "chapter": "Add source documents",
     "voice": "The main Documents page is where new source files enter the system. Upload your records, follow processing, and review information that needs clarification.",
-    "start": 134.251,
-    "end": 144.133,
+    "start": 162.962,
+    "end": 172.844,
     "shot": "16-intake"
   },
   {
     "key": "oversight",
     "chapter": "Across your pursuits",
     "voice": "Proposals gives you a view across active packages. Scoring Rules captures your firm’s preferences, while Metrics shows pipeline activity and processing health.",
-    "start": 144.133,
-    "end": 155.771,
+    "start": 172.844,
+    "end": 184.482,
     "shot": "17-proposals"
   },
   {
     "key": "support",
     "chapter": "Supporting tools",
     "voice": "Help explains the workflow. Additional Folders connects supporting files, and Roadmap shows planned work. Lifecycle and Availability are marked as work in progress in this dashboard.",
-    "start": 155.771,
-    "end": 168.617,
+    "start": 184.482,
+    "end": 197.328,
     "shot": "20-help"
   },
   {
     "key": "close",
     "chapter": "From discovery to review",
     "voice": "That’s Rhodo: the monitoring, analysis, matching, and proposal preparation handled for you, with your team in control of the decisions—and support when something needs changing.",
-    "start": 168.617,
-    "end": 180.95,
+    "start": 197.328,
+    "end": 209.661,
     "shot": "01-pipeline"
   }
 ]

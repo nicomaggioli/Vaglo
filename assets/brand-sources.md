@@ -10,16 +10,16 @@ Palette: Obsidian `#0B0D11`, mint `#65FC9F`, white `#FFFFFF`, and ash `#BDBDBD`.
 
 The embedded images were decoded with their transparency masks, trimmed only around empty padding, resized, and encoded as WebP. `reference-assets.json` preserves the extraction provenance and source hashes; its meadow entry is historical and that image is no longer deployed. The full PDF stays outside this repository.
 
-| Asset | PDF object | Use |
-| --- | --- | --- |
-| `brand-moss-branch-right.webp` | 810 | Hero foreground |
-| `brand-daylight-shadows.webp` | 594 | Daylight texture |
-| `brand-green-shadows.webp` | 882 | Photo spread and closing section |
-| `brand-green-blur.webp` | 856 | Photographic detail |
-| `brand-leaf-detail.webp` | 750 | Macro leaf detail |
-| `brand-floating-garden.webp` | 914 | Human judgment section |
-| `brand-moss-stone.webp` | 554 | Working-together page |
+| Asset                          | PDF object | Use                              |
+| ------------------------------ | ---------- | -------------------------------- |
+| `brand-moss-branch-right.webp` | 810        | Hero foreground                  |
+| `brand-daylight-shadows.webp`  | 594        | Daylight texture                 |
+| `brand-green-shadows.webp`     | 882        | Photo spread and closing section |
+| `brand-green-blur.webp`        | 856        | Photographic detail              |
+| `brand-leaf-detail.webp`       | 750        | Macro leaf detail                |
+| `brand-floating-garden.webp`   | 914        | Human judgment section           |
+| `brand-moss-stone.webp`        | 554        | Working-together page            |
 
 ## Product imagery
 
-The demo stills and video show the supplied frontend using synthetic records and Rhodo branding. They are actual interface layouts, not real customer results. The private application source is excluded. The 3:03 video uses native 4K captures and authorized ElevenLabs Roger narration; see the repository README for reproducibility.
+The demo stills and video show the supplied frontend using synthetic records and Rhodo branding. They are actual interface layouts, not real customer results. The private application source is excluded. The 3:32 video uses native 4K captures and authorized ElevenLabs Roger narration, including dedicated AI-analysis and feedback-learning chapters; see the repository README for reproducibility.

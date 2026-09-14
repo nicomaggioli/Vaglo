@@ -247,7 +247,7 @@
   .hero-branch-right {
     width: 110%;
     left: -5%;
-    bottom: -390px;
+    bottom: min(-390px, calc(465px - 45vw));
   }
 }
 @media (max-width: 1000px) {
@@ -389,6 +389,7 @@
   .hero-text-link {
     font-size: 10px;
     gap: 17px;
+    min-height: 44px;
   }
   .hero-text-link span {
     font-size: 15px;

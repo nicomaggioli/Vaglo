@@ -102,6 +102,10 @@
         const seek = () => {
           video.currentTime = Number(button.dataset.time);
           video.play().catch(() => {});
+          dialog.scrollTo({
+            top: 0,
+            behavior: reducedMotion.matches ? "auto" : "smooth",
+          });
         };
         if (video.readyState >= 1) seek();
         else {
