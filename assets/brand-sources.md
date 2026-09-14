@@ -1,25 +1,17 @@
 # Brand and asset notes
 
-Rhodo is the selected name, derived from rhodonite, Massachusetts’ state gemstone. The original faceted gemstone symbol and Geist-derived vector wordmark are specific to Rhodo. The Ophelia wordmark and sun symbol are not used.
+Rhodo is the selected name, derived from rhodonite, Massachusetts’ state gemstone. The original faceted gemstone symbol and Geist-derived vector wordmark are specific to Rhodo. Geist and Inter are bundled with their SIL Open Font Licenses.
 
-## Botanical direction
+## Current imagery
 
-The user supplied `Branding Ophelia.pdf` and https://www.ophelias.ai/ as visual references, then requested the same images from the PDF. After reviewing newly generated alternatives, the user asked to restore the previous images. The deployed site therefore retains the original PDF images, apart from the countryside photograph which the user asked to remove. No newly generated alternatives are deployed.
+The user requested architecture and engineering imagery to replace the botanical direction. The site now uses original generated depictions of a fictional civic building, a structural detail, and a studio worktable. They are illustrative brand imagery, not customer projects or founder portraits. See [architecture-sources.md](architecture-sources.md) for the exact prompts, generation method, source paths, and dimensions.
 
-Palette: Obsidian `#0B0D11`, mint `#65FC9F`, white `#FFFFFF`, and ash `#BDBDBD`. Geist and Inter are bundled with their SIL Open Font Licenses.
+The white/obsidian palette, mint accents, and clean typography are retained, with muted stone and sage surfaces complementing the new imagery.
 
-The embedded images were decoded with their transparency masks, trimmed only around empty padding, resized, and encoded as WebP. `reference-assets.json` preserves the extraction provenance and source hashes; its meadow entry is historical and that image is no longer deployed. The full PDF stays outside this repository.
+## Earlier reference assets
 
-| Asset                          | PDF object | Use                              |
-| ------------------------------ | ---------- | -------------------------------- |
-| `brand-moss-branch-right.webp` | 810        | Hero foreground                  |
-| `brand-daylight-shadows.webp`  | 594        | Daylight texture                 |
-| `brand-green-shadows.webp`     | 882        | Photo spread and closing section |
-| `brand-green-blur.webp`        | 856        | Photographic detail              |
-| `brand-leaf-detail.webp`       | 750        | Macro leaf detail                |
-| `brand-floating-garden.webp`   | 914        | Human judgment section           |
-| `brand-moss-stone.webp`        | 554        | Working-together page            |
+Earlier iterations used botanical artwork extracted from the supplied `Branding Ophelia.pdf`, then restored it at the user’s request. Those assets and `reference-assets.json` remain historical source material; no active page or stylesheet references them. The full PDF remains outside the repository.
 
 ## Product imagery
 
-The demo stills and video show the supplied frontend using synthetic records and Rhodo branding. They are actual interface layouts, not real customer results. The private application source is excluded. The 3:32 video uses native 4K captures and authorized ElevenLabs Roger narration, including dedicated AI-analysis and feedback-learning chapters; see the repository README for reproducibility.
+The demo stills and video show the supplied frontend using synthetic records and Rhodo branding. They are actual interface layouts, not real customer results. The private application source is excluded. The approved 3:32 video uses native 4K captures and authorized ElevenLabs Roger narration. The website refresh does not change the video; see the repository README for reproducibility.

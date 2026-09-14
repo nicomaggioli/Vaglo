@@ -30,7 +30,7 @@
       menuButton.focus();
     }
   });
-  window.matchMedia("(min-width: 581px)").addEventListener("change", (e) => {
+  window.matchMedia("(min-width: 801px)").addEventListener("change", (e) => {
     if (e.matches) closeMenu();
   });
 
@@ -64,18 +64,50 @@
   const video = document.querySelector("#full-video");
   const reducedMotion = matchMedia("(prefers-reduced-motion: reduce)");
   let lastFocus = null;
-  function closeTrailer() {
-    dialog.close();
-  }
   if (dialog) {
+    let pendingStart = null;
+    let startRequest = 0;
+    function cancelPendingStart() {
+      startRequest += 1;
+      if (pendingStart)
+        video.removeEventListener("loadedmetadata", pendingStart);
+      pendingStart = null;
+    }
+    function playVideo() {
+      video.play().catch(() => {
+        /* Native controls remain available if autoplay is blocked. */
+      });
+    }
+    function startVideo(time, scrollBehavior) {
+      cancelPendingStart();
+      if (!dialog.open) return;
+      const request = startRequest;
+      const begin = () => {
+        if (!dialog.open || request !== startRequest) return;
+        pendingStart = null;
+        video.currentTime = time;
+        dialog.scrollTo({ top: 0, behavior: scrollBehavior });
+        playVideo();
+      };
+      if (video.readyState >= 1) begin();
+      else {
+        pendingStart = begin;
+        video.addEventListener("loadedmetadata", begin, { once: true });
+        // Start loading in the click gesture; seek once metadata is available.
+        playVideo();
+      }
+    }
+    function closeTrailer() {
+      cancelPendingStart();
+      video.pause();
+      dialog.close();
+    }
     document.querySelectorAll("[data-trailer]").forEach((button) =>
       button.addEventListener("click", () => {
         lastFocus = button;
         dialog.showModal();
         document.body.classList.add("modal-open");
-        video.play().catch(() => {
-          /* Native controls remain available if autoplay is blocked. */
-        });
+        startVideo(Number(button.dataset.start || 0), "instant");
       }),
     );
     dialog
@@ -93,25 +125,17 @@
         closeTrailer();
     });
     dialog.addEventListener("close", () => {
+      cancelPendingStart();
       video.pause();
       document.body.classList.remove("modal-open");
       lastFocus?.focus();
     });
     dialog.querySelectorAll("[data-time]").forEach((button) =>
       button.addEventListener("click", () => {
-        const seek = () => {
-          video.currentTime = Number(button.dataset.time);
-          video.play().catch(() => {});
-          dialog.scrollTo({
-            top: 0,
-            behavior: reducedMotion.matches ? "auto" : "smooth",
-          });
-        };
-        if (video.readyState >= 1) seek();
-        else {
-          video.addEventListener("loadedmetadata", seek, { once: true });
-          video.load();
-        }
+        startVideo(
+          Number(button.dataset.time),
+          reducedMotion.matches ? "auto" : "smooth",
+        );
       }),
     );
   }
@@ -130,12 +154,12 @@
       e.preventDefault();
       if (!form.reportValidity()) return;
       const d = new FormData(form);
-      const text = `Rhodo demo request\n\nName: ${d.get("name")}\nEmail: ${d.get("email")}\nFirm: ${d.get("firm")}\nTeam size: ${d.get("team_size") || "Not specified"}\nDiscipline: ${d.get("discipline") || "Not specified"}\n\nCurrent challenge:\n${d.get("workflow")}`;
+      const text = `Rhodo walkthrough request\n\nName: ${d.get("name")}\nEmail: ${d.get("email")}\nFirm: ${d.get("firm")}\nTeam size: ${d.get("team_size") || "Not specified"}\nDiscipline: ${d.get("discipline") || "Not specified"}\n\nCurrent challenge:\n${d.get("workflow")}`;
       request.value = text;
       result.hidden = false;
       if (validEmail) {
         const a = document.createElement("a");
-        a.href = `mailto:${config.contactEmail}?subject=${encodeURIComponent("Rhodo demo — " + d.get("firm"))}&body=${encodeURIComponent(text)}`;
+        a.href = `mailto:${config.contactEmail}?subject=${encodeURIComponent("Rhodo walkthrough — " + d.get("firm"))}&body=${encodeURIComponent(text)}`;
         a.click();
         document.querySelector("#result-message").textContent =
           "Your mail app should open with a draft. Review and send it there. If it does not open, copy or save the request below.";
@@ -163,7 +187,7 @@
       );
       const link = document.createElement("a");
       link.href = url;
-      link.download = "rhodo-demo-request.txt";
+      link.download = "rhodo-walkthrough-request.txt";
       link.click();
       setTimeout(() => URL.revokeObjectURL(url), 1000);
     });

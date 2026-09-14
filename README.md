@@ -2,7 +2,7 @@
 
 A responsive marketing site for independent architecture and engineering firms. Rhodo takes its name from rhodonite, Massachusetts’ state gemstone. The original faceted gem symbol and Geist wordmark reflect the idea of finding valuable opportunities among the noise.
 
-The site retains the previous botanical images from the supplied brand reference at the user’s request. The countryside photo, decorative green status dots, and hero caption/down arrow have been removed. See `assets/brand-sources.md` for provenance.
+The site uses three original generated architectural images: a civic building, a structural detail, and a working studio. The homepage explains the four pursuit stages, shows an illustrative saved-feedback example, introduces the brothers behind Rhodo, and links directly to demo chapters. The working-together and contact pages explain onboarding, responsibilities, and the walkthrough. See `assets/architecture-sources.md` for image prompts and provenance.
 
 ## Preview
 
@@ -31,14 +31,17 @@ python3 -m venv .venv
 
 ## Inquiries
 
-The contact form prepares a local introduction that visitors can copy or save. It clearly states that nothing is sent. Set `contactEmail` in `app.js` to an approved recipient to enable an email draft, or integrate a real form endpoint before enabling automatic delivery.
+The walkthrough page explains the agenda, optional preparation, and next steps. Its form prepares a local introduction that visitors can copy or save; no meeting is booked. It clearly states that nothing is sent. Set `contactEmail` in `app.js` to an approved recipient to enable an email draft, or integrate a real form endpoint before enabling automatic delivery.
 
 ## Checks and release
 
 ```sh
 node --check app.js
+node --test tools/test_demo_player.cjs
 python3 tools/check_site.py
 python3 tools/test_preview.py
 ```
 
-Checks validate local assets/links, unique IDs, captions, and byte-range support. Chromium viewport review covers all six pages at twenty widths from 320 to 2560 pixels, plus landscape video playback, keyboard navigation, feature tabs, FAQs, and the local introduction form. Images keep their native proportions, forms adapt to available space, and mobile player controls remain accessible. The video is decoded with FFmpeg. Changes remain on `codex/cinematic-rebuild`; main is not merged or deployed.
+Checks validate local assets/links, unique IDs, captions, and byte-range support. Chromium viewport review covers all six pages at nineteen widths from 320 to 2560 pixels, plus landscape video playback, keyboard navigation, feature-specific demo links, FAQs, and the local introduction form. Images keep their native proportions, forms adapt to available space, and mobile player controls remain accessible. The video is decoded with FFmpeg. Changes remain on `codex/cinematic-rebuild`; main is not merged or deployed.
+
+Founder copy uses the supplied two-brothers/Massachusetts story. Full names, roles, founder photographs, and the booking destination can be added when supplied. No biographies, customer results, or calendar availability have been invented.
